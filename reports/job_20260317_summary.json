@@ -1,21 +1,21 @@
 {
   "date": "2026-03-17",
   "category": "job",
-  "article_count": 150,
+  "article_count": 173,
   "source_count": 5,
-  "matched_count": 12,
+  "matched_count": 16,
   "top_entities": [
     {
       "name": "Company",
-      "count": 13
+      "count": 17
     }
   ],
   "sources": {
     "한겨레 경제": 30,
+    "동아일보 경제": 53,
     "매일경제 취업": 30,
     "서울경제": 30,
-    "한국경제": 30,
-    "동아일보 경제": 30
+    "한국경제": 30
   },
-  "generated_at": "2026-03-17T00:14:32.806808+09:00"
+  "generated_at": "2026-03-17T00:49:29.069647+09:00"
 }
