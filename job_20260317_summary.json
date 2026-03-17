@@ -2,29 +2,28 @@
   "date": "2026-03-17",
   "category": "job",
   "article_count": 200,
-  "source_count": 6,
-  "matched_count": 46,
+  "source_count": 5,
+  "matched_count": 45,
   "top_entities": [
     {
       "name": "Company",
-      "count": 47
+      "count": 48
     },
     {
       "name": "EmploymentTrend",
-      "count": 6
+      "count": 7
     },
     {
       "name": "JobTitle",
-      "count": 6
+      "count": 3
     }
   ],
   "sources": {
-    "한겨레 경제": 46,
-    "동아일보 경제": 62,
-    "서울경제": 38,
-    "매일경제 취업": 14,
-    "한국경제": 34,
-    "HR Dive": 6
+    "한겨레 경제": 49,
+    "동아일보 경제": 55,
+    "서울경제": 46,
+    "매일경제 취업": 15,
+    "한국경제": 35
   },
-  "generated_at": "2026-03-17T15:07:06.379654+09:00"
+  "generated_at": "2026-03-17T17:28:20.400883+09:00"
 }
