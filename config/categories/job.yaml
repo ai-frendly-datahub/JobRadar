@@ -40,14 +40,8 @@ sources:
     url: "https://hrexecutive.com/feed"
 
   # BLS Employment Situation - 미국 고용 통계
-  - name: "BLS Employment"
-    type: "rss"
-    url: "https://www.bls.gov/rss/empsit.rss"
 
   # BLS Job Openings - 미국 구인/이직 통계
-  - name: "BLS JOLTS"
-    type: "rss"
-    url: "https://www.bls.gov/rss/jolts.rss"
 
 entities:
   - name: "Company"
