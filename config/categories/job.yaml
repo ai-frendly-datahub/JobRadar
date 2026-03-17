@@ -2,6 +2,7 @@ category_name: "job"
 display_name: "채용 레이더"
 
 sources:
+  # === 국내 경제 뉴스 (취업/고용 관련 기사 포함) ===
   - name: "동아일보 경제"
     type: "rss"
     url: "https://rss.donga.com/economy.xml"
@@ -22,6 +23,22 @@ sources:
     type: "rss"
     url: "https://www.hankyung.com/feed/economy"
 
+  # === 글로벌 고용/채용 전문 매체 ===
+  # Indeed Hiring Lab - 글로벌 고용 시장 분석/트렌드
+  - name: "Indeed Hiring Lab"
+    type: "rss"
+    url: "https://www.hiringlab.org/feed/"
+
+  # HR Dive - HR/채용/인재관리 뉴스
+  - name: "HR Dive"
+    type: "rss"
+    url: "https://www.hrdive.com/feeds/news"
+
+  # HR Executive - HR 리더십/보상/채용 전략
+  - name: "HR Executive"
+    type: "rss"
+    url: "https://hrexecutive.com/feed"
+
 entities:
   - name: "Company"
     keywords:
@@ -40,6 +57,11 @@ entities:
       - "현대"
       - "Google"
       - "Amazon"
+      - "Microsoft"
+      - "Apple"
+      - "Meta"
+      - "Tesla"
+      - "OpenAI"
   - name: "JobTitle"
     keywords:
       - "개발자"
@@ -58,6 +80,9 @@ entities:
       - "주니어"
       - "인턴"
       - "기획자"
+      - "recruiter"
+      - "hiring manager"
+      - "talent acquisition"
   - name: "TechStack"
     keywords:
       - "Python"
@@ -76,3 +101,26 @@ entities:
       - "Redis"
       - "Terraform"
       - "CI/CD"
+  - name: "EmploymentTrend"
+    display_name: "고용 트렌드"
+    keywords:
+      - "채용"
+      - "고용"
+      - "실업"
+      - "실업률"
+      - "취업"
+      - "이직"
+      - "퇴사"
+      - "해고"
+      - "정리해고"
+      - "layoff"
+      - "hiring"
+      - "unemployment"
+      - "job market"
+      - "labor market"
+      - "workforce"
+      - "remote work"
+      - "재택근무"
+      - "하이브리드"
+      - "연봉"
+      - "compensation"
