@@ -1,0 +1,35 @@
+{
+  "date": "2026-03-20",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 7,
+  "matched_count": 42,
+  "top_entities": [
+    {
+      "name": "Company",
+      "count": 32
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 19
+    },
+    {
+      "name": "JobTitle",
+      "count": 6
+    },
+    {
+      "name": "TechStack",
+      "count": 1
+    }
+  ],
+  "sources": {
+    "한겨레 경제": 55,
+    "서울경제": 34,
+    "동아일보 경제": 35,
+    "한국경제": 33,
+    "매일경제 취업": 30,
+    "HR Executive": 8,
+    "HR Dive": 5
+  },
+  "generated_at": "2026-03-20T14:11:24.110628+09:00"
+}
