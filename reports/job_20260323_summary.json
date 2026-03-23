@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-23",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 5,
+  "matched_count": 27,
+  "top_entities": [
+    {
+      "name": "Company",
+      "count": 16
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 16
+    },
+    {
+      "name": "JobTitle",
+      "count": 3
+    }
+  ],
+  "sources": {
+    "한겨레 경제": 57,
+    "동아일보 경제": 44,
+    "매일경제 취업": 46,
+    "한국경제": 50,
+    "HR Dive": 3
+  },
+  "generated_at": "2026-03-23T14:26:12.106768+09:00"
+}
