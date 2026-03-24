@@ -4,7 +4,6 @@ from pathlib import Path
 from typing import cast
 
 import yaml
-
 from radar_core.models import (
     CategoryConfig,
     EntityDefinition,
@@ -12,6 +11,7 @@ from radar_core.models import (
     RadarSettings,
     Source,
 )
+
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
