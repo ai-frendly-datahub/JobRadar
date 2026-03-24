@@ -34,8 +34,8 @@ _ACTIVE_HEALTH_STORE: Any = None
 
 def _load_radar_core_classes() -> tuple[type[Any], type[Any]]:
     module = importlib.import_module("radar_core")
-    throttler_cls = getattr(module, "AdaptiveThrottler")
-    health_store_cls = getattr(module, "CrawlHealthStore")
+    throttler_cls = module.AdaptiveThrottler
+    health_store_cls = module.CrawlHealthStore
     return throttler_cls, health_store_cls
 
 
