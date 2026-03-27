@@ -1,0 +1,31 @@
+{
+  "date": "2026-03-27",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 7,
+  "matched_count": 34,
+  "top_entities": [
+    {
+      "name": "Company",
+      "count": 30
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 6
+    },
+    {
+      "name": "JobTitle",
+      "count": 2
+    }
+  ],
+  "sources": {
+    "한겨레 경제": 60,
+    "동아일보 경제": 52,
+    "매일경제 취업": 37,
+    "한국경제": 39,
+    "HR Dive": 6,
+    "HR Executive": 5,
+    "Indeed Hiring Lab": 1
+  },
+  "generated_at": "2026-03-27T14:41:46.669397+09:00"
+}
