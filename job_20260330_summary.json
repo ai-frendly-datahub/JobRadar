@@ -1,0 +1,28 @@
+{
+  "date": "2026-03-30",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 4,
+  "matched_count": 27,
+  "top_entities": [
+    {
+      "name": "Company",
+      "count": 21
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 10
+    },
+    {
+      "name": "JobTitle",
+      "count": 3
+    }
+  ],
+  "sources": {
+    "한겨레 경제": 58,
+    "동아일보 경제": 43,
+    "한국경제": 57,
+    "매일경제 취업": 42
+  },
+  "generated_at": "2026-03-30T14:58:44.114875+09:00"
+}
