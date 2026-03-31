@@ -47,9 +47,60 @@ sources:
     type: "rss"
     url: "https://hrexecutive.com/feed"
 
-  # BLS Employment Situation - 미국 고용 통계
+  # === Reddit 채용/커리어 커뮤니티 ===
+  - name: "r/cscareerquestions"
+    type: "rss"
+    url: "https://www.reddit.com/r/cscareerquestions/.rss"
 
-  # BLS Job Openings - 미국 구인/이직 통계
+  - name: "r/jobs"
+    type: "rss"
+    url: "https://www.reddit.com/r/jobs/.rss"
+
+  - name: "r/recruitinghell"
+    type: "rss"
+    url: "https://www.reddit.com/r/recruitinghell/.rss"
+
+  - name: "r/careeradvice"
+    type: "rss"
+    url: "https://www.reddit.com/r/careeradvice/.rss"
+
+  - name: "r/layoffs"
+    type: "rss"
+    url: "https://www.reddit.com/r/layoffs/.rss"
+
+  - name: "r/korea"
+    type: "rss"
+    url: "https://www.reddit.com/r/korea/.rss"
+
+  - name: "r/overemployed"
+    type: "rss"
+    url: "https://www.reddit.com/r/overemployed/.rss"
+
+  # === 채용/커리어 팟캐스트/YouTube ===
+  - name: "Think Fast Talk Smart"
+    type: "rss"
+    url: "https://feeds.simplecast.com/UpKJNtCm"
+
+  - name: "Hiring On All Cylinders"
+    type: "rss"
+    url: "https://feeds.transistor.fm/hiring-on-all-cylinders"
+
+  # === 글로벌 고용 데이터/연구 ===
+  - name: "LinkedIn Talent Blog"
+    type: "rss"
+    url: "https://www.linkedin.com/blog/talent/feed"
+
+  - name: "Glassdoor Blog"
+    type: "rss"
+    url: "https://www.glassdoor.com/blog/feed/"
+
+  - name: "SHRM HR Today"
+    type: "rss"
+    url: "https://www.shrm.org/rss/pages/rss.aspx"
+
+  - name: "McKinsey Future of Work"
+    type: "rss"
+    url: "https://www.mckinsey.com/featured-insights/future-of-work/rss.xml"
 
 entities:
   - name: "Company"
