@@ -1,0 +1,44 @@
+{
+  "date": "2026-04-01",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 12,
+  "matched_count": 126,
+  "top_entities": [
+    {
+      "name": "Industry",
+      "count": 102
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 80
+    },
+    {
+      "name": "JobTitle",
+      "count": 55
+    },
+    {
+      "name": "TechStack",
+      "count": 23
+    },
+    {
+      "name": "Company",
+      "count": 10
+    }
+  ],
+  "sources": {
+    "JobPost": 30,
+    "매일경제 취업": 19,
+    "r/layoffs": 18,
+    "r/careeradvice": 21,
+    "r/jobs": 18,
+    "r/cscareerquestions": 15,
+    "한국경제": 30,
+    "r/recruitinghell": 19,
+    "r/overemployed": 16,
+    "r/korea": 5,
+    "HR Dive": 6,
+    "한겨레 경제": 3
+  },
+  "generated_at": "2026-04-01T14:55:03.059395+09:00"
+}
