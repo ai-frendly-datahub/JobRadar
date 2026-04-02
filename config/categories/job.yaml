@@ -48,33 +48,34 @@ sources:
     url: "https://hrexecutive.com/feed"
 
   # === Reddit 채용/커리어 커뮤니티 ===
+  # NOTE: 2026-04-02 Reddit RSS 403 차단 → reddit type으로 변환
   - name: "r/cscareerquestions"
-    type: "rss"
-    url: "https://www.reddit.com/r/cscareerquestions/.rss"
+    type: reddit
+    url: "https://www.reddit.com/r/cscareerquestions/"
 
   - name: "r/jobs"
-    type: "rss"
-    url: "https://www.reddit.com/r/jobs/.rss"
+    type: reddit
+    url: "https://www.reddit.com/r/jobs/"
 
   - name: "r/recruitinghell"
-    type: "rss"
-    url: "https://www.reddit.com/r/recruitinghell/.rss"
+    type: reddit
+    url: "https://www.reddit.com/r/recruitinghell/"
 
   - name: "r/careeradvice"
-    type: "rss"
-    url: "https://www.reddit.com/r/careeradvice/.rss"
+    type: reddit
+    url: "https://www.reddit.com/r/careeradvice/"
 
   - name: "r/layoffs"
-    type: "rss"
-    url: "https://www.reddit.com/r/layoffs/.rss"
+    type: reddit
+    url: "https://www.reddit.com/r/layoffs/"
 
   - name: "r/korea"
-    type: "rss"
-    url: "https://www.reddit.com/r/korea/.rss"
+    type: reddit
+    url: "https://www.reddit.com/r/korea/"
 
   - name: "r/overemployed"
-    type: "rss"
-    url: "https://www.reddit.com/r/overemployed/.rss"
+    type: reddit
+    url: "https://www.reddit.com/r/overemployed/"
 
   # === 채용/커리어 팟캐스트/YouTube ===
   - name: "Think Fast Talk Smart"
