@@ -2,20 +2,20 @@
   "date": "2026-04-02",
   "category": "job",
   "article_count": 200,
-  "source_count": 13,
-  "matched_count": 89,
+  "source_count": 12,
+  "matched_count": 82,
   "top_entities": [
     {
       "name": "Industry",
-      "count": 55
+      "count": 48
     },
     {
       "name": "EmploymentTrend",
-      "count": 47
+      "count": 44
     },
     {
       "name": "JobTitle",
-      "count": 31
+      "count": 28
     },
     {
       "name": "Company",
@@ -28,18 +28,17 @@
   ],
   "sources": {
     "JobPost": 60,
-    "매일경제 취업": 36,
-    "한국경제": 48,
+    "매일경제 취업": 37,
+    "한국경제": 52,
     "HR Dive": 5,
     "HR Executive": 7,
     "HR Bartender": 1,
     "r/layoffs": 10,
     "r/careeradvice": 10,
-    "r/jobs": 8,
-    "r/cscareerquestions": 8,
-    "r/recruitinghell": 4,
-    "r/overemployed": 2,
-    "r/korea": 1
+    "r/jobs": 7,
+    "r/cscareerquestions": 6,
+    "r/recruitinghell": 3,
+    "r/overemployed": 2
   },
-  "generated_at": "2026-04-02T14:32:06.730280+09:00"
+  "generated_at": "2026-04-02T14:41:16.001565+09:00"
 }
