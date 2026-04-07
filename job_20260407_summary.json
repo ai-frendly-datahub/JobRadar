@@ -1,0 +1,33 @@
+{
+  "date": "2026-04-07",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 5,
+  "matched_count": 78,
+  "top_entities": [
+    {
+      "name": "Industry",
+      "count": 37
+    },
+    {
+      "name": "Company",
+      "count": 30
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 24
+    },
+    {
+      "name": "JobTitle",
+      "count": 16
+    }
+  ],
+  "sources": {
+    "JobPost": 60,
+    "한국경제": 62,
+    "매일경제 취업": 67,
+    "HR Dive": 6,
+    "HR Executive": 5
+  },
+  "generated_at": "2026-04-07T14:46:27.833644+09:00"
+}
