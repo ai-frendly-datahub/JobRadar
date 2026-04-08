@@ -11,86 +11,181 @@ sources:
   - name: "매일경제 취업"
     type: "rss"
     url: "https://www.mk.co.kr/rss/30100041/"
+    language: "ko"
+    country: "KR"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   - name: "RecruitingDaily"
     type: "rss"
     url: "https://recruitingdaily.com/feed/"
+    language: "en"
+    country: "US"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   - name: "서울경제"
     type: "rss"
     url: "https://www.sedaily.com/RSS/Economy"
+    language: "ko"
+    country: "KR"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   - name: "한국경제"
     type: "rss"
     url: "https://www.hankyung.com/feed/economy"
+    language: "ko"
+    country: "KR"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   - name: "WorkLife"
     type: "rss"
     url: "https://www.worklife.news/feed/"
+    language: "en"
+    country: "US"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   - name: "HR Bartender"
     type: "rss"
     url: "https://www.hrbartender.com/feed/"
+    language: "en"
+    country: "US"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   # === 글로벌 고용/채용 전문 매체 ===
   # Indeed Hiring Lab - 글로벌 고용 시장 분석/트렌드
   - name: "Indeed Hiring Lab"
     type: "rss"
     url: "https://www.hiringlab.org/feed/"
+    language: "en"
+    country: "US"
+    trust_tier: "T2_institutional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   # HR Dive - HR/채용/인재관리 뉴스
   - name: "HR Dive"
     type: "rss"
     url: "https://www.hrdive.com/feeds/news"
+    language: "en"
+    country: "US"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   # HR Executive - HR 리더십/보상/채용 전략
   - name: "HR Executive"
     type: "rss"
     url: "https://hrexecutive.com/feed"
+    language: "en"
+    country: "US"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   # === Reddit 채용/커리어 커뮤니티 ===
   # NOTE: 2026-04-02 Reddit RSS 403 차단 → reddit type으로 변환
   - name: "r/cscareerquestions"
     type: reddit
     url: "https://www.reddit.com/r/cscareerquestions/"
+    language: "en"
+    country: "US"
+    trust_tier: "T4_community"
+    collection_tier: "C3_reddit"
+    content_type: "community"
 
   - name: "r/jobs"
     type: reddit
     url: "https://www.reddit.com/r/jobs/"
+    language: "en"
+    country: "US"
+    trust_tier: "T4_community"
+    collection_tier: "C3_reddit"
+    content_type: "community"
 
   - name: "r/recruitinghell"
     type: reddit
     url: "https://www.reddit.com/r/recruitinghell/"
+    language: "en"
+    country: "US"
+    trust_tier: "T4_community"
+    collection_tier: "C3_reddit"
+    content_type: "community"
 
   - name: "r/careeradvice"
     type: reddit
     url: "https://www.reddit.com/r/careeradvice/"
+    language: "en"
+    country: "US"
+    trust_tier: "T4_community"
+    collection_tier: "C3_reddit"
+    content_type: "community"
 
   - name: "r/layoffs"
     type: reddit
     url: "https://www.reddit.com/r/layoffs/"
+    language: "en"
+    country: "US"
+    trust_tier: "T4_community"
+    collection_tier: "C3_reddit"
+    content_type: "community"
 
   - name: "r/korea"
     type: reddit
     url: "https://www.reddit.com/r/korea/"
+    language: "en"
+    country: "KR"
+    trust_tier: "T4_community"
+    collection_tier: "C3_reddit"
+    content_type: "community"
 
   - name: "r/overemployed"
     type: reddit
     url: "https://www.reddit.com/r/overemployed/"
+    language: "en"
+    country: "US"
+    trust_tier: "T4_community"
+    collection_tier: "C3_reddit"
+    content_type: "community"
 
   # === 채용/커리어 팟캐스트/YouTube ===
   - name: "Think Fast Talk Smart"
     type: "rss"
     url: "https://feeds.simplecast.com/UpKJNtCm"
+    language: "en"
+    country: "US"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   - name: "Hiring On All Cylinders"
     type: "rss"
     url: "https://feeds.transistor.fm/hiring-on-all-cylinders"
+    language: "en"
+    country: "US"
+    trust_tier: "T3_professional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   # === 글로벌 고용 데이터/연구 ===
   - name: "LinkedIn Talent Blog"
     type: "rss"
     url: "https://www.linkedin.com/blog/talent/feed"
+    language: "en"
+    country: "US"
+    trust_tier: "T2_institutional"
+    collection_tier: "C1_rss"
+    content_type: "news"
 
   # NOTE: 2026-04-06 RSS 403 오류로 비활성화
   # - name: "Glassdoor Blog"
