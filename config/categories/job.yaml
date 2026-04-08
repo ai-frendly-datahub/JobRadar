@@ -3,9 +3,10 @@ display_name: "채용 레이더"
 
 sources:
   # === 국내 경제 뉴스 (취업/고용 관련 기사 포함) ===
-  - name: "JobPost"
-    type: "rss"
-    url: "https://www.job-post.co.kr/rss/allArticle.xml"
+  # NOTE: 2026-04-06 RSS 404 오류로 비활성화
+  # - name: "JobPost"
+  #   type: "rss"
+  #   url: "https://www.job-post.co.kr/rss/allArticle.xml"
 
   - name: "매일경제 취업"
     type: "rss"
@@ -91,17 +92,20 @@ sources:
     type: "rss"
     url: "https://www.linkedin.com/blog/talent/feed"
 
-  - name: "Glassdoor Blog"
-    type: "rss"
-    url: "https://www.glassdoor.com/blog/feed/"
+  # NOTE: 2026-04-06 RSS 403 오류로 비활성화
+  # - name: "Glassdoor Blog"
+  #   type: "rss"
+  #   url: "https://www.glassdoor.com/blog/feed/"
 
-  - name: "SHRM HR Today"
-    type: "rss"
-    url: "https://www.shrm.org/rss/pages/rss.aspx"
+  # NOTE: 2026-04-06 RSS 404 오류로 비활성화
+  # - name: "SHRM HR Today"
+  #   type: "rss"
+  #   url: "https://www.shrm.org/rss/pages/rss.aspx"
 
-  - name: "McKinsey Future of Work"
-    type: "rss"
-    url: "https://www.mckinsey.com/featured-insights/future-of-work/rss.xml"
+  # NOTE: 2026-04-06 RSS 404 오류로 비활성화
+  # - name: "McKinsey Future of Work"
+  #   type: "rss"
+  #   url: "https://www.mckinsey.com/featured-insights/future-of-work/rss.xml"
 
 entities:
   - name: "Company"
