@@ -1,0 +1,46 @@
+{
+  "date": "2026-04-10",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 6,
+  "matched_count": 110,
+  "top_entities": [
+    {
+      "name": "Industry",
+      "count": 96
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 29
+    },
+    {
+      "name": "JobTitle",
+      "count": 29
+    },
+    {
+      "name": "Company",
+      "count": 23
+    },
+    {
+      "name": "JobGeneral",
+      "count": 9
+    },
+    {
+      "name": "EmploymentType",
+      "count": 3
+    },
+    {
+      "name": "TechStack",
+      "count": 1
+    }
+  ],
+  "sources": {
+    "한국경제": 96,
+    "매일경제 취업": 75,
+    "HR Dive": 15,
+    "HR Executive": 12,
+    "Indeed Hiring Lab": 1,
+    "HR Bartender": 1
+  },
+  "generated_at": "2026-04-10T14:57:08.520851+09:00"
+}
