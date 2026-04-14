@@ -7,35 +7,35 @@
   "top_entities": [
     {
       "name": "Industry",
-      "count": 86
-    },
-    {
-      "name": "JobTitle",
-      "count": 33
+      "count": 97
     },
     {
       "name": "EmploymentTrend",
-      "count": 25
+      "count": 18
     },
     {
       "name": "Company",
-      "count": 16
+      "count": 17
+    },
+    {
+      "name": "JobTitle",
+      "count": 13
     },
     {
       "name": "JobGeneral",
-      "count": 9
+      "count": 12
     },
     {
       "name": "EmploymentType",
-      "count": 3
+      "count": 6
     }
   ],
   "sources": {
-    "매일경제 취업": 72,
-    "한국경제": 100,
-    "Indeed Hiring Lab": 1,
-    "HR Dive": 12,
-    "HR Executive": 15
+    "HR Executive": 7,
+    "한국경제": 106,
+    "매일경제 취업": 77,
+    "Indeed Hiring Lab": 2,
+    "HR Dive": 8
   },
-  "generated_at": "2026-04-14T15:00:03.262468+09:00"
+  "generated_at": "2026-04-14T20:54:44.726218+09:00"
 }
