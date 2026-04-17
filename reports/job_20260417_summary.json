@@ -1,0 +1,44 @@
+{
+  "date": "2026-04-17",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 4,
+  "matched_count": 111,
+  "top_entities": [
+    {
+      "name": "Industry",
+      "count": 77
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 45
+    },
+    {
+      "name": "Company",
+      "count": 26
+    },
+    {
+      "name": "JobTitle",
+      "count": 19
+    },
+    {
+      "name": "JobGeneral",
+      "count": 8
+    },
+    {
+      "name": "EmploymentType",
+      "count": 4
+    },
+    {
+      "name": "TechStack",
+      "count": 1
+    }
+  ],
+  "sources": {
+    "매일경제 취업": 90,
+    "한국경제": 82,
+    "HR Dive": 18,
+    "HR Executive": 10
+  },
+  "generated_at": "2026-04-17T15:02:29.796432+09:00"
+}
