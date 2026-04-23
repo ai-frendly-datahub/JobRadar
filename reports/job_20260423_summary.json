@@ -1,0 +1,41 @@
+{
+  "date": "2026-04-23",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 5,
+  "matched_count": 101,
+  "top_entities": [
+    {
+      "name": "Industry",
+      "count": 83
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 39
+    },
+    {
+      "name": "JobTitle",
+      "count": 26
+    },
+    {
+      "name": "Company",
+      "count": 23
+    },
+    {
+      "name": "JobGeneral",
+      "count": 10
+    },
+    {
+      "name": "EmploymentType",
+      "count": 1
+    }
+  ],
+  "sources": {
+    "매일경제 취업": 80,
+    "한국경제": 90,
+    "HR Dive": 16,
+    "HR Executive": 13,
+    "HR Bartender": 1
+  },
+  "generated_at": "2026-04-23T15:05:04.361222+09:00"
+}
