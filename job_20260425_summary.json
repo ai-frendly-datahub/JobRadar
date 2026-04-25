@@ -1,0 +1,42 @@
+{
+  "date": "2026-04-25",
+  "category": "job",
+  "article_count": 200,
+  "source_count": 6,
+  "matched_count": 106,
+  "top_entities": [
+    {
+      "name": "Industry",
+      "count": 87
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 32
+    },
+    {
+      "name": "JobTitle",
+      "count": 27
+    },
+    {
+      "name": "Company",
+      "count": 26
+    },
+    {
+      "name": "JobGeneral",
+      "count": 11
+    },
+    {
+      "name": "EmploymentType",
+      "count": 1
+    }
+  ],
+  "sources": {
+    "한국경제": 90,
+    "매일경제 취업": 76,
+    "HR Dive": 16,
+    "HR Executive": 16,
+    "Indeed Hiring Lab": 1,
+    "HR Bartender": 1
+  },
+  "generated_at": "2026-04-25T14:47:19.468593+09:00"
+}
