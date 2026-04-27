@@ -1,0 +1,2104 @@
+{
+  "category": "job",
+  "generated_at": "2026-04-26T18:48:03.501288+00:00",
+  "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
+  "summary": {
+    "total_sources": 21,
+    "enabled_sources": 15,
+    "tracked_sources": 3,
+    "fresh_sources": 3,
+    "stale_sources": 0,
+    "missing_sources": 0,
+    "missing_event_sources": 0,
+    "unknown_event_date_sources": 0,
+    "not_tracked_sources": 12,
+    "skipped_disabled_sources": 6,
+    "collection_error_count": 0,
+    "official_job_posting_events": 17,
+    "job_board_posting_events": 0,
+    "labor_market_signal_events": 3,
+    "skill_demand_events": 0,
+    "salary_signal_events": 0,
+    "job_signal_event_count": 20,
+    "official_or_operational_event_count": 17,
+    "community_proxy_event_count": 0,
+    "complete_canonical_key_count": 13,
+    "proxy_canonical_key_count": 7,
+    "missing_canonical_key_count": 0,
+    "company_present_count": 17,
+    "job_title_present_count": 10,
+    "location_present_count": 20,
+    "salary_range_present_count": 0,
+    "skill_present_count": 4,
+    "demand_count_present_count": 0,
+    "event_required_field_gap_count": 6,
+    "tracked_source_gap_count": 0,
+    "missing_event_model_count": 3,
+    "source_backlog_candidate_count": 4,
+    "daily_review_item_count": 20
+  },
+  "sources": [
+    {
+      "source": "매일경제 취업",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 11,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "RecruitingDaily",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "recruiting_ops"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Endpoint is reachable but latest parsed feed entries are from 2024, so it no longer satisfies current labor-market freshness.",
+      "reenable_gate": "Re-enable after the feed resumes current dated recruiting/labor-market posts.",
+      "errors": []
+    },
+    {
+      "source": "서울경제",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Non-tracked broad economy feed is currently disabled by crawl-health checks.",
+      "reenable_gate": "Re-enable only if it is promoted to a tracked job-specific signal or crawl health recovers.",
+      "errors": []
+    },
+    {
+      "source": "한국경제",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 2,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "WorkLife",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "workplace",
+        "labor_market"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed is healthy but latest entries are stale for current job-market tracking.",
+      "reenable_gate": "Re-enable after the feed publishes current workplace/labor-market posts.",
+      "errors": []
+    },
+    {
+      "source": "HR Bartender",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "workplace",
+        "talent_strategy"
+      ],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 1,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "tracked": true,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 14.0,
+      "status": "fresh",
+      "article_count": 3,
+      "event_count": 3,
+      "latest_event_at": "2026-04-23T00:00:00+00:00",
+      "age_days": 3.78,
+      "latest_title": "For New Grads Looking for Work, the Struggle Is Real – But Not for All",
+      "latest_url": "https://www.hiringlab.org/2026/04/23/new-grads-looking-for-work-the-struggle-is-real/",
+      "latest_canonical_key": "labor_market:hiring:us",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 24,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 21,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/cscareerquestions",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 21,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/jobs",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 20,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/recruitinghell",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 18,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/careeradvice",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 21,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/layoffs",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 18,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/korea",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 7,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/overemployed",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 15,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Think Fast Talk Smart",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "workplace"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 404 during source audit.",
+      "reenable_gate": "Replace with a current feed URL before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "Hiring On All Cylinders",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "recruiting_ops",
+        "talent_strategy"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 404 during source audit.",
+      "reenable_gate": "Replace with a current feed URL before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "LinkedIn Talent Blog",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T1_authoritative",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "skill_trend",
+        "official_hiring_signal"
+      ],
+      "tracked": false,
+      "event_model": "skill_demand",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 400 during unauthenticated source audit.",
+      "reenable_gate": "Replace with a stable public feed or authenticated/API-backed source before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "enabled": true,
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "tracked": true,
+      "event_model": "official_job_posting",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 16,
+      "event_count": 16,
+      "latest_event_at": "2026-04-25T11:23:29.887524+00:00",
+      "age_days": 1.31,
+      "latest_title": "[공동체] 카카오모빌리티 자율주행 HW 엔지니어 (R&D)영입마감일영입종료시근무지직군 태그회사정보카카오모빌리티직원유형정규직",
+      "latest_url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "latest_canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Samsung Careers",
+      "source_type": "browser",
+      "enabled": true,
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "enterprise_hiring"
+      ],
+      "tracked": true,
+      "event_model": "official_job_posting",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 1,
+      "event_count": 1,
+      "latest_event_at": "2026-04-25T11:23:35.856254+00:00",
+      "age_days": 1.31,
+      "latest_title": "SAMSUNG CAREERS",
+      "latest_url": "https://www.samsungcareers.com/insight/find",
+      "latest_canonical_key": "job_posting:employer:삼성",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    }
+  ],
+  "events": [
+    {
+      "source": "Samsung Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "enterprise_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "SAMSUNG CAREERS",
+      "url": "https://www.samsungcareers.com/insight/find",
+      "source_url": "https://www.samsungcareers.com/insight/find",
+      "event_at": "2026-04-25T11:23:35.856254+00:00",
+      "matched_entities": {
+        "Company": [
+          "삼성"
+        ],
+        "EmploymentTrend": [
+          "채용",
+          "채용공고"
+        ],
+        "JobGeneral": [
+          "커리어"
+        ],
+        "SourceSignal": [
+          "employer",
+          "enterprise_hiring",
+          "official_job_posting"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "삼성",
+      "company_name": "삼성",
+      "job_title": "",
+      "role": "채용",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "채용",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "enterprise_hiring",
+        "official_job_posting"
+      ],
+      "canonical_key": "job_posting:employer:삼성",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오모빌리티 자율주행 HW 엔지니어 (R&D)영입마감일영입종료시근무지직군 태그회사정보카카오모빌리티직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887524+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "엔지니어"
+        ],
+        "Industry": [
+          "모빌리티"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "엔지니어",
+      "role": "엔지니어",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:c7e60305b5c1:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "서비스 안정성 기획 및 운영 담당자 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14326?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14326?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887471+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "Industry": [
+          "서비스"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "카카오톡 SRE(Site Reliability Engineer) 엔지니어 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14249?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14249?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887440+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "엔지니어",
+          "sre",
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "엔지니어",
+      "role": "엔지니어",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:c7e60305b5c1:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "추천 시스템 연구/개발 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14287?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14287?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887415+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "Multimodal LLM Research Engineer (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14402?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14402?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887399+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "TechStack": [
+          "llm"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "llm"
+      ],
+      "skill": "llm",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오페이 서버 개발자 - 결제 서비스영입마감일영입종료시근무지직군 태그회사정보카카오페이직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4685?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4685?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887383+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "개발자"
+        ],
+        "Industry": [
+          "서비스"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "EmploymentTrend": [
+          "이직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "개발자",
+      "role": "개발자",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "이직",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:개발자:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:aa087055c033:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오헬스케어 Data Engineer(Healthcare)영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4689?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4689?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887367+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "Industry": [
+          "헬스케어",
+          "healthcare"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "광고추천 데이터 사이언스, 머신러닝 전문가 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14148?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14148?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887351+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "TechStack": [
+          "머신러닝"
+        ],
+        "Industry": [
+          "광고"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "머신러닝"
+      ],
+      "skill": "머신러닝",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4697?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4697?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887335+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "Industry": [
+          "보험"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "LLM Research Engineer (신입/경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14403?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14403?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887315+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "신입",
+          "engineer"
+        ],
+        "TechStack": [
+          "llm"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "신입",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "신입",
+      "role": "신입",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "llm"
+      ],
+      "skill": "llm",
+      "employment_type": [
+        "정규직",
+        "신입",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:신입:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:52e7f7035384:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오헬스케어 AI Native EHR 개발영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4699?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4699?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887295+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "Industry": [
+          "헬스케어"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "Machine Learning Engineer (Search) (신입)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14319?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14319?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887272+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "신입",
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "신입"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "신입",
+      "role": "신입",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "신입"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:신입:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:52e7f7035384:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "보이스톡 / 페이스톡 Server 엔지니어 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14172?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14172?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887249+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "엔지니어"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "엔지니어",
+      "role": "엔지니어",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:c7e60305b5c1:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "Machine Learning Engineer (Search) (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14318?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14318?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887221+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "MLOps Engineer (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14039?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14039?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-25T11:23:29.887172+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260425",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "For New Grads Looking for Work, the Struggle Is Real – But Not for All",
+      "url": "https://www.hiringlab.org/2026/04/23/new-grads-looking-for-work-the-struggle-is-real/",
+      "source_url": "https://www.hiringlab.org/2026/04/23/new-grads-looking-for-work-the-struggle-is-real/",
+      "event_at": "2026-04-23T00:00:00+00:00",
+      "matched_entities": {
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260423",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "카카오 영입",
+      "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
+      "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
+      "event_at": "2026-04-14T11:24:33.554500+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "TechStack": [
+          "javascript"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-part-technology",
+      "company_name": "ALL&part=TECHNOLOGY",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "javascript"
+      ],
+      "skill": "javascript",
+      "employment_type": [],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:00539721ef51:20260414",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Workers Want Training but Employers Don’t Always Deliver. Can Policy Help?",
+      "url": "https://www.hiringlab.org/2026/04/14/workers-want-training-but-employers-dont-always-deliver/",
+      "source_url": "https://www.hiringlab.org/2026/04/14/workers-want-training-but-employers-dont-always-deliver/",
+      "event_at": "2026-04-13T21:00:00+00:00",
+      "matched_entities": {
+        "Industry": [
+          "it"
+        ],
+        "EmploymentType": [
+          "permanent"
+        ],
+        "EmploymentTrend": [
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "permanent"
+      ],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260413",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "What Goes Up, Must Come Down: How the Labor Market Is Emerging From the Long Shadow of the Pandemic",
+      "url": "https://www.hiringlab.org/2026/04/13/how-the-labor-market-is-emerging-from-the-long-shadow-of-the-pandemic/",
+      "source_url": "https://www.hiringlab.org/2026/04/13/how-the-labor-market-is-emerging-from-the-long-shadow-of-the-pandemic/",
+      "event_at": "2026-04-13T12:40:49+00:00",
+      "matched_entities": {
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260413",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    }
+  ],
+  "daily_review_items": [
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Samsung Careers",
+      "title": "SAMSUNG CAREERS",
+      "canonical_key": "job_posting:employer:삼성",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "서비스 안정성 기획 및 운영 담당자 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "서비스 안정성 기획 및 운영 담당자 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "추천 시스템 연구/개발 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "추천 시스템 연구/개발 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "광고추천 데이터 사이언스, 머신러닝 전문가 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "광고추천 데이터 사이언스, 머신러닝 전문가 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오헬스케어 AI Native EHR 개발영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오헬스케어 AI Native EHR 개발영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "카카오 영입",
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "카카오 영입",
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "job_board_posting"
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "skill_demand"
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "salary_signal"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Greenhouse public job boards",
+      "signal_type": "official_job_posting",
+      "activation_gate": "board token mapping, company canonicalization, and duplicate posting handling"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Lever public job boards",
+      "signal_type": "official_job_posting",
+      "activation_gate": "company canonicalization, location normalization, and closing date policy"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Job board skill demand index",
+      "signal_type": "skill_demand",
+      "activation_gate": "ToS/API review, repost handling, and skill alias map"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Salary survey and labor market feeds",
+      "signal_type": "salary_signal",
+      "activation_gate": "role taxonomy, region mapping, and sample-size caveat retention"
+    }
+  ],
+  "source_backlog": {
+    "operational_candidates": [
+      {
+        "id": "greenhouse_public_jobs",
+        "name": "Greenhouse public job boards",
+        "signal_type": "official_job_posting",
+        "activation_gate": "board token mapping, company canonicalization, and duplicate posting handling"
+      },
+      {
+        "id": "lever_public_jobs",
+        "name": "Lever public job boards",
+        "signal_type": "official_job_posting",
+        "activation_gate": "company canonicalization, location normalization, and closing date policy"
+      },
+      {
+        "id": "job_board_skill_index",
+        "name": "Job board skill demand index",
+        "signal_type": "skill_demand",
+        "activation_gate": "ToS/API review, repost handling, and skill alias map"
+      },
+      {
+        "id": "salary_survey_feeds",
+        "name": "Salary survey and labor market feeds",
+        "signal_type": "salary_signal",
+        "activation_gate": "role taxonomy, region mapping, and sample-size caveat retention"
+      }
+    ]
+  },
+  "errors": []
+}

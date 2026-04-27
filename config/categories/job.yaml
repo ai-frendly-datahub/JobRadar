@@ -1,608 +1,772 @@
-category_name: "job"
-display_name: "채용 레이더"
-
+category_name: job
+display_name: 채용 레이더
+data_quality:
+  priority: P2
+  primary_motion: conversion
+  weakest_dimension: authority
+  quality_outputs:
+    freshness_report: reports/job_quality.json
+    dated_freshness_report_pattern: reports/job_YYYYMMDD_quality.json
+    tracked_event_models:
+    - official_job_posting
+    - job_board_posting
+    - labor_market_signal
+    - salary_signal
+    - skill_demand
+  event_models:
+    official_job_posting:
+      date_fields:
+      - posted_date
+      - closing_date
+      - collected_at
+      required_fields:
+      - company_id
+      - job_title
+      - location
+      - source_url
+    job_board_posting:
+      date_fields:
+      - posted_date
+      - closing_date
+      - collected_at
+      required_fields:
+      - company_name
+      - job_title
+      - location
+      - source_url
+    labor_market_signal:
+      date_fields:
+      - observed_at
+      - collected_at
+      required_fields:
+      - topic
+      - source_url
+      - source_name
+    salary_signal:
+      date_fields:
+      - metric_date
+      - collected_at
+      required_fields:
+      - role
+      - region
+      - salary_range
+      - source_url
+    skill_demand:
+      date_fields:
+      - posted_date
+      - collected_at
+      required_fields:
+      - skill
+      - role
+      - demand_count
+  canonical_keys:
+    job_posting:
+    - company_name
+    - job_title
+    - location
+    - posted_date
+    - source_url
+    labor_market_skill:
+    - skill
+    - role_family
+    - region
+  freshness_sla:
+    official_job_posting_days: 3
+    job_board_posting_days: 3
+    labor_market_signal_days: 7
+    salary_signal_days: 30
+    skill_demand_days: 7
+  quality_gates:
+  - 회사명, 직무명, 지역을 canonical key로 정규화한다
+  - 중복 공고와 repost를 구분한다
+  - 게시일, 마감일, 수집일을 별도 필드로 유지한다
+  - 급여/스킬 트렌드는 출처와 기준 기간을 함께 기록한다
+  - 광범위 경제/커뮤니티 소스는 직무·고용·스킬 신호가 있을 때만 리포트에 반영한다
+source_backlog:
+  operational_candidates:
+  - id: greenhouse_public_jobs
+    name: Greenhouse public job boards
+    signal_type: official_job_posting
+    activation_gate: board token mapping, company canonicalization, and duplicate
+      posting handling
+  - id: lever_public_jobs
+    name: Lever public job boards
+    signal_type: official_job_posting
+    activation_gate: company canonicalization, location normalization, and closing
+      date policy
+  - id: job_board_skill_index
+    name: Job board skill demand index
+    signal_type: skill_demand
+    activation_gate: ToS/API review, repost handling, and skill alias map
+  - id: salary_survey_feeds
+    name: Salary survey and labor market feeds
+    signal_type: salary_signal
+    activation_gate: role taxonomy, region mapping, and sample-size caveat retention
 sources:
-  # === 국내 경제 뉴스 (취업/고용 관련 기사 포함) ===
-  # NOTE: 2026-04-06 RSS 404 오류로 비활성화
-  # - name: "JobPost"
-  #   type: "rss"
-  #   url: "https://www.job-post.co.kr/rss/allArticle.xml"
-
-  - name: "매일경제 취업"
-    type: "rss"
-    url: "https://www.mk.co.kr/rss/30100041/"
-    language: "ko"
-    country: "KR"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  - name: "RecruitingDaily"
-    type: "rss"
-    url: "https://recruitingdaily.com/feed/"
-    language: "en"
-    country: "US"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  - name: "서울경제"
-    type: "rss"
-    url: "https://www.sedaily.com/RSS/Economy"
-    language: "ko"
-    country: "KR"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  - name: "한국경제"
-    type: "rss"
-    url: "https://www.hankyung.com/feed/economy"
-    language: "ko"
-    country: "KR"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  - name: "WorkLife"
-    type: "rss"
-    url: "https://www.worklife.news/feed/"
-    language: "en"
-    country: "US"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  - name: "HR Bartender"
-    type: "rss"
-    url: "https://www.hrbartender.com/feed/"
-    language: "en"
-    country: "US"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  # === 글로벌 고용/채용 전문 매체 ===
-  # Indeed Hiring Lab - 글로벌 고용 시장 분석/트렌드
-  - name: "Indeed Hiring Lab"
-    type: "rss"
-    url: "https://www.hiringlab.org/feed/"
-    language: "en"
-    country: "US"
-    trust_tier: "T2_institutional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  # HR Dive - HR/채용/인재관리 뉴스
-  - name: "HR Dive"
-    type: "rss"
-    url: "https://www.hrdive.com/feeds/news"
-    language: "en"
-    country: "US"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  # HR Executive - HR 리더십/보상/채용 전략
-  - name: "HR Executive"
-    type: "rss"
-    url: "https://hrexecutive.com/feed"
-    language: "en"
-    country: "US"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  # === Reddit 채용/커리어 커뮤니티 ===
-  # NOTE: 2026-04-02 Reddit RSS 403 차단 → reddit type으로 변환
-  - name: "r/cscareerquestions"
-    type: reddit
-    url: "https://www.reddit.com/r/cscareerquestions/"
-    language: "en"
-    country: "US"
-    trust_tier: "T4_community"
-    collection_tier: "C3_reddit"
-    content_type: "community"
-
-  - name: "r/jobs"
-    type: reddit
-    url: "https://www.reddit.com/r/jobs/"
-    language: "en"
-    country: "US"
-    trust_tier: "T4_community"
-    collection_tier: "C3_reddit"
-    content_type: "community"
-
-  - name: "r/recruitinghell"
-    type: reddit
-    url: "https://www.reddit.com/r/recruitinghell/"
-    language: "en"
-    country: "US"
-    trust_tier: "T4_community"
-    collection_tier: "C3_reddit"
-    content_type: "community"
-
-  - name: "r/careeradvice"
-    type: reddit
-    url: "https://www.reddit.com/r/careeradvice/"
-    language: "en"
-    country: "US"
-    trust_tier: "T4_community"
-    collection_tier: "C3_reddit"
-    content_type: "community"
-
-  - name: "r/layoffs"
-    type: reddit
-    url: "https://www.reddit.com/r/layoffs/"
-    language: "en"
-    country: "US"
-    trust_tier: "T4_community"
-    collection_tier: "C3_reddit"
-    content_type: "community"
-
-  - name: "r/korea"
-    type: reddit
-    url: "https://www.reddit.com/r/korea/"
-    language: "en"
-    country: "KR"
-    trust_tier: "T4_community"
-    collection_tier: "C3_reddit"
-    content_type: "community"
-
-  - name: "r/overemployed"
-    type: reddit
-    url: "https://www.reddit.com/r/overemployed/"
-    language: "en"
-    country: "US"
-    trust_tier: "T4_community"
-    collection_tier: "C3_reddit"
-    content_type: "community"
-
-  # === 채용/커리어 팟캐스트/YouTube ===
-  - name: "Think Fast Talk Smart"
-    type: "rss"
-    url: "https://feeds.simplecast.com/UpKJNtCm"
-    language: "en"
-    country: "US"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  - name: "Hiring On All Cylinders"
-    type: "rss"
-    url: "https://feeds.transistor.fm/hiring-on-all-cylinders"
-    language: "en"
-    country: "US"
-    trust_tier: "T3_professional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  # === 글로벌 고용 데이터/연구 ===
-  - name: "LinkedIn Talent Blog"
-    type: "rss"
-    url: "https://www.linkedin.com/blog/talent/feed"
-    language: "en"
-    country: "US"
-    trust_tier: "T2_institutional"
-    collection_tier: "C1_rss"
-    content_type: "news"
-
-  # NOTE: 2026-04-06 RSS 403 오류로 비활성화
-  # - name: "Glassdoor Blog"
-  #   type: "rss"
-  #   url: "https://www.glassdoor.com/blog/feed/"
-
-  # NOTE: 2026-04-06 RSS 404 오류로 비활성화
-  # - name: "SHRM HR Today"
-  #   type: "rss"
-  #   url: "https://www.shrm.org/rss/pages/rss.aspx"
-
-  # NOTE: 2026-04-06 RSS 404 오류로 비활성화
-  # - name: "McKinsey Future of Work"
-  #   type: "rss"
-  #   url: "https://www.mckinsey.com/featured-insights/future-of-work/rss.xml"
-
+- name: 매일경제 취업
+  type: rss
+  url: https://www.mk.co.kr/rss/30100041/
+  language: ko
+  country: KR
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  config:
+    event_model: editorial_coverage
+- name: RecruitingDaily
+  type: rss
+  url: https://recruitingdaily.com/feed/
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: trade_media
+  info_purpose:
+  - labor_market
+  - recruiting_ops
+  config:
+    skip_reason: Endpoint is reachable but latest parsed feed entries are from 2024,
+      so it no longer satisfies current labor-market freshness.
+    reenable_gate: Re-enable after the feed resumes current dated recruiting/labor-market
+      posts.
+- name: 서울경제
+  type: rss
+  url: https://www.sedaily.com/RSS/Economy
+  enabled: false
+  language: ko
+  country: KR
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  config:
+    skip_reason: Non-tracked broad economy feed is currently disabled by crawl-health
+      checks.
+    reenable_gate: Re-enable only if it is promoted to a tracked job-specific signal
+      or crawl health recovers.
+- name: 한국경제
+  type: rss
+  url: https://www.hankyung.com/feed/economy
+  language: ko
+  country: KR
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  config:
+    event_model: editorial_coverage
+- name: WorkLife
+  type: rss
+  url: https://www.worklife.news/feed/
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: trade_media
+  info_purpose:
+  - workplace
+  - labor_market
+  config:
+    skip_reason: Feed is healthy but latest entries are stale for current job-market
+      tracking.
+    reenable_gate: Re-enable after the feed publishes current workplace/labor-market
+      posts.
+- name: HR Bartender
+  type: rss
+  url: https://www.hrbartender.com/feed/
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: expert_media
+  info_purpose:
+  - workplace
+  - talent_strategy
+  config:
+    event_model: editorial_coverage
+- name: Indeed Hiring Lab
+  type: rss
+  url: https://www.hiringlab.org/feed/
+  language: en
+  country: US
+  trust_tier: T2_institutional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: vendor_research
+  info_purpose:
+  - labor_market
+  - salary_signal
+  - skill_trend
+  notes: Official Indeed labor market research feed useful for hiring slowdown, wage,
+    and skill trend signals.
+  config:
+    event_model: labor_market_signal
+    freshness_sla_days: 14
+- name: HR Dive
+  type: rss
+  url: https://www.hrdive.com/feeds/news
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: trade_media
+  info_purpose:
+  - labor_market
+  - employment_compliance
+  - workplace
+  config:
+    event_model: editorial_coverage
+- name: HR Executive
+  type: rss
+  url: https://hrexecutive.com/feed
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: trade_media
+  info_purpose:
+  - labor_market
+  - talent_strategy
+  - workplace
+  config:
+    event_model: editorial_coverage
+- name: r/cscareerquestions
+  type: rss
+  url: https://www.reddit.com/r/cscareerquestions/.rss
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
+  config:
+    event_model: editorial_coverage
+- name: r/jobs
+  type: rss
+  url: https://www.reddit.com/r/jobs/.rss
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
+  config:
+    event_model: editorial_coverage
+- name: r/recruitinghell
+  type: rss
+  url: https://www.reddit.com/r/recruitinghell/.rss
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
+  config:
+    event_model: editorial_coverage
+- name: r/careeradvice
+  type: rss
+  url: https://www.reddit.com/r/careeradvice/.rss
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
+  config:
+    event_model: editorial_coverage
+- name: r/layoffs
+  type: rss
+  url: https://www.reddit.com/r/layoffs/.rss
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
+  config:
+    event_model: editorial_coverage
+- name: r/korea
+  type: rss
+  url: https://www.reddit.com/r/korea/.rss
+  language: en
+  country: KR
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
+  config:
+    event_model: editorial_coverage
+- name: r/overemployed
+  type: rss
+  url: https://www.reddit.com/r/overemployed/.rss
+  language: en
+  country: US
+  trust_tier: T4_community
+  collection_tier: C3_reddit
+  content_type: community
+  config:
+    event_model: editorial_coverage
+- name: Think Fast Talk Smart
+  type: rss
+  url: https://feeds.simplecast.com/UpKJNtCm
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: expert_media
+  info_purpose:
+  - workplace
+  config:
+    skip_reason: Feed endpoint returned 404 during source audit.
+    reenable_gate: Replace with a current feed URL before re-enabling.
+- name: Hiring On All Cylinders
+  type: rss
+  url: https://feeds.transistor.fm/hiring-on-all-cylinders
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T3_professional
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: expert_media
+  info_purpose:
+  - recruiting_ops
+  - talent_strategy
+  config:
+    skip_reason: Feed endpoint returned 404 during source audit.
+    reenable_gate: Replace with a current feed URL before re-enabling.
+- name: LinkedIn Talent Blog
+  type: rss
+  url: https://www.linkedin.com/blog/talent/feed
+  enabled: false
+  language: en
+  country: US
+  trust_tier: T1_authoritative
+  collection_tier: C1_rss
+  content_type: news
+  producer_role: vendor_research
+  info_purpose:
+  - labor_market
+  - skill_trend
+  - official_hiring_signal
+  notes: Official LinkedIn hiring and talent insights feed.
+  config:
+    skip_reason: Feed endpoint returned 400 during unauthenticated source audit.
+    reenable_gate: Replace with a stable public feed or authenticated/API-backed source
+      before re-enabling.
+- name: Kakao Careers
+  type: browser
+  url: https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY
+  language: ko
+  country: KR
+  trust_tier: T1_authoritative
+  collection_tier: C3_html_js
+  content_type: job_posting
+  producer_role: employer
+  info_purpose:
+  - official_job_posting
+  - tech_hiring
+  notes: Official Kakao engineering hiring board.
+  config:
+    wait_for: body
+    link_selector: a[href*='/jobs/']
+    event_model: official_job_posting
+- name: Samsung Careers
+  type: browser
+  url: https://www.samsungcareers.com/insight/find
+  language: ko
+  country: KR
+  trust_tier: T1_authoritative
+  collection_tier: C3_html_js
+  content_type: job_posting
+  producer_role: employer
+  info_purpose:
+  - official_job_posting
+  - enterprise_hiring
+  notes: Official Samsung careers and open roles page.
+  config:
+    wait_for: body
+    event_model: official_job_posting
 entities:
-  - name: "Company"
-    keywords:
-      - "삼성"
-      - "LG"
-      - "네이버"
-      - "카카오"
-      - "쿠팡"
-      - "라인"
-      - "배달의민족"
-      - "우아한형제들"
-      - "당근"
-      - "토스"
-      - "비바리퍼블리카"
-      - "SK"
-      - "현대"
-      - "Google"
-      - "Amazon"
-      - "Microsoft"
-      - "Apple"
-      - "Meta"
-      - "Tesla"
-      - "OpenAI"
-  - name: "JobTitle"
-    display_name: "직무/직책"
-    keywords:
-      # 개발직군
-      - "개발자"
-      - "엔지니어"
-      - "프로그래머"
-      - "소프트웨어 엔지니어"
-      - "풀스택"
-      - "프론트엔드"
-      - "백엔드"
-      - "DevOps"
-      - "SRE"
-      - "데이터 엔지니어"
-      - "데이터 분석가"
-      - "데이터 사이언티스트"
-      - "ML 엔지니어"
-      - "AI 엔지니어"
-      - "클라우드 엔지니어"
-      - "보안 엔지니어"
-      - "QA 엔지니어"
-      - "테스트 엔지니어"
-      - "모바일 개발자"
-      - "앱 개발자"
-      - "웹 개발자"
-      - "임베디드"
-      - "시스템 엔지니어"
-      # 디자인직군
-      - "디자이너"
-      - "UX 디자이너"
-      - "UI 디자이너"
-      - "프로덕트 디자이너"
-      - "그래픽 디자이너"
-      - "BX 디자이너"
-      # 기획/PM
-      - "기획자"
-      - "PM"
-      - "PO"
-      - "프로덕트 매니저"
-      - "프로젝트 매니저"
-      - "서비스 기획"
-      - "전략 기획"
-      # 마케팅/영업
-      - "마케터"
-      - "퍼포먼스 마케터"
-      - "그로스 해커"
-      - "콘텐츠 마케터"
-      - "브랜드 마케터"
-      - "영업"
-      - "세일즈"
-      - "어카운트 매니저"
-      # HR/경영지원
-      - "HR"
-      - "인사담당자"
-      - "채용담당자"
-      - "리크루터"
-      - "recruiter"
-      - "talent acquisition"
-      - "HRBP"
-      # 직급
-      - "인턴"
-      - "신입"
-      - "주니어"
-      - "미드레벨"
-      - "시니어"
-      - "리드"
-      - "팀장"
-      - "매니저"
-      - "이사"
-      - "임원"
-      - "CTO"
-      - "CEO"
-      - "CFO"
-      - "COO"
-      # 영문 직무
-      - "engineer"
-      - "developer"
-      - "analyst"
-      - "consultant"
-      - "manager"
-      - "director"
-      - "specialist"
-      - "coordinator"
-  - name: "TechStack"
-    display_name: "기술스택"
-    keywords:
-      # 프로그래밍 언어
-      - "Python"
-      - "파이썬"
-      - "Java"
-      - "자바"
-      - "JavaScript"
-      - "TypeScript"
-      - "Go"
-      - "Golang"
-      - "Rust"
-      - "Kotlin"
-      - "Swift"
-      - "C++"
-      - "C#"
-      - "Scala"
-      - "Ruby"
-      - "PHP"
-      # 프레임워크
-      - "React"
-      - "리액트"
-      - "Vue"
-      - "Angular"
-      - "Next.js"
-      - "Spring"
-      - "스프링"
-      - "Django"
-      - "FastAPI"
-      - "Node.js"
-      - "Express"
-      - "NestJS"
-      - "Flutter"
-      # 클라우드/인프라
-      - "AWS"
-      - "GCP"
-      - "Azure"
-      - "Kubernetes"
-      - "쿠버네티스"
-      - "Docker"
-      - "도커"
-      - "Terraform"
-      - "CI/CD"
-      - "Jenkins"
-      - "GitHub Actions"
-      # 데이터베이스
-      - "MySQL"
-      - "PostgreSQL"
-      - "MongoDB"
-      - "Redis"
-      - "Elasticsearch"
-      - "Kafka"
-      - "카프카"
-      # AI/ML
-      - "TensorFlow"
-      - "텐서플로우"
-      - "PyTorch"
-      - "파이토치"
-      - "LLM"
-      - "GPT"
-      - "RAG"
-      - "머신러닝"
-      - "딥러닝"
-      - "Hugging Face"
-
-  - name: "Industry"
-    display_name: "산업분야"
-    keywords:
-      - "핀테크"
-      - "fintech"
-      - "이커머스"
-      - "e-commerce"
-      - "헬스케어"
-      - "healthcare"
-      - "에듀테크"
-      - "edtech"
-      - "모빌리티"
-      - "물류"
-      - "logistics"
-      - "게임"
-      - "게임사"
-      - "스타트업"
-      - "startup"
-      - "유니콘"
-      - "빅테크"
-      - "대기업"
-      - "중견기업"
-      - "중소기업"
-      - "외국계"
-      - "IT"
-      - "금융"
-      - "제조"
-      - "서비스"
-      - "서비스업"
-      - "미디어"
-      - "콘텐츠"
-      - "플랫폼"
-      - "SaaS"
-      - "B2B"
-      - "B2C"
-      - "공기업"
-      - "공공기관"
-      - "통신"
-      - "유통"
-      - "광고"
-      - "보험"
-      - "증권"
-      - "은행"
-      - "반도체"
-      - "바이오"
-      - "제약"
-  - name: "EmploymentType"
-    display_name: "고용형태"
-    keywords:
-      - "정규직"
-      - "계약직"
-      - "인턴"
-      - "인턴십"
-      - "신입"
-      - "경력"
-      - "경력직"
-      - "신입사원"
-      - "파견직"
-      - "프리랜서"
-      - "아르바이트"
-      - "알바"
-      - "임시직"
-      - "full-time"
-      - "part-time"
-      - "contract"
-      - "freelance"
-      - "permanent"
-      - "temporary"
-      - "entry-level"
-      - "experienced"
-      - "수습"
-      - "정직원"
-      - "비정규직"
-
-  - name: "EmploymentTrend"
-    display_name: "고용 트렌드"
-    keywords:
-      - "채용"
-      - "고용"
-      - "실업"
-      - "실업률"
-      - "취업"
-      - "이직"
-      - "퇴사"
-      - "해고"
-      - "정리해고"
-      - "layoff"
-      - "hiring"
-      - "unemployment"
-      - "job market"
-      - "labor market"
-      - "workforce"
-      - "remote work"
-      - "재택근무"
-      - "하이브리드"
-      - "연봉"
-      - "compensation"
-      - "talent"
-      - "resume"
-      - "interview"
-      - "onboarding"
-      - "retention"
-      - "recruiter"
-      - "applicant"
-      - "candidate"
-      - "employer"
-      - "employee"
-      - "benefits"
-      - "payroll"
-      - "DEI"
-      - "diversity"
-      - "인사"
-      - "인력"
-      - "구인"
-      - "구직"
-      - "면접"
-      - "이력서"
-      - "복리후생"
-      - "인재"
-      - "노동시장"
-      - "노동자"
-      - "근로자"
-      - "임금"
-      - "최저임금"
-      - "고용률"
-      - "공채"
-      - "수시채용"
-      - "공개채용"
-      - "경력채용"
-      - "신입채용"
-      - "대규모채용"
-      - "채용공고"
-      - "job posting"
-      - "job opening"
-      - "vacancy"
-      - "job search"
-      - "career change"
-      - "job hunting"
-      - "headhunting"
-      - "헤드헌팅"
-      - "서류전형"
-      - "코딩테스트"
-      - "기술면접"
-      - "인적성"
-      - "인적성검사"
-
-  - name: "JobGeneral"
-    display_name: "일반 고용/채용"
-    keywords:
-      # 핵심 채용 용어
-      - "채용중"
-      - "채용예정"
-      - "상시채용"
-      - "긴급채용"
-      - "대량채용"
-      - "채용설명회"
-      - "채용박람회"
-      - "잡페어"
-      - "취업박람회"
-      - "직무설명회"
-      # 지원/선발 추가
-      - "지원마감"
-      - "마감임박"
-      - "지원하기"
-      - "지원접수"
-      - "온라인지원"
-      - "서류접수"
-      - "합격자발표"
-      - "최종발표"
-      - "채용확정"
-      - "오퍼레터"
-      # 업무환경
-      - "재택근무"
-      - "원격근무"
-      - "유연근무"
-      - "자율출퇴근"
-      - "스마트워크"
-      - "오피스"
-      - "사무실"
-      - "근무환경"
-      - "근무조건"
-      - "근무형태"
-      # 복리후생 추가
-      - "4대보험"
-      - "건강검진"
-      - "식대"
-      - "교통비"
-      - "자기계발"
-      - "교육지원"
-      - "도서비"
-      - "운동비"
-      - "복지포인트"
-      - "사내복지"
-      # 조직문화
-      - "수평문화"
-      - "자율문화"
-      - "성장"
-      - "성장환경"
-      - "커리어"
-      - "커리어패스"
-      - "커리어성장"
-      - "역량개발"
-      - "직무교육"
-      - "온보딩"
-      # 취업 준비
-      - "취업준비"
-      - "취준생"
-      - "졸업예정"
-      - "신입지원"
-      - "경력지원"
-      - "경력무관"
-      - "학력무관"
-      - "나이무관"
-      # 영문 추가
-      - "job fair"
-      - "career fair"
-      - "open position"
-      - "now hiring"
-      - "we are hiring"
-      - "join us"
-      - "join our team"
-      - "career opportunity"
-      - "job opportunity"
-      - "work from home"
-      - "remote position"
-      - "hybrid work"
-      - "flexible work"
-      - "competitive salary"
-      - "great benefits"
-      - "stock options"
-      - "equity"
-      - "RSU"
+- name: Company
+  keywords:
+  - 삼성
+  - LG
+  - 네이버
+  - 카카오
+  - 쿠팡
+  - 라인
+  - 배달의민족
+  - 우아한형제들
+  - 당근
+  - 토스
+  - 비바리퍼블리카
+  - SK
+  - 현대
+  - Google
+  - Amazon
+  - Microsoft
+  - Apple
+  - Meta
+  - Tesla
+  - OpenAI
+- name: JobTitle
+  display_name: 직무/직책
+  keywords:
+  - 개발자
+  - 엔지니어
+  - 프로그래머
+  - 소프트웨어 엔지니어
+  - 풀스택
+  - 프론트엔드
+  - 백엔드
+  - DevOps
+  - SRE
+  - 데이터 엔지니어
+  - 데이터 분석가
+  - 데이터 사이언티스트
+  - ML 엔지니어
+  - AI 엔지니어
+  - 클라우드 엔지니어
+  - 보안 엔지니어
+  - QA 엔지니어
+  - 테스트 엔지니어
+  - 모바일 개발자
+  - 앱 개발자
+  - 웹 개발자
+  - 임베디드
+  - 시스템 엔지니어
+  - 디자이너
+  - UX 디자이너
+  - UI 디자이너
+  - 프로덕트 디자이너
+  - 그래픽 디자이너
+  - BX 디자이너
+  - 기획자
+  - PM
+  - PO
+  - 프로덕트 매니저
+  - 프로젝트 매니저
+  - 서비스 기획
+  - 전략 기획
+  - 마케터
+  - 퍼포먼스 마케터
+  - 그로스 해커
+  - 콘텐츠 마케터
+  - 브랜드 마케터
+  - 영업
+  - 세일즈
+  - 어카운트 매니저
+  - HR
+  - 인사담당자
+  - 채용담당자
+  - 리크루터
+  - recruiter
+  - talent acquisition
+  - HRBP
+  - 인턴
+  - 신입
+  - 주니어
+  - 미드레벨
+  - 시니어
+  - 리드
+  - 팀장
+  - 매니저
+  - 이사
+  - 임원
+  - CTO
+  - CEO
+  - CFO
+  - COO
+  - engineer
+  - developer
+  - analyst
+  - consultant
+  - manager
+  - director
+  - specialist
+  - coordinator
+- name: TechStack
+  display_name: 기술스택
+  keywords:
+  - Python
+  - 파이썬
+  - Java
+  - 자바
+  - JavaScript
+  - TypeScript
+  - Go
+  - Golang
+  - Rust
+  - Kotlin
+  - Swift
+  - C++
+  - C#
+  - Scala
+  - Ruby
+  - PHP
+  - React
+  - 리액트
+  - Vue
+  - Angular
+  - Next.js
+  - Spring
+  - 스프링
+  - Django
+  - FastAPI
+  - Node.js
+  - Express
+  - NestJS
+  - Flutter
+  - AWS
+  - GCP
+  - Azure
+  - Kubernetes
+  - 쿠버네티스
+  - Docker
+  - 도커
+  - Terraform
+  - CI/CD
+  - Jenkins
+  - GitHub Actions
+  - MySQL
+  - PostgreSQL
+  - MongoDB
+  - Redis
+  - Elasticsearch
+  - Kafka
+  - 카프카
+  - TensorFlow
+  - 텐서플로우
+  - PyTorch
+  - 파이토치
+  - LLM
+  - GPT
+  - RAG
+  - 머신러닝
+  - 딥러닝
+  - Hugging Face
+- name: Industry
+  display_name: 산업분야
+  keywords:
+  - 핀테크
+  - fintech
+  - 이커머스
+  - e-commerce
+  - 헬스케어
+  - healthcare
+  - 에듀테크
+  - edtech
+  - 모빌리티
+  - 물류
+  - logistics
+  - 게임
+  - 게임사
+  - 스타트업
+  - startup
+  - 유니콘
+  - 빅테크
+  - 대기업
+  - 중견기업
+  - 중소기업
+  - 외국계
+  - IT
+  - 금융
+  - 제조
+  - 서비스
+  - 서비스업
+  - 미디어
+  - 콘텐츠
+  - 플랫폼
+  - SaaS
+  - B2B
+  - B2C
+  - 공기업
+  - 공공기관
+  - 통신
+  - 유통
+  - 광고
+  - 보험
+  - 증권
+  - 은행
+  - 반도체
+  - 바이오
+  - 제약
+- name: EmploymentType
+  display_name: 고용형태
+  keywords:
+  - 정규직
+  - 계약직
+  - 인턴
+  - 인턴십
+  - 신입
+  - 경력
+  - 경력직
+  - 신입사원
+  - 파견직
+  - 프리랜서
+  - 아르바이트
+  - 알바
+  - 임시직
+  - full-time
+  - part-time
+  - contract
+  - freelance
+  - permanent
+  - temporary
+  - entry-level
+  - experienced
+  - 수습
+  - 정직원
+  - 비정규직
+- name: EmploymentTrend
+  display_name: 고용 트렌드
+  keywords:
+  - 채용
+  - 고용
+  - 실업
+  - 실업률
+  - 취업
+  - 이직
+  - 퇴사
+  - 해고
+  - 정리해고
+  - layoff
+  - hiring
+  - unemployment
+  - job market
+  - labor market
+  - workforce
+  - remote work
+  - 재택근무
+  - 하이브리드
+  - 연봉
+  - compensation
+  - talent
+  - resume
+  - interview
+  - onboarding
+  - retention
+  - recruiter
+  - applicant
+  - candidate
+  - employer
+  - employee
+  - benefits
+  - payroll
+  - DEI
+  - diversity
+  - 인사
+  - 인력
+  - 구인
+  - 구직
+  - 면접
+  - 이력서
+  - 복리후생
+  - 인재
+  - 노동시장
+  - 노동자
+  - 근로자
+  - 임금
+  - 최저임금
+  - 고용률
+  - 공채
+  - 수시채용
+  - 공개채용
+  - 경력채용
+  - 신입채용
+  - 대규모채용
+  - 채용공고
+  - job posting
+  - job opening
+  - vacancy
+  - job search
+  - career change
+  - job hunting
+  - headhunting
+  - 헤드헌팅
+  - 서류전형
+  - 코딩테스트
+  - 기술면접
+  - 인적성
+  - 인적성검사
+- name: JobGeneral
+  display_name: 일반 고용/채용
+  keywords:
+  - 채용중
+  - 채용예정
+  - 상시채용
+  - 긴급채용
+  - 대량채용
+  - 채용설명회
+  - 채용박람회
+  - 잡페어
+  - 취업박람회
+  - 직무설명회
+  - 지원마감
+  - 마감임박
+  - 지원하기
+  - 지원접수
+  - 온라인지원
+  - 서류접수
+  - 합격자발표
+  - 최종발표
+  - 채용확정
+  - 오퍼레터
+  - 재택근무
+  - 원격근무
+  - 유연근무
+  - 자율출퇴근
+  - 스마트워크
+  - 오피스
+  - 사무실
+  - 근무환경
+  - 근무조건
+  - 근무형태
+  - 4대보험
+  - 건강검진
+  - 식대
+  - 교통비
+  - 자기계발
+  - 교육지원
+  - 도서비
+  - 운동비
+  - 복지포인트
+  - 사내복지
+  - 수평문화
+  - 자율문화
+  - 성장
+  - 성장환경
+  - 커리어
+  - 커리어패스
+  - 커리어성장
+  - 역량개발
+  - 직무교육
+  - 온보딩
+  - 취업준비
+  - 취준생
+  - 졸업예정
+  - 신입지원
+  - 경력지원
+  - 경력무관
+  - 학력무관
+  - 나이무관
+  - job fair
+  - career fair
+  - open position
+  - now hiring
+  - we are hiring
+  - join us
+  - join our team
+  - career opportunity
+  - job opportunity
+  - work from home
+  - remote position
+  - hybrid work
+  - flexible work
+  - competitive salary
+  - great benefits
+  - stock options
+  - equity
+  - RSU

@@ -202,10 +202,11 @@ def collect_sources(
     health_db_path: str | None = None,
 ) -> tuple[list[Article], list[str]]:
     """Fetch items from all configured sources, returning articles and errors."""
-    rss_sources = [source for source in sources if source.type.lower() == "rss"]
+    enabled_sources = [source for source in sources if source.enabled]
+    rss_sources = [source for source in enabled_sources if source.type.lower() == "rss"]
     js_sources = [
         source
-        for source in sources
+        for source in enabled_sources
         if source.type.lower() in {"javascript", "browser", "js", "web", "html"}
     ]
 

@@ -96,6 +96,60 @@ def test_generate_index_html(tmp_path):
     assert "test_20240315.html" in rendered
 
 
+def test_generate_report_injects_job_quality_panel(tmp_path, monkeypatch):
+    """Generated report contains JobRadar quality telemetry when provided."""
+    fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=UTC)
+
+    class FixedDateTime(datetime):
+        @classmethod
+        def now(cls, tz=None):
+            if tz is None:
+                return fixed_now.replace(tzinfo=None)
+            return fixed_now.astimezone(tz)
+
+    monkeypatch.setattr("radar_core.report_utils.datetime", FixedDateTime)
+
+    output_path = tmp_path / "reports" / "test_report.html"
+    generate_report(
+        category=_sample_category(),
+        articles=_sample_articles(),
+        output_path=output_path,
+        stats={"sources": 1, "collected": 1, "matched": 1, "window_days": 7},
+        quality_report={
+            "summary": {
+                "job_signal_event_count": 1,
+                "official_job_posting_events": 1,
+                "event_required_field_gap_count": 2,
+            },
+            "events": [
+                {
+                    "event_model": "official_job_posting",
+                    "source": "Kakao Careers",
+                    "canonical_key": "job_posting:kakao:engineer:kr",
+                    "canonical_key_status": "complete",
+                    "required_field_gaps": [],
+                }
+            ],
+            "daily_review_items": [],
+        },
+    )
+
+    html = output_path.read_text(encoding="utf-8")
+    assert 'id="job-quality"' in html
+    assert "Job Quality" in html
+    assert "job_posting:kakao:engineer:kr" in html
+    summaries = sorted(
+        (tmp_path / "reports").glob(
+            "test_[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]_summary.json"
+        )
+    )
+    assert len(summaries) == 1
+    summary = summaries[0].read_text(encoding="utf-8")
+    assert '"repo": "JobRadar"' in summary
+    assert '"ontology_version": "0.1.0"' in summary
+    assert '"employment.official_job_posting"' in summary
+
+
 def test_generate_report_with_errors(tmp_path, monkeypatch):
     """generate_report includes error messages in HTML."""
     fixed_now = datetime(2024, 3, 15, 9, 30, tzinfo=UTC)

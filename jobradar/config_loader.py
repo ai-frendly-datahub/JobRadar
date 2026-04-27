@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 from typing import cast
 
@@ -26,6 +27,54 @@ def _read_yaml(path: Path) -> dict[str, object]:
 def _str(d: dict[str, object], k: str, default: str = "") -> str:
     v = d.get(k)
     return v if isinstance(v, str) and v.strip() else default
+
+
+def _bool(d: dict[str, object], k: str, default: bool) -> bool:
+    v = d.get(k)
+    if isinstance(v, bool):
+        return v
+    if isinstance(v, str):
+        lowered = v.strip().lower()
+        if lowered in {"true", "1", "yes", "y"}:
+            return True
+        if lowered in {"false", "0", "no", "n"}:
+            return False
+    return default
+
+
+def _float(d: dict[str, object], k: str, default: float) -> float:
+    v = d.get(k)
+    if isinstance(v, int | float):
+        return float(v)
+    if isinstance(v, str):
+        try:
+            return float(v.strip())
+        except ValueError:
+            return default
+    return default
+
+
+def _strings(d: dict[str, object], k: str) -> list[str]:
+    value = d.get(k)
+    if isinstance(value, list):
+        values = cast(list[object], value)
+    elif isinstance(value, tuple | set):
+        values = list(cast(tuple[object, ...] | set[object], value))
+    elif isinstance(value, str) and value.strip():
+        values = [value]
+    else:
+        values = []
+    return [str(item).strip() for item in values if str(item).strip()]
+
+
+def _dict(d: dict[str, object], k: str) -> dict[str, object]:
+    value = d.get(k)
+    if isinstance(value, dict):
+        return {
+            str(key): cast(object, _resolve_env_refs(val))
+            for key, val in cast(dict[object, object], value).items()
+        }
+    return {}
 
 
 def _path(val: str) -> Path:
@@ -56,13 +105,24 @@ def load_category_config(category_name: str, categories_dir: Path | None = None)
     for s in raw.get("sources") or []:
         if isinstance(s, dict):
             sd = {str(k): v for k, v in cast(dict[object, object], s).items()}
-            cfg = sd.get("config")
             sources.append(
                 Source(
                     name=_str(sd, "name", "Unnamed"),
                     type=_str(sd, "type", "rss"),
                     url=_str(sd, "url"),
-                    config=cfg if isinstance(cfg, dict) else {},
+                    id=_str(sd, "id"),
+                    enabled=_bool(sd, "enabled", True),
+                    language=_str(sd, "language"),
+                    country=_str(sd, "country"),
+                    region=_str(sd, "region"),
+                    trust_tier=_str(sd, "trust_tier", "T3_professional"),
+                    weight=_float(sd, "weight", 1.0),
+                    content_type=_str(sd, "content_type", "news"),
+                    collection_tier=_str(sd, "collection_tier", "C1_rss"),
+                    producer_role=_str(sd, "producer_role"),
+                    info_purpose=_strings(sd, "info_purpose"),
+                    notes=_str(sd, "notes"),
+                    config=_dict(sd, "config"),
                 )
             )
     entities = []
@@ -91,6 +151,44 @@ def load_category_config(category_name: str, categories_dir: Path | None = None)
     )
 
 
+def _category_file(category_name: str, categories_dir: Path | None = None) -> Path:
+    base = categories_dir or _PROJECT_ROOT / "config" / "categories"
+    f = Path(base) / f"{category_name}.yaml"
+    if not f.exists():
+        raise FileNotFoundError(f"Category config not found: {f}")
+    return f
+
+
+def _resolve_env_refs(value: object) -> object:
+    if isinstance(value, str):
+        result = value
+        for raw_name in value.split("${")[1:]:
+            var_name = raw_name.split("}", 1)[0]
+            if var_name:
+                result = result.replace(f"${{{var_name}}}", os.environ.get(var_name, ""))
+        return result
+    if isinstance(value, dict):
+        return {
+            str(key): _resolve_env_refs(val)
+            for key, val in cast(dict[object, object], value).items()
+        }
+    if isinstance(value, list):
+        return [_resolve_env_refs(item) for item in cast(list[object], value)]
+    return value
+
+
+def load_category_quality_config(
+    category_name: str,
+    categories_dir: Path | None = None,
+) -> dict[str, object]:
+    raw = _read_yaml(_category_file(category_name, categories_dir=categories_dir))
+    quality_config: dict[str, object] = {}
+    for key in ("data_quality", "source_backlog", "integration_candidates"):
+        if key in raw:
+            quality_config[key] = _resolve_env_refs(raw[key])
+    return quality_config
+
+
 def load_notification_config(config_path: Path | None = None) -> NotificationConfig:
     f = config_path or _PROJECT_ROOT / "config" / "notifications.yaml"
     if not f.exists():
@@ -98,4 +196,9 @@ def load_notification_config(config_path: Path | None = None) -> NotificationCon
     return NotificationConfig(enabled=False, channels=[])
 
 
-__all__ = ["load_category_config", "load_notification_config", "load_settings"]
+__all__ = [
+    "load_category_config",
+    "load_category_quality_config",
+    "load_notification_config",
+    "load_settings",
+]

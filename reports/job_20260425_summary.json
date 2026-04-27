@@ -1,0 +1,100 @@
+{
+  "date": "2026-04-25",
+  "category": "job",
+  "article_count": 193,
+  "source_count": 15,
+  "matched_count": 193,
+  "top_entities": [
+    {
+      "name": "SourceSignal",
+      "count": 183
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 174
+    },
+    {
+      "name": "Industry",
+      "count": 123
+    },
+    {
+      "name": "JobTitle",
+      "count": 101
+    },
+    {
+      "name": "TechStack",
+      "count": 45
+    },
+    {
+      "name": "EmploymentType",
+      "count": 39
+    },
+    {
+      "name": "Company",
+      "count": 33
+    },
+    {
+      "name": "JobGeneral",
+      "count": 9
+    }
+  ],
+  "sources": {
+    "Samsung Careers": 1,
+    "Kakao Careers": 15,
+    "r/careeradvice": 21,
+    "r/cscareerquestions": 21,
+    "r/jobs": 20,
+    "r/overemployed": 15,
+    "r/layoffs": 18,
+    "HR Dive": 23,
+    "r/recruitinghell": 18,
+    "HR Executive": 20,
+    "매일경제 취업": 10,
+    "r/korea": 7,
+    "Indeed Hiring Lab": 1,
+    "한국경제": 2,
+    "HR Bartender": 1
+  },
+  "generated_at": "2026-04-25T20:23:47.164874+09:00",
+  "ontology": {
+    "repo": "JobRadar",
+    "category": "job",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "employment.job_board_posting",
+      "employment.labor_market_signal",
+      "employment.official_job_posting",
+      "employment.salary_signal",
+      "employment.skill_demand"
+    ],
+    "event_model_mappings": {
+      "official_job_posting": "employment.official_job_posting",
+      "job_board_posting": "employment.job_board_posting",
+      "salary_signal": "employment.salary_signal",
+      "skill_demand": "employment.skill_demand",
+      "labor_market_signal": "employment.labor_market_signal"
+    },
+    "entity_type_hints": [
+      "employment.job_posting",
+      "organization.company"
+    ],
+    "source_role_ids": [
+      "community_signal",
+      "context_only",
+      "operational_evidence",
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "Kakao Careers": "primary_evidence",
+      "Samsung Careers": "primary_evidence",
+      "Indeed Hiring Lab": "operational_evidence",
+      "HR Dive": "context_only",
+      "r/cscareerquestions": "community_signal"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
+}

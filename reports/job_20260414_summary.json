@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-14",
+  "category": "job",
+  "article_count": 4,
+  "source_count": 3,
+  "matched_count": 4,
+  "top_entities": [
+    {
+      "name": "SourceSignal",
+      "count": 14
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 5
+    },
+    {
+      "name": "Company",
+      "count": 2
+    },
+    {
+      "name": "Industry",
+      "count": 2
+    },
+    {
+      "name": "JobGeneral",
+      "count": 1
+    },
+    {
+      "name": "TechStack",
+      "count": 1
+    },
+    {
+      "name": "EmploymentType",
+      "count": 1
+    }
+  ],
+  "sources": {
+    "Samsung Careers": 1,
+    "Kakao Careers": 1,
+    "Indeed Hiring Lab": 2
+  },
+  "generated_at": "2026-04-14T20:24:41.368132+09:00"
+}

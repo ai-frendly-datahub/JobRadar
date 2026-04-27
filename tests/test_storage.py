@@ -67,6 +67,25 @@ def test_recent_articles(tmp_db):
         assert results[0].title == "최신 기사"
 
 
+def test_recent_articles_round_trip_ontology(tmp_db):
+    """Stored articles preserve ontology metadata."""
+    with RadarStorage(tmp_db) as storage:
+        article = _make_article(
+            title="온톨로지 기사",
+            link="https://example.com/ontology",
+            published=datetime.now(UTC),
+        )
+        article.ontology = {
+            "ontology_version": "0.1.0",
+            "event_model_id": "job_post_event",
+        }
+        storage.upsert_articles([article])
+        results = storage.recent_articles("test", days=1)
+
+    assert len(results) == 1
+    assert results[0].ontology == article.ontology
+
+
 def test_delete_older_than(tmp_db):
     """delete_older_than removes old articles and returns count."""
     with RadarStorage(tmp_db) as storage:
