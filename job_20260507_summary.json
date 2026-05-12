@@ -1,46 +1,127 @@
 {
   "date": "2026-05-07",
   "category": "job",
-  "article_count": 200,
-  "source_count": 6,
-  "matched_count": 105,
+  "article_count": 5,
+  "source_count": 5,
+  "matched_count": 5,
   "top_entities": [
     {
-      "name": "Industry",
-      "count": 76
+      "name": "SourceSignal",
+      "count": 12
     },
     {
       "name": "EmploymentTrend",
-      "count": 32
-    },
-    {
-      "name": "JobTitle",
-      "count": 32
+      "count": 3
     },
     {
       "name": "Company",
-      "count": 23
+      "count": 2
     },
     {
       "name": "JobGeneral",
-      "count": 7
+      "count": 1
     },
     {
       "name": "TechStack",
       "count": 1
     },
     {
-      "name": "EmploymentType",
+      "name": "JobTitle",
+      "count": 1
+    },
+    {
+      "name": "Industry",
       "count": 1
     }
   ],
   "sources": {
-    "한국경제": 90,
-    "매일경제 취업": 72,
-    "HR Dive": 21,
-    "HR Executive": 15,
-    "HR Bartender": 1,
-    "Indeed Hiring Lab": 1
+    "Samsung Careers": 1,
+    "Kakao Careers": 1,
+    "HR Dive": 1,
+    "HR Executive": 1,
+    "r/recruitinghell": 1
   },
-  "generated_at": "2026-05-07T15:33:59.316889+09:00"
+  "generated_at": "2026-05-07T09:58:22.594207+09:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "source_url": "https://www.samsungcareers.com/insight/find"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Dive",
+        "headline": "Antisemitism allegations reach National Education Association",
+        "source_url": "https://www.hrdive.com/news/antisemitism-allegations-reach-national-education-association/819430/",
+        "published_at": "2026-05-06T10:53:00+00:00",
+        "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/YhfYIJUVq5NS1TvFUN7mAypDRiuxxHCUI51fcFpRLKw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTk4NTU1NzA5LmpwZw==.webp\" /></div></figure><p>NEA discriminated against Jewish members by allowing pro-Palestinian activity that promoted “a hostile environment,” a Brandeis Center complaint filed with EEOC alleges.</p>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Executive",
+        "headline": "Humility, agility—keys to unlocking HR greatness in the age of AI",
+        "source_url": "https://hrexecutive.com/humility-agility-keys-to-unlocking-hr-greatness-in-the-age-of-ai/",
+        "published_at": "2026-05-06T03:30:56+00:00",
+        "summary": "<p>MetLife CHRO Shurawl Sibblies says HR can drive AI transformation through core tenets like active listening and staying in \"learn mode.\"</p>\n<p>The post <a href=\"https://hrexecutive.com/humility-agility-keys-to-unlocking-hr-greatness-in-the-age-of-ai/\">Humility, agility—keys to unlocking HR greatness in the age of AI</a> appeared first on <a href=\"https://hrexecutive.com\">HR Executive</a>.</p>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "r/recruitinghell",
+        "headline": "Requiered internship to keep studying in CS",
+        "source_url": "https://www.reddit.com/r/recruitinghell/comments/1t5aeht/requiered_internship_to_keep_studying_in_cs/",
+        "published_at": "2026-05-06T02:43:20+00:00",
+        "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/recruitinghell/comments/1t5aeht/requiered_internship_to_keep_studying_in_cs/\"> <img alt=\"Requiered internship to keep studying in CS\" src=\"https://preview.redd.it/0nei89fg8izg1.png?width=640&crop=smart&auto=webp&s=7b6e9e50acadaa77cf2bf5a49f6f9b83a4cb0894\" title=\"Requiered internship to keep studying in CS\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>CV has been looked at by multiple professionals, I know many people in that same situation but the university keeps on insisting there's nothing wrong with the job market. I will get removed from the university if I don't find an internship and they've been of no help at all</p> </div><!-- SC_ON -->   submitted by   <a href=\"https://www.reddit.com/user/Juicy_enby\"> /u/Juicy_enby </a> <br /> <span><a href=\"https://i.redd.it/0nei89fg8izg1.png\">[link]</a></span>   <span><a href=\"https://www.reddit.com/r/recruitinghell/comments/1t5aeht/requiered_internship_to_keep_studying_in_cs/\">[comments]</a></span> </td></tr></table>"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "JobRadar",
+    "category": "job",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "employment.editorial_coverage",
+      "employment.job_board_posting",
+      "employment.labor_market_signal",
+      "employment.official_job_posting",
+      "employment.salary_signal",
+      "employment.skill_demand"
+    ],
+    "event_model_mappings": {
+      "official_job_posting": "employment.official_job_posting",
+      "job_board_posting": "employment.job_board_posting",
+      "salary_signal": "employment.salary_signal",
+      "skill_demand": "employment.skill_demand",
+      "labor_market_signal": "employment.labor_market_signal",
+      "editorial_coverage": "employment.editorial_coverage"
+    },
+    "entity_type_hints": [
+      "employment.job_posting",
+      "organization.company"
+    ],
+    "source_role_ids": [
+      "community_signal",
+      "context_only",
+      "operational_evidence",
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "Kakao Careers": "primary_evidence",
+      "Samsung Careers": "primary_evidence",
+      "Indeed Hiring Lab": "operational_evidence",
+      "HR Dive": "context_only",
+      "r/cscareerquestions": "community_signal"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
 }

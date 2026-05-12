@@ -1,40 +1,217 @@
 {
   "date": "2026-04-28",
   "category": "job",
-  "article_count": 200,
-  "source_count": 4,
-  "matched_count": 94,
+  "article_count": 21,
+  "source_count": 7,
+  "matched_count": 21,
   "top_entities": [
     {
-      "name": "Industry",
-      "count": 70
-    },
-    {
-      "name": "EmploymentTrend",
-      "count": 30
-    },
-    {
-      "name": "Company",
-      "count": 22
-    },
-    {
-      "name": "JobTitle",
-      "count": 18
-    },
-    {
-      "name": "JobGeneral",
-      "count": 8
+      "name": "SourceSignal",
+      "count": 58
     },
     {
       "name": "EmploymentType",
-      "count": 4
+      "count": 26
+    },
+    {
+      "name": "Company",
+      "count": 17
+    },
+    {
+      "name": "JobTitle",
+      "count": 16
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 8
+    },
+    {
+      "name": "Industry",
+      "count": 8
+    },
+    {
+      "name": "TechStack",
+      "count": 3
+    },
+    {
+      "name": "JobGeneral",
+      "count": 1
     }
   ],
   "sources": {
-    "매일경제 취업": 78,
-    "한국경제": 100,
-    "HR Dive": 12,
-    "HR Executive": 10
+    "Samsung Careers": 1,
+    "Kakao Careers": 15,
+    "HR Dive": 1,
+    "HR Executive": 1,
+    "매일경제 취업": 1,
+    "Indeed Hiring Lab": 1,
+    "r/cscareerquestions": 1
   },
-  "generated_at": "2026-04-28T15:28:21.559883+09:00"
+  "generated_at": "2026-04-28T23:59:37.087764+09:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "source_url": "https://www.samsungcareers.com/insight/find"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4682?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14326?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14249?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14287?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14402?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4685?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4689?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14148?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14403?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4699?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14319?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14172?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14318?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14039?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Dive",
+        "headline": "CHRO confidence levels are the strongest tracked yet, The Conference Board reports",
+        "source_url": "https://www.hrdive.com/news/chro-confidence-levels-strongest-tracked-the-conference-board/818654/",
+        "published_at": "2026-04-28T05:47:00+00:00",
+        "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/lYYxOSSh-E9plkox0iJTt2CMuRnkEvlOhuW-4JjfNr0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMDI4NTc0MzIyLmpwZw==.webp\" /></div></figure><p>The report contrasts with other recent surveys indicating rising unease tied to events like “the unanticipated Iran War.”</p>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Executive",
+        "headline": "PTO pullback: Did Deloitte, Zoom just set a new precedent?",
+        "source_url": "https://hrexecutive.com/pto-pullback-did-deloitte-zoom-just-set-a-new-precedent/",
+        "published_at": "2026-04-28T03:30:44+00:00",
+        "summary": "<p>Starting next year, both orgs will scale back benefits, particularly around paid time off and parental leave.</p>\n<p>The post <a href=\"https://hrexecutive.com/pto-pullback-did-deloitte-zoom-just-set-a-new-precedent/\">PTO pullback: Did Deloitte, Zoom just set a new precedent?</a> appeared first on <a href=\"https://hrexecutive.com\">HR Executive</a>.</p>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "매일경제 취업",
+        "headline": "올 청년 정책에 30조 … 구직수당 月 10만원 인상",
+        "source_url": "https://www.mk.co.kr/news/economy/12029964",
+        "published_at": "2026-04-28T02:15:30+00:00",
+        "summary": "정부가 올해 청년정책에 총 30조원 규모 예산을 투입하고 주거와 일자리 전반에 청년층 지원을 강화하기로 했다. 청년층을 대상으로 주택 6만7000가구를 공급하는 동시에 취업지원수당.."
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://www.hiringlab.org/2026/04/28/job-seeker-searches-for-ai-roles-have-grown/"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "r/cscareerquestions",
+        "headline": "Resume Advice Thread - April 28, 2026",
+        "source_url": "https://www.reddit.com/r/cscareerquestions/comments/1sxturo/resume_advice_thread_april_28_2026/",
+        "published_at": "2026-04-27T22:00:06+00:00",
+        "summary": "<!-- SC_OFF --><div class=\"md\"><p>Please use this thread to ask for resume advice and critiques. You should read our <a href=\"https://www.reddit.com/r/cscareerquestions/wiki/faq_resumes\">Resume FAQ</a> and implement any changes from that before you ask for more advice.</p> <p>Abide by the rules, don't be a jerk.</p> <p><strong>Note on anonomyizing your resume:</strong> If you'd like your resume to remain anonymous, make sure you blank out or change all personally identifying information. Also be careful of using your own Google Docs account or DropBox account which can lead back to your personally identifying information. To make absolutely sure you're anonymous, we suggest posting on sites/accounts with no ties to you after thoroughly checking the contents of your resume.</p> <p>This thread is posted each <strong>Tuesday and Saturday at midnight PST</strong>. Previous Resume Advice Threads can be found <a href=\"https://www.reddit.com/r/cscareerquestions/search?q=Resume+Advice+Thread&restrict_sr=on&sort=new&t=all\">here</a>.</p> </div><!-- SC_ON -->   submitted by   <a href=\"https://www.reddit.com/user/CSCQMods\"> /u/CSCQMods </a> <br /> <span><a href=\"https://www.reddit.com/r/cscareerquestions/comments/1sxturo/resume_advice_thread_april_28_2026/\">[link]</a></span>   <span><a href=\"https://www.reddit.com/r/cscareerquestions/comments/1sxturo/resume_advice_thread_april_28_2026/\">[comments]</a></span>"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "JobRadar",
+    "category": "job",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "employment.editorial_coverage",
+      "employment.job_board_posting",
+      "employment.labor_market_signal",
+      "employment.official_job_posting",
+      "employment.salary_signal",
+      "employment.skill_demand"
+    ],
+    "event_model_mappings": {
+      "official_job_posting": "employment.official_job_posting",
+      "job_board_posting": "employment.job_board_posting",
+      "salary_signal": "employment.salary_signal",
+      "skill_demand": "employment.skill_demand",
+      "labor_market_signal": "employment.labor_market_signal",
+      "editorial_coverage": "employment.editorial_coverage"
+    },
+    "entity_type_hints": [
+      "employment.job_posting",
+      "organization.company"
+    ],
+    "source_role_ids": [
+      "community_signal",
+      "context_only",
+      "operational_evidence",
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "Kakao Careers": "primary_evidence",
+      "Samsung Careers": "primary_evidence",
+      "Indeed Hiring Lab": "operational_evidence",
+      "HR Dive": "context_only",
+      "r/cscareerquestions": "community_signal"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
 }

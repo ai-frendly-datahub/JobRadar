@@ -1,0 +1,3971 @@
+{
+  "category": "job",
+  "generated_at": "2026-04-23T19:40:30.488548+00:00",
+  "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
+  "summary": {
+    "total_sources": 21,
+    "enabled_sources": 15,
+    "tracked_sources": 6,
+    "fresh_sources": 6,
+    "stale_sources": 0,
+    "missing_sources": 0,
+    "missing_event_sources": 0,
+    "unknown_event_date_sources": 0,
+    "not_tracked_sources": 9,
+    "skipped_disabled_sources": 6,
+    "collection_error_count": 0,
+    "official_job_posting_events": 17,
+    "job_board_posting_events": 1,
+    "labor_market_signal_events": 35,
+    "skill_demand_events": 0,
+    "salary_signal_events": 1,
+    "job_signal_event_count": 54,
+    "official_or_operational_event_count": 17,
+    "community_proxy_event_count": 5,
+    "complete_canonical_key_count": 47,
+    "proxy_canonical_key_count": 7,
+    "missing_canonical_key_count": 0,
+    "company_present_count": 21,
+    "job_title_present_count": 27,
+    "location_present_count": 54,
+    "salary_range_present_count": 2,
+    "skill_present_count": 5,
+    "demand_count_present_count": 0,
+    "event_required_field_gap_count": 6,
+    "tracked_source_gap_count": 0,
+    "missing_event_model_count": 1,
+    "source_backlog_candidate_count": 4,
+    "daily_review_item_count": 23
+  },
+  "sources": [
+    {
+      "source": "매일경제 취업",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 3,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "RecruitingDaily",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "recruiting_ops"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Endpoint is reachable but latest parsed feed entries are from 2024, so it no longer satisfies current labor-market freshness.",
+      "reenable_gate": "Re-enable after the feed resumes current dated recruiting/labor-market posts.",
+      "errors": []
+    },
+    {
+      "source": "서울경제",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Non-tracked broad economy feed is currently disabled by crawl-health checks.",
+      "reenable_gate": "Re-enable only if it is promoted to a tracked job-specific signal or crawl health recovers.",
+      "errors": []
+    },
+    {
+      "source": "한국경제",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 2,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "WorkLife",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "workplace",
+        "labor_market"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed is healthy but latest entries are stale for current job-market tracking.",
+      "reenable_gate": "Re-enable after the feed publishes current workplace/labor-market posts.",
+      "errors": []
+    },
+    {
+      "source": "HR Bartender",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "workplace",
+        "talent_strategy"
+      ],
+      "tracked": true,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "fresh",
+      "article_count": 1,
+      "event_count": 1,
+      "latest_event_at": "2026-04-21T23:57:00+00:00",
+      "age_days": 1.82,
+      "latest_title": "Redesign Work Using Job Enrichment and Job Enlargement",
+      "latest_url": "https://www.hrbartender.com/2026/strategy-planning/redesign-work-using-job-enrichment-enlargement/",
+      "latest_canonical_key": "labor_market:employee:us",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "tracked": true,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 14.0,
+      "status": "fresh",
+      "article_count": 2,
+      "event_count": 2,
+      "latest_event_at": "2026-04-13T21:00:00+00:00",
+      "age_days": 9.94,
+      "latest_title": "Workers Want Training but Employers Don’t Always Deliver. Can Policy Help?",
+      "latest_url": "https://www.hiringlab.org/2026/04/14/workers-want-training-but-employers-dont-always-deliver/",
+      "latest_canonical_key": "labor_market:hiring:us",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "tracked": true,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "fresh",
+      "article_count": 14,
+      "event_count": 14,
+      "latest_event_at": "2026-04-22T11:49:00+00:00",
+      "age_days": 1.33,
+      "latest_title": "5 minutes with Mindr’s CHRO",
+      "latest_url": "https://www.hrdive.com/news/5-minutes-with-mindr-chro-amanda-sedars/818231/",
+      "latest_canonical_key": "labor_market:talent:us",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "tracked": true,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "fresh",
+      "article_count": 12,
+      "event_count": 12,
+      "latest_event_at": "2026-04-22T03:30:56+00:00",
+      "age_days": 1.67,
+      "latest_title": "MetLife CHRO: 3 ways HR can lead through uncertainty",
+      "latest_url": "https://hrexecutive.com/metlife-chro-3-ways-hr-can-lead-through-uncertainty/",
+      "latest_canonical_key": "labor_market:talent:us",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/cscareerquestions",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 2,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/jobs",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 1,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/recruitinghell",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 1,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/careeradvice",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/layoffs",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 1,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/korea",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/overemployed",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 1,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Think Fast Talk Smart",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "workplace"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 404 during source audit.",
+      "reenable_gate": "Replace with a current feed URL before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "Hiring On All Cylinders",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "recruiting_ops",
+        "talent_strategy"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 404 during source audit.",
+      "reenable_gate": "Replace with a current feed URL before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "LinkedIn Talent Blog",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T1_authoritative",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "skill_trend",
+        "official_hiring_signal"
+      ],
+      "tracked": false,
+      "event_model": "skill_demand",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 400 during unauthenticated source audit.",
+      "reenable_gate": "Replace with a stable public feed or authenticated/API-backed source before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "enabled": true,
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "tracked": true,
+      "event_model": "official_job_posting",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 16,
+      "event_count": 16,
+      "latest_event_at": "2026-04-22T21:28:43.581891+00:00",
+      "age_days": 0.92,
+      "latest_title": "[공동체] 카카오모빌리티 자율주행 HW 엔지니어 (R&D)영입마감일영입종료시근무지직군 태그회사정보카카오모빌리티직원유형정규직",
+      "latest_url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "latest_canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Samsung Careers",
+      "source_type": "browser",
+      "enabled": true,
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "enterprise_hiring"
+      ],
+      "tracked": true,
+      "event_model": "official_job_posting",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 1,
+      "event_count": 1,
+      "latest_event_at": "2026-04-22T21:28:49.248398+00:00",
+      "age_days": 0.92,
+      "latest_title": "SAMSUNG CAREERS",
+      "latest_url": "https://www.samsungcareers.com/insight/find",
+      "latest_canonical_key": "job_posting:employer:삼성",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    }
+  ],
+  "events": [
+    {
+      "source": "Samsung Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "enterprise_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "SAMSUNG CAREERS",
+      "url": "https://www.samsungcareers.com/insight/find",
+      "source_url": "https://www.samsungcareers.com/insight/find",
+      "event_at": "2026-04-22T21:28:49.248398+00:00",
+      "matched_entities": {
+        "Company": [
+          "삼성"
+        ],
+        "EmploymentTrend": [
+          "채용",
+          "채용공고"
+        ],
+        "JobGeneral": [
+          "커리어"
+        ],
+        "SourceSignal": [
+          "employer",
+          "enterprise_hiring",
+          "official_job_posting"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "삼성",
+      "company_name": "삼성",
+      "job_title": "",
+      "role": "채용",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "채용",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "enterprise_hiring",
+        "official_job_posting"
+      ],
+      "canonical_key": "job_posting:employer:삼성",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오모빌리티 자율주행 HW 엔지니어 (R&D)영입마감일영입종료시근무지직군 태그회사정보카카오모빌리티직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581891+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "엔지니어"
+        ],
+        "Industry": [
+          "모빌리티"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "엔지니어",
+      "role": "엔지니어",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:c7e60305b5c1:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "서비스 안정성 기획 및 운영 담당자 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14326?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14326?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581865+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "Industry": [
+          "서비스"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "카카오톡 SRE(Site Reliability Engineer) 엔지니어 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14249?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14249?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581856+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "엔지니어",
+          "sre",
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "엔지니어",
+      "role": "엔지니어",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:c7e60305b5c1:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "추천 시스템 연구/개발 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14287?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14287?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581841+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "Multimodal LLM Research Engineer (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14402?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14402?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581833+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "TechStack": [
+          "llm"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "llm"
+      ],
+      "skill": "llm",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오페이 서버 개발자 - 결제 서비스영입마감일영입종료시근무지직군 태그회사정보카카오페이직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4685?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4685?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581824+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "개발자"
+        ],
+        "Industry": [
+          "서비스"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "EmploymentTrend": [
+          "이직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "개발자",
+      "role": "개발자",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "이직",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:개발자:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:aa087055c033:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오헬스케어 Data Engineer(Healthcare)영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4689?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4689?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581814+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "Industry": [
+          "헬스케어",
+          "healthcare"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "광고추천 데이터 사이언스, 머신러닝 전문가 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14148?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14148?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581805+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "TechStack": [
+          "머신러닝"
+        ],
+        "Industry": [
+          "광고"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "머신러닝"
+      ],
+      "skill": "머신러닝",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4697?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4697?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581796+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "Industry": [
+          "보험"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "LLM Research Engineer (신입/경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14403?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14403?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581786+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "신입",
+          "engineer"
+        ],
+        "TechStack": [
+          "llm"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "신입",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "신입",
+      "role": "신입",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "llm"
+      ],
+      "skill": "llm",
+      "employment_type": [
+        "정규직",
+        "신입",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:신입:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:52e7f7035384:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "[공동체] 카카오헬스케어 AI Native EHR 개발영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/S-4699?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/S-4699?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581776+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "Industry": [
+          "헬스케어"
+        ],
+        "EmploymentType": [
+          "정규직"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:9720b25d1204:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "Machine Learning Engineer (Search) (신입)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14319?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14319?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581765+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "신입",
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "신입"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "신입",
+      "role": "신입",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "신입"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:신입:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:52e7f7035384:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "보이스톡 / 페이스톡 Server 엔지니어 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14172?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14172?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581753+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "엔지니어"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "엔지니어",
+      "role": "엔지니어",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:엔지니어:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:c7e60305b5c1:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "Machine Learning Engineer (Search) (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14318?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14318?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581739+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "MLOps Engineer (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "url": "https://careers.kakao.com/jobs/P-14039?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "source_url": "https://careers.kakao.com/jobs/P-14039?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
+      "event_at": "2026-04-22T21:28:43.581713+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "JobTitle": [
+          "engineer"
+        ],
+        "EmploymentType": [
+          "정규직",
+          "경력"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-employeetype-page-1",
+      "company_name": "ALL&employeeType=&page=1",
+      "job_title": "engineer",
+      "role": "engineer",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "정규직",
+        "경력"
+      ],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:all-employeetype-page-1:engineer:kr",
+      "canonical_key_status": "complete",
+      "event_key": "official_job_posting:989bf32035cb:20260422",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "5 minutes with Mindr’s CHRO",
+      "url": "https://www.hrdive.com/news/5-minutes-with-mindr-chro-amanda-sedars/818231/",
+      "source_url": "https://www.hrdive.com/news/5-minutes-with-mindr-chro-amanda-sedars/818231/",
+      "event_at": "2026-04-22T11:49:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "talent",
+          "benefits"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "talent",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "talent",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:talent:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:04cc5601e645:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Coke bottler rebuts EEOC claim that women-only work trip harmed male workers",
+      "url": "https://www.hrdive.com/news/coke-bottler-rebuts-eeoc-claim-women-only-work-trip/818226/",
+      "source_url": "https://www.hrdive.com/news/coke-bottler-rebuts-eeoc-claim-women-only-work-trip/818226/",
+      "event_at": "2026-04-22T10:03:00+00:00",
+      "matched_entities": {
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employment_compliance",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employment-compliance:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:1b6d984b44f0:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "r/overemployed",
+      "source_type": "rss",
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "salary_signal",
+      "title": "Meta to start capturing employee mouse movements, keystrokes for AI training data",
+      "url": "https://www.reddit.com/r/overemployed/comments/1sss4ub/meta_to_start_capturing_employee_mouse_movements/",
+      "source_url": "https://www.reddit.com/r/overemployed/comments/1sss4ub/meta_to_start_capturing_employee_mouse_movements/",
+      "event_at": "2026-04-22T08:25:28+00:00",
+      "matched_entities": {
+        "Company": [
+          "meta"
+        ],
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "employee"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "meta",
+      "job_title": "",
+      "role": "employee",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employee",
+      "salary_range": "2026-04",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "salary:employee:us:5bff3858078d",
+      "canonical_key_status": "complete",
+      "event_key": "salary_signal:784c9afe7b92:20260422",
+      "required_field_proxy": {
+        "role": true,
+        "region": true,
+        "salary_range": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "r/cscareerquestions",
+      "source_type": "rss",
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "labor_market_signal",
+      "title": "Odd candidate",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1ssq4vw/odd_candidate/",
+      "source_url": "https://www.reddit.com/r/cscareerquestions/comments/1ssq4vw/odd_candidate/",
+      "event_at": "2026-04-22T07:15:09+00:00",
+      "matched_entities": {
+        "TechStack": [
+          "go"
+        ],
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "candidate"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "candidate",
+      "location": "US",
+      "region": "US",
+      "skills": [
+        "go"
+      ],
+      "skill": "go",
+      "employment_type": [],
+      "topic": "candidate",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "labor_market:candidate:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:6a54e01903a3:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "On the eve of the draft, NFL calls on employers to judge candidates based on skills — not criminal records",
+      "url": "https://www.hrdive.com/news/april-second-chance-hiring-month-2026/817963/",
+      "source_url": "https://www.hrdive.com/news/april-second-chance-hiring-month-2026/817963/",
+      "event_at": "2026-04-22T06:13:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "talent"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "r/recruitinghell",
+      "source_type": "rss",
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "labor_market_signal",
+      "title": "The culture fit trap is getting out of hand",
+      "url": "https://www.reddit.com/r/recruitinghell/comments/1ssnqud/the_culture_fit_trap_is_getting_out_of_hand/",
+      "source_url": "https://www.reddit.com/r/recruitinghell/comments/1ssnqud/the_culture_fit_trap_is_getting_out_of_hand/",
+      "event_at": "2026-04-22T05:50:12+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "manager"
+        ],
+        "Industry": [
+          "startup",
+          "it"
+        ],
+        "EmploymentTrend": [
+          "hiring",
+          "interview"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "manager",
+      "role": "manager",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Recent grads are settling for jobs they plan to leave, says ZipRecruiter",
+      "url": "https://www.hrdive.com/news/recent-grads-are-settling-for-jobs-they-plan-to-leave-says-ziprecruiter/818138/",
+      "source_url": "https://www.hrdive.com/news/recent-grads-are-settling-for-jobs-they-plan-to-leave-says-ziprecruiter/818138/",
+      "event_at": "2026-04-22T05:41:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "job market",
+          "workforce"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "job market",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "job market",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:job-market:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:e861a92de314:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "DOL proposes new joint employer rule",
+      "url": "https://www.hrdive.com/news/dol-proposes-new-joint-employer-rule/818153/",
+      "source_url": "https://www.hrdive.com/news/dol-proposes-new-joint-employer-rule/818153/",
+      "event_at": "2026-04-22T05:20:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "employer"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "employer",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employer:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:709383c6324d:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "r/jobs",
+      "source_type": "rss",
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "labor_market_signal",
+      "title": "My 6 month job search is over",
+      "url": "https://www.reddit.com/r/jobs/comments/1ssma5w/my_6_month_job_search_is_over/",
+      "source_url": "https://www.reddit.com/r/jobs/comments/1ssma5w/my_6_month_job_search_is_over/",
+      "event_at": "2026-04-22T04:56:40+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr",
+          "manager"
+        ],
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "layoff",
+          "hiring",
+          "interview",
+          "candidate",
+          "job search"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "layoff",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "labor_market:layoff:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:776d023459c9:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "MetLife CHRO: 3 ways HR can lead through uncertainty",
+      "url": "https://hrexecutive.com/metlife-chro-3-ways-hr-can-lead-through-uncertainty/",
+      "source_url": "https://hrexecutive.com/metlife-chro-3-ways-hr-can-lead-through-uncertainty/",
+      "event_at": "2026-04-22T03:30:56+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "EmploymentTrend": [
+          "talent",
+          "benefits"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "talent",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:talent:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:04cc5601e645:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Large employers demand accountability as healthcare prices surge",
+      "url": "https://hrexecutive.com/large-employers-demand-accountability-as-healthcare-prices-surge/",
+      "source_url": "https://hrexecutive.com/large-employers-demand-accountability-as-healthcare-prices-surge/",
+      "event_at": "2026-04-22T03:15:24+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr",
+          "ceo"
+        ],
+        "Industry": [
+          "healthcare"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "labor_market",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:labor-market:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:acce29927001:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "On Capitol Hill, a debate over who AI at work is really working for",
+      "url": "https://hrexecutive.com/on-capitol-hill-a-debate-over-who-ai-at-work-is-really-working-for/",
+      "source_url": "https://hrexecutive.com/on-capitol-hill-a-debate-over-who-ai-at-work-is-really-working-for/",
+      "event_at": "2026-04-22T03:00:19+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "labor_market",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:labor-market:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:acce29927001:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "4 workplace culture risks CHROs must address in 2026 to survive in the age of AI",
+      "url": "https://hrexecutive.com/4-workplace-culture-risks-chros-must-address-in-2026-to-survive-in-the-age-of-ai/",
+      "source_url": "https://hrexecutive.com/4-workplace-culture-risks-chros-must-address-in-2026-to-survive-in-the-age-of-ai/",
+      "event_at": "2026-04-22T02:45:33+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "labor_market",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:labor-market:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:acce29927001:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Apple CEO shake-up: 3 succession lessons",
+      "url": "https://hrexecutive.com/apple-ceo-shake-up-3-succession-lessons/",
+      "source_url": "https://hrexecutive.com/apple-ceo-shake-up-3-succession-lessons/",
+      "event_at": "2026-04-22T02:40:29+00:00",
+      "matched_entities": {
+        "Company": [
+          "apple"
+        ],
+        "JobTitle": [
+          "hr",
+          "ceo"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "apple",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "labor_market",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:labor-market:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:acce29927001:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "What Cisco is doing to avoid ‘compliance theater’",
+      "url": "https://hrexecutive.com/what-cisco-is-doing-to-avoid-compliance-theater/",
+      "source_url": "https://hrexecutive.com/what-cisco-is-doing-to-avoid-compliance-theater/",
+      "event_at": "2026-04-22T02:30:26+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "labor_market",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:labor-market:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:acce29927001:20260422",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "한국경제",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "job_board_posting",
+      "title": "삼성 영업익 300조…코스피 차기 테마주는 '이·태·원'? [퇴근길 30초 경제]",
+      "url": "https://www.hankyung.com/article/2026042298127",
+      "source_url": "https://www.hankyung.com/article/2026042298127",
+      "event_at": "2026-04-22T00:08:55+00:00",
+      "matched_entities": {
+        "Company": [
+          "삼성"
+        ],
+        "JobTitle": [
+          "영업"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "삼성",
+      "job_title": "영업",
+      "role": "영업",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "job_posting:삼성:영업:kr",
+      "canonical_key_status": "complete",
+      "event_key": "job_board_posting:0f08d3c8735b:20260422",
+      "required_field_proxy": {
+        "company_name": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Bartender",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "workplace",
+        "talent_strategy"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Redesign Work Using Job Enrichment and Job Enlargement",
+      "url": "https://www.hrbartender.com/2026/strategy-planning/redesign-work-using-job-enrichment-enlargement/",
+      "source_url": "https://www.hrbartender.com/2026/strategy-planning/redesign-work-using-job-enrichment-enlargement/",
+      "event_at": "2026-04-21T23:57:00+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "EmploymentTrend": [
+          "employee"
+        ],
+        "SourceSignal": [
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employee",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employee:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:f11ac9d3ec3f:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "매일경제 취업",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "labor_market_signal",
+      "title": "성과급 따라 근로자간 양극화 커져…고임금發 인플레 우려도",
+      "url": "https://www.mk.co.kr/news/economy/12024305",
+      "source_url": "https://www.mk.co.kr/news/economy/12024305",
+      "event_at": "2026-04-21T23:48:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "고용",
+          "근로자",
+          "임금"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "고용",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "고용",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "labor_market:고용:kr",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:f131de55d5e8:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "매일경제 취업",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "labor_market_signal",
+      "title": "“4월 월급 보고 놀라지 마세요”…건보료 평균 22만원 더 내는 직장인 1000만명",
+      "url": "https://www.mk.co.kr/news/economy/12024071",
+      "source_url": "https://www.mk.co.kr/news/economy/12024071",
+      "event_at": "2026-04-21T21:47:27+00:00",
+      "matched_entities": {
+        "Industry": [
+          "보험"
+        ],
+        "EmploymentTrend": [
+          "임금"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "임금",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "임금",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "labor_market:임금:kr",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:c214f1a71d7b:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Why Your HSA Isn’t Working the Way You Think: New Research on Employee Behavior",
+      "url": "https://hrexecutive.com/why-your-hsa-isnt-working-the-way-you-think-new-research-on-employee-behavior/",
+      "source_url": "https://hrexecutive.com/why-your-hsa-isnt-working-the-way-you-think-new-research-on-employee-behavior/",
+      "event_at": "2026-04-21T14:29:29+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "pm",
+          "hr"
+        ],
+        "EmploymentTrend": [
+          "employee"
+        ],
+        "JobGeneral": [
+          "join us"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "pm",
+      "role": "pm",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employee",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employee:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:f11ac9d3ec3f:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Lawsuit alleges Trump’s anti-DEI contractor order violates Constitution",
+      "url": "https://www.hrdive.com/news/lawsuit-trump-anti-dei-contractor-order-violates-constitution-diversity-officers-higher-ed/818107/",
+      "source_url": "https://www.hrdive.com/news/lawsuit-trump-anti-dei-contractor-order-violates-constitution-diversity-officers-higher-ed/818107/",
+      "event_at": "2026-04-21T10:51:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "dei"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "dei",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "dei",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:dei:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:3e2ff25f5aa6:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "FedEx settles charge it denied telework accommodations to workers with disabilities",
+      "url": "https://www.hrdive.com/news/fedex-elework-accommodations-workers-with-disabilities-eeoc/818106/",
+      "source_url": "https://www.hrdive.com/news/fedex-elework-accommodations-workers-with-disabilities-eeoc/818106/",
+      "event_at": "2026-04-21T10:50:00+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "Industry": [
+          "it"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employment_compliance",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employment-compliance:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:1b6d984b44f0:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "California contractor ordered to pay $468K in wage theft case",
+      "url": "https://www.hrdive.com/news/california-contractor-back-wages-theft-dol/818073/",
+      "source_url": "https://www.hrdive.com/news/california-contractor-back-wages-theft-dol/818073/",
+      "event_at": "2026-04-21T10:50:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "payroll"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "payroll",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "payroll",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:payroll:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a5c9983fe9a9:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Employers hesitate to train high-turnover workers — but training may strengthen retention",
+      "url": "https://www.hrdive.com/news/train-high-turnover-workers-retention/818041/",
+      "source_url": "https://www.hrdive.com/news/train-high-turnover-workers-retention/818041/",
+      "event_at": "2026-04-21T06:45:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "labor market",
+          "retention",
+          "employer"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Organizations and employees want different things from leaders, study finds",
+      "url": "https://www.hrdive.com/news/organizations-and-employees-want-different-things-from-leaders/818055/",
+      "source_url": "https://www.hrdive.com/news/organizations-and-employees-want-different-things-from-leaders/818055/",
+      "event_at": "2026-04-21T06:04:00+00:00",
+      "matched_entities": {
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employment_compliance",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employment-compliance:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:1b6d984b44f0:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "AI payoff remains distant as firms keep spending, PwC finds",
+      "url": "https://www.hrdive.com/news/ai-payoff-remains-distant-firms-keep-spending-pwc/818047/",
+      "source_url": "https://www.hrdive.com/news/ai-payoff-remains-distant-firms-keep-spending-pwc/818047/",
+      "event_at": "2026-04-21T06:04:00+00:00",
+      "matched_entities": {
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employment_compliance",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employment-compliance:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:1b6d984b44f0:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Leaders may be overspending on tech and underspending on talent",
+      "url": "https://www.hrdive.com/news/kpmg-adaptability-index-2026/818034/",
+      "source_url": "https://www.hrdive.com/news/kpmg-adaptability-index-2026/818034/",
+      "event_at": "2026-04-21T06:03:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "talent"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "talent",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "talent",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:talent:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:04cc5601e645:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Why AI improves employee engagement for some organizations and how to make it work for yours",
+      "url": "https://hrexecutive.com/why-ai-improves-employee-engagement-for-some-organizations-and-how-to-make-it-work-for-yours/",
+      "source_url": "https://hrexecutive.com/why-ai-improves-employee-engagement-for-some-organizations-and-how-to-make-it-work-for-yours/",
+      "event_at": "2026-04-21T03:30:24+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "employee"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employee",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employee:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:f11ac9d3ec3f:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "The 3 trials of leadership in the age of AI",
+      "url": "https://hrexecutive.com/the-3-trials-of-leadership-in-the-age-of-ai/",
+      "source_url": "https://hrexecutive.com/the-3-trials-of-leadership-in-the-age-of-ai/",
+      "event_at": "2026-04-21T03:15:58+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "labor_market",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:labor-market:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:acce29927001:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "As AI layoff regret surges, will boomerang employees make a comeback?",
+      "url": "https://hrexecutive.com/as-ai-layoff-regret-surges-will-boomerang-employees-make-a-comeback/",
+      "source_url": "https://hrexecutive.com/as-ai-layoff-regret-surges-will-boomerang-employees-make-a-comeback/",
+      "event_at": "2026-04-21T03:00:09+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "EmploymentTrend": [
+          "layoff"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "layoff",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:layoff:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:776d023459c9:20260421",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "r/cscareerquestions",
+      "source_type": "rss",
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "event_model": "labor_market_signal",
+      "title": "Resume Advice Thread - April 21, 2026",
+      "url": "https://www.reddit.com/r/cscareerquestions/comments/1srg4y6/resume_advice_thread_april_21_2026/",
+      "source_url": "https://www.reddit.com/r/cscareerquestions/comments/1srg4y6/resume_advice_thread_april_21_2026/",
+      "event_at": "2026-04-20T22:00:05+00:00",
+      "matched_entities": {
+        "Company": [
+          "google"
+        ],
+        "EmploymentTrend": [
+          "resume"
+        ]
+      },
+      "signal_basis": "article_entity_signal",
+      "company_id": "",
+      "company_name": "google",
+      "job_title": "",
+      "role": "resume",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "resume",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [],
+      "canonical_key": "labor_market:resume:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:4c2eaed1d841:20260420",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "카카오 영입",
+      "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
+      "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
+      "event_at": "2026-04-14T11:24:33.554500+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "TechStack": [
+          "javascript"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-part-technology",
+      "company_name": "ALL&part=TECHNOLOGY",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "javascript"
+      ],
+      "skill": "javascript",
+      "employment_type": [],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:00539721ef51:20260414",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Workers Want Training but Employers Don’t Always Deliver. Can Policy Help?",
+      "url": "https://www.hiringlab.org/2026/04/14/workers-want-training-but-employers-dont-always-deliver/",
+      "source_url": "https://www.hiringlab.org/2026/04/14/workers-want-training-but-employers-dont-always-deliver/",
+      "event_at": "2026-04-13T21:00:00+00:00",
+      "matched_entities": {
+        "Industry": [
+          "it"
+        ],
+        "EmploymentType": [
+          "permanent"
+        ],
+        "EmploymentTrend": [
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "permanent"
+      ],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260413",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "What Goes Up, Must Come Down: How the Labor Market Is Emerging From the Long Shadow of the Pandemic",
+      "url": "https://www.hiringlab.org/2026/04/13/how-the-labor-market-is-emerging-from-the-long-shadow-of-the-pandemic/",
+      "source_url": "https://www.hiringlab.org/2026/04/13/how-the-labor-market-is-emerging-from-the-long-shadow-of-the-pandemic/",
+      "event_at": "2026-04-13T12:40:49+00:00",
+      "matched_entities": {
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260413",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "IBM strikes $17M deal to end feds’ probe of DEI programs",
+      "url": "https://www.hrdive.com/news/ibm-strikes-deal-end-dei-probe/817354/",
+      "source_url": "https://www.hrdive.com/news/ibm-strikes-deal-end-dei-probe/817354/",
+      "event_at": "2026-04-13T11:01:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "dei"
+        ],
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "dei",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "dei",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:dei:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:3e2ff25f5aa6:20260413",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "IBM CHRO: Focus on AI productivity at your own risk",
+      "url": "https://hrexecutive.com/ibm-chro-focus-on-ai-productivity-at-your-own-risk/",
+      "source_url": "https://hrexecutive.com/ibm-chro-focus-on-ai-productivity-at-your-own-risk/",
+      "event_at": "2026-04-13T03:30:27+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "hr"
+        ],
+        "EmploymentTrend": [
+          "benefits"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "hr",
+      "role": "hr",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "benefits",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:benefits:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:f7fe42f467f6:20260413",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Colorado AI bias law is unconstitutional, lawsuit from Elon Musk’s xAI claims",
+      "url": "https://www.hrdive.com/news/colorado-ai-bias-law-unconstitutional-elon-musks-xai/817258/",
+      "source_url": "https://www.hrdive.com/news/colorado-ai-bias-law-unconstitutional-elon-musks-xai/817258/",
+      "event_at": "2026-04-10T11:59:00+00:00",
+      "matched_entities": {
+        "SourceSignal": [
+          "employment_compliance",
+          "labor_market",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "employment_compliance",
+      "salary_range": "24-205",
+      "demand_count": null,
+      "source_signal": [
+        "employment_compliance",
+        "labor_market",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:employment-compliance:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:1b6d984b44f0:20260410",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "The Recipe for Growth: Slim Chickens CEO Tom Gordon on Scalability and Succession Planning",
+      "url": "https://hrexecutive.com/the-recipe-for-growth-slim-chickens-ceo-tom-gordon-on-scalability-and-succession-planning-2/",
+      "source_url": "https://hrexecutive.com/the-recipe-for-growth-slim-chickens-ceo-tom-gordon-on-scalability-and-succession-planning-2/",
+      "event_at": "2026-04-10T10:54:10+00:00",
+      "matched_entities": {
+        "JobTitle": [
+          "pm",
+          "hr",
+          "ceo"
+        ],
+        "EmploymentTrend": [
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "talent_strategy",
+          "workplace"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "pm",
+      "role": "pm",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260410",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    }
+  ],
+  "daily_review_items": [
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Samsung Careers",
+      "title": "SAMSUNG CAREERS",
+      "canonical_key": "job_posting:employer:삼성",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "서비스 안정성 기획 및 운영 담당자 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "서비스 안정성 기획 및 운영 담당자 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "추천 시스템 연구/개발 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "추천 시스템 연구/개발 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "광고추천 데이터 사이언스, 머신러닝 전문가 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "광고추천 데이터 사이언스, 머신러닝 전문가 (경력)영입마감일영입종료시근무지직군 태그회사정보카카오직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오헬스케어 AI Native EHR 개발영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "[공동체] 카카오헬스케어 AI Native EHR 개발영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
+      "canonical_key": "job_posting:employer:all-employeetype-page-1",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "community_proxy_source",
+      "event_model": "salary_signal",
+      "source": "r/overemployed",
+      "title": "Meta to start capturing employee mouse movements, keystrokes for AI training data",
+      "signal_basis": "article_entity_signal"
+    },
+    {
+      "reason": "community_proxy_source",
+      "event_model": "labor_market_signal",
+      "source": "r/cscareerquestions",
+      "title": "Odd candidate",
+      "signal_basis": "article_entity_signal"
+    },
+    {
+      "reason": "community_proxy_source",
+      "event_model": "labor_market_signal",
+      "source": "r/recruitinghell",
+      "title": "The culture fit trap is getting out of hand",
+      "signal_basis": "article_entity_signal"
+    },
+    {
+      "reason": "community_proxy_source",
+      "event_model": "labor_market_signal",
+      "source": "r/jobs",
+      "title": "My 6 month job search is over",
+      "signal_basis": "article_entity_signal"
+    },
+    {
+      "reason": "community_proxy_source",
+      "event_model": "labor_market_signal",
+      "source": "r/cscareerquestions",
+      "title": "Resume Advice Thread - April 21, 2026",
+      "signal_basis": "article_entity_signal"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "카카오 영입",
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "카카오 영입",
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "skill_demand"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Greenhouse public job boards",
+      "signal_type": "official_job_posting",
+      "activation_gate": "board token mapping, company canonicalization, and duplicate posting handling"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Lever public job boards",
+      "signal_type": "official_job_posting",
+      "activation_gate": "company canonicalization, location normalization, and closing date policy"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Job board skill demand index",
+      "signal_type": "skill_demand",
+      "activation_gate": "ToS/API review, repost handling, and skill alias map"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Salary survey and labor market feeds",
+      "signal_type": "salary_signal",
+      "activation_gate": "role taxonomy, region mapping, and sample-size caveat retention"
+    }
+  ],
+  "source_backlog": {
+    "operational_candidates": [
+      {
+        "id": "greenhouse_public_jobs",
+        "name": "Greenhouse public job boards",
+        "signal_type": "official_job_posting",
+        "activation_gate": "board token mapping, company canonicalization, and duplicate posting handling"
+      },
+      {
+        "id": "lever_public_jobs",
+        "name": "Lever public job boards",
+        "signal_type": "official_job_posting",
+        "activation_gate": "company canonicalization, location normalization, and closing date policy"
+      },
+      {
+        "id": "job_board_skill_index",
+        "name": "Job board skill demand index",
+        "signal_type": "skill_demand",
+        "activation_gate": "ToS/API review, repost handling, and skill alias map"
+      },
+      {
+        "id": "salary_survey_feeds",
+        "name": "Salary survey and labor market feeds",
+        "signal_type": "salary_signal",
+        "activation_gate": "role taxonomy, region mapping, and sample-size caveat retention"
+      }
+    ]
+  },
+  "errors": []
+}

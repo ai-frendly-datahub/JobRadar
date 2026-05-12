@@ -1,46 +1,212 @@
 {
   "date": "2026-04-30",
   "category": "job",
-  "article_count": 200,
+  "article_count": 21,
   "source_count": 6,
-  "matched_count": 103,
+  "matched_count": 21,
   "top_entities": [
     {
-      "name": "Industry",
-      "count": 69
-    },
-    {
-      "name": "EmploymentTrend",
-      "count": 33
-    },
-    {
-      "name": "JobTitle",
-      "count": 30
-    },
-    {
-      "name": "Company",
-      "count": 24
+      "name": "SourceSignal",
+      "count": 61
     },
     {
       "name": "EmploymentType",
+      "count": 28
+    },
+    {
+      "name": "Company",
+      "count": 17
+    },
+    {
+      "name": "JobTitle",
+      "count": 17
+    },
+    {
+      "name": "Industry",
+      "count": 8
+    },
+    {
+      "name": "EmploymentTrend",
       "count": 6
     },
     {
-      "name": "JobGeneral",
-      "count": 5
+      "name": "TechStack",
+      "count": 4
     },
     {
-      "name": "TechStack",
+      "name": "JobGeneral",
       "count": 1
     }
   ],
   "sources": {
-    "매일경제 취업": 74,
-    "한국경제": 90,
-    "HR Executive": 13,
-    "HR Dive": 20,
-    "Indeed Hiring Lab": 2,
-    "HR Bartender": 1
+    "Samsung Careers": 1,
+    "Kakao Careers": 16,
+    "r/cscareerquestions": 1,
+    "HR Executive": 1,
+    "HR Dive": 1,
+    "Indeed Hiring Lab": 1
   },
-  "generated_at": "2026-04-30T15:26:06.252436+09:00"
+  "generated_at": "2026-04-30T18:02:42.963161+09:00",
+  "articles": [
+    {
+      "event_model_payload": {
+        "source_url": "https://www.samsungcareers.com/insight/find"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4682?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4683?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14326?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14249?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14287?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14402?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4685?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4689?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14148?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14403?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/S-4699?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14319?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14172?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14318?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs/P-14039?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "r/cscareerquestions",
+        "headline": "Interview Discussion - April 30, 2026",
+        "source_url": "https://www.reddit.com/r/cscareerquestions/comments/1szokjd/interview_discussion_april_30_2026/",
+        "published_at": "2026-04-29T22:00:06+00:00",
+        "summary": "<!-- SC_OFF --><div class=\"md\"><p>Please use this thread to have discussions about interviews, interviewing, and interview prep. Posts focusing solely on interviews created outside of this thread will probably be removed.</p> <p>Abide by the rules, don't be a jerk.</p> <p>This thread is posted each <strong>Monday and Thursday at midnight PST</strong>. Previous Interview Discussion threads can be found <a href=\"https://www.reddit.com/r/cscareerquestions/search?q=Interview+Discussion&restrict_sr=on&sort=new&t=all\">here</a>.</p> </div><!-- SC_ON -->   submitted by   <a href=\"https://www.reddit.com/user/CSCQMods\"> /u/CSCQMods </a> <br /> <span><a href=\"https://www.reddit.com/r/cscareerquestions/comments/1szokjd/interview_discussion_april_30_2026/\">[link]</a></span>   <span><a href=\"https://www.reddit.com/r/cscareerquestions/comments/1szokjd/interview_discussion_april_30_2026/\">[comments]</a></span>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Executive",
+        "headline": "AI in Action: Real HR Use Cases, Real Outcomes",
+        "source_url": "https://hrexecutive.com/ai-in-action-real-hr-use-cases-real-outcomes/",
+        "published_at": "2026-04-29T14:43:26+00:00",
+        "summary": "<p>Wednesday, May 27, 2026 at 2:00 pm ET </p>\n<p>If your HR is still treating AI as an experiment, this webcast shows how to move pragmatically and confidently to integrated intelligence.</p>\n<p>The post <a href=\"https://hrexecutive.com/ai-in-action-real-hr-use-cases-real-outcomes/\">AI in Action: Real HR Use Cases, Real Outcomes</a> appeared first on <a href=\"https://hrexecutive.com\">HR Executive</a>.</p>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Dive",
+        "headline": "Company used sham recruiting email address for US workers to justify hiring foreign citizens, DOJ says",
+        "source_url": "https://www.hrdive.com/news/company-used-sham-recruiting-email-address-for-us-workers-doj/818820/",
+        "published_at": "2026-04-29T11:03:00+00:00",
+        "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/3_NUxSWrLjyTEJEWKa8ZYfwhbyrPBURnLm6kCdSR-Yo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjUyMDU2OTk0LmpwZw==.webp\" /></div></figure><p>“America’s civil rights and labor laws are clear: if you want to sponsor people with temporary visas for permanent residency, you cannot discriminate against U.S. workers,” the department said.</p>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://www.hiringlab.org/2026/04/29/april-2026-fomc-reaction-uncertainty-from-all-directions/"
+      }
+    }
+  ],
+  "ontology": {
+    "repo": "JobRadar",
+    "category": "job",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "employment.editorial_coverage",
+      "employment.job_board_posting",
+      "employment.labor_market_signal",
+      "employment.official_job_posting",
+      "employment.salary_signal",
+      "employment.skill_demand"
+    ],
+    "event_model_mappings": {
+      "official_job_posting": "employment.official_job_posting",
+      "job_board_posting": "employment.job_board_posting",
+      "salary_signal": "employment.salary_signal",
+      "skill_demand": "employment.skill_demand",
+      "labor_market_signal": "employment.labor_market_signal",
+      "editorial_coverage": "employment.editorial_coverage"
+    },
+    "entity_type_hints": [
+      "employment.job_posting",
+      "organization.company"
+    ],
+    "source_role_ids": [
+      "community_signal",
+      "context_only",
+      "operational_evidence",
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "Kakao Careers": "primary_evidence",
+      "Samsung Careers": "primary_evidence",
+      "Indeed Hiring Lab": "operational_evidence",
+      "HR Dive": "context_only",
+      "r/cscareerquestions": "community_signal"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
 }

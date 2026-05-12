@@ -1,36 +1,43 @@
 {
   "date": "2026-04-13",
   "category": "job",
-  "article_count": 200,
-  "source_count": 4,
-  "matched_count": 86,
+  "article_count": 3,
+  "source_count": 3,
+  "matched_count": 3,
   "top_entities": [
     {
-      "name": "Industry",
-      "count": 87
-    },
-    {
-      "name": "JobTitle",
-      "count": 25
-    },
-    {
-      "name": "JobGeneral",
-      "count": 16
+      "name": "SourceSignal",
+      "count": 6
     },
     {
       "name": "Company",
-      "count": 15
+      "count": 2
     },
     {
       "name": "EmploymentTrend",
-      "count": 11
+      "count": 2
+    },
+    {
+      "name": "JobGeneral",
+      "count": 1
+    },
+    {
+      "name": "TechStack",
+      "count": 1
+    },
+    {
+      "name": "JobTitle",
+      "count": 1
+    },
+    {
+      "name": "Industry",
+      "count": 1
     }
   ],
   "sources": {
-    "매일경제 취업": 73,
-    "한국경제": 112,
-    "HR Dive": 5,
-    "HR Executive": 10
+    "Samsung Careers": 1,
+    "Kakao Careers": 1,
+    "매일경제 취업": 1
   },
-  "generated_at": "2026-04-13T15:13:32.047266+09:00"
+  "generated_at": "2026-04-13T17:12:44.642354+09:00"
 }
