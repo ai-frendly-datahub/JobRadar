@@ -3,7 +3,7 @@ name: JobRadar Daily Collection
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 4 * * *"  # Daily at 4:00 UTC
+    - cron: "0 5 * * *"  # Daily at 4:00 UTC
 
 permissions:
   contents: write
