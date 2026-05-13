@@ -1,61 +1,59 @@
 {
   "date": "2026-05-13",
   "category": "job",
-  "article_count": 129,
-  "source_count": 15,
-  "matched_count": 129,
+  "article_count": 114,
+  "source_count": 13,
+  "matched_count": 114,
   "top_entities": [
     {
       "name": "EmploymentTrend",
-      "count": 95
+      "count": 104
     },
     {
       "name": "Industry",
-      "count": 91
-    },
-    {
-      "name": "JobTitle",
-      "count": 84
-    },
-    {
-      "name": "SourceSignal",
       "count": 82
     },
     {
+      "name": "SourceSignal",
+      "count": 77
+    },
+    {
+      "name": "JobTitle",
+      "count": 68
+    },
+    {
       "name": "TechStack",
-      "count": 39
+      "count": 32
     },
     {
       "name": "EmploymentType",
-      "count": 19
-    },
-    {
-      "name": "Company",
       "count": 16
     },
     {
+      "name": "Company",
+      "count": 10
+    },
+    {
       "name": "JobGeneral",
-      "count": 13
+      "count": 6
     }
   ],
   "sources": {
     "Samsung Careers": 1,
     "Kakao Careers": 1,
-    "r/careeradvice": 17,
-    "r/jobs": 11,
-    "r/cscareerquestions": 20,
-    "r/recruitinghell": 14,
-    "r/overemployed": 14,
-    "HR Dive": 11,
+    "r/careeradvice": 14,
+    "r/cscareerquestions": 21,
+    "r/recruitinghell": 13,
+    "r/jobs": 13,
+    "r/overemployed": 11,
+    "r/korea": 6,
     "r/layoffs": 6,
-    "HR Executive": 11,
-    "r/korea": 4,
-    "한국경제": 6,
-    "매일경제 취업": 10,
-    "Indeed Hiring Lab": 2,
-    "HR Bartender": 1
+    "매일경제 취업": 5,
+    "HR Dive": 11,
+    "HR Executive": 10,
+    "Indeed Hiring Lab": 2
   },
-  "generated_at": "2026-05-13T05:48:04.376195+09:00",
+  "generated_at": "2026-05-13T16:51:08.199967+09:00",
   "articles": [
     {
       "event_model_payload": {
@@ -64,24 +62,6 @@
         "source_url": "https://www.hrdive.com/news/antisemitism-allegations-reach-national-education-association/819430/",
         "published_at": "2026-05-06T10:53:00+00:00",
         "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/YhfYIJUVq5NS1TvFUN7mAypDRiuxxHCUI51fcFpRLKw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTk4NTU1NzA5LmpwZw==.webp\" /></div></figure><p>NEA discriminated against Jewish members by allowing pro-Palestinian activity that promoted “a hostile environment,” a Brandeis Center complaint filed with EEOC alleges.</p>"
-      }
-    },
-    {
-      "event_model_payload": {
-        "source_name": "HR Executive",
-        "headline": "Humility, agility—keys to unlocking HR greatness in the age of AI",
-        "source_url": "https://hrexecutive.com/humility-agility-keys-to-unlocking-hr-greatness-in-the-age-of-ai/",
-        "published_at": "2026-05-06T03:30:56+00:00",
-        "summary": "<p>MetLife CHRO Shurawl Sibblies says HR can drive AI transformation through core tenets like active listening and staying in \"learn mode.\"</p>\n<p>The post <a href=\"https://hrexecutive.com/humility-agility-keys-to-unlocking-hr-greatness-in-the-age-of-ai/\">Humility, agility—keys to unlocking HR greatness in the age of AI</a> appeared first on <a href=\"https://hrexecutive.com\">HR Executive</a>.</p>"
-      }
-    },
-    {
-      "event_model_payload": {
-        "source_name": "r/recruitinghell",
-        "headline": "Requiered internship to keep studying in CS",
-        "source_url": "https://www.reddit.com/r/recruitinghell/comments/1t5aeht/requiered_internship_to_keep_studying_in_cs/",
-        "published_at": "2026-05-06T02:43:20+00:00",
-        "summary": "<table> <tr><td> <a href=\"https://www.reddit.com/r/recruitinghell/comments/1t5aeht/requiered_internship_to_keep_studying_in_cs/\"> <img alt=\"Requiered internship to keep studying in CS\" src=\"https://preview.redd.it/0nei89fg8izg1.png?width=640&crop=smart&auto=webp&s=7b6e9e50acadaa77cf2bf5a49f6f9b83a4cb0894\" title=\"Requiered internship to keep studying in CS\" /> </a> </td><td> <!-- SC_OFF --><div class=\"md\"><p>CV has been looked at by multiple professionals, I know many people in that same situation but the university keeps on insisting there's nothing wrong with the job market. I will get removed from the university if I don't find an internship and they've been of no help at all</p> </div><!-- SC_ON -->   submitted by   <a href=\"https://www.reddit.com/user/Juicy_enby\"> /u/Juicy_enby </a> <br /> <span><a href=\"https://i.redd.it/0nei89fg8izg1.png\">[link]</a></span>   <span><a href=\"https://www.reddit.com/r/recruitinghell/comments/1t5aeht/requiered_internship_to_keep_studying_in_cs/\">[comments]</a></span> </td></tr></table>"
       }
     }
   ]
