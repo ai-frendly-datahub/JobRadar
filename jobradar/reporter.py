@@ -48,6 +48,38 @@ def generate_report(
     except Exception:
         pass
 
+    # --- Skill role distribution (powered by jobradar.skill_cluster) ---
+    try:
+        from .skill_cluster import extract_for_jobs, role_distribution
+
+        extractions = extract_for_jobs(articles_list)
+        roles = role_distribution(extractions)
+    except Exception:
+        roles = {}
+
+    extra_sections = None
+    if roles:
+        role_rows = "".join(
+            f"<tr><td>{escape(role)}</td><td>{count}</td></tr>"
+            for role, count in sorted(roles.items(), key=lambda kv: kv[1], reverse=True)
+        )
+        roles_html = (
+            '<table class="job-role-distribution">'
+            "<thead><tr><th>Role</th><th>Postings</th></tr></thead>"
+            f"<tbody>{role_rows}</tbody></table>"
+        )
+        extra_sections = [
+            {
+                "id": "job-role-distribution",
+                "aria_label": "Role distribution",
+                "title": "Role Distribution",
+                "panel_title": "Role Distribution",
+                "subtitle": "Role assignments inferred from a 60+ skill lexicon",
+                "badges": [],
+                "body_html": f'<div class="role-wrap">{roles_html}</div>',
+            }
+        ]
+
     report_path = _core_generate_report(
         category=category,
         articles=articles_list,
@@ -55,6 +87,7 @@ def generate_report(
         stats=stats,
         errors=errors,
         plugin_charts=plugin_charts if plugin_charts else None,
+        extra_sections=extra_sections,
         ontology_metadata=build_summary_ontology_metadata(
             "JobRadar",
             category_name=category.category_name,
