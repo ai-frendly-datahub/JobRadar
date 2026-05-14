@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-05-07T00:58:07.466552+00:00",
+  "generated_at": "2026-05-13T12:25:58.904981+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -14,28 +14,28 @@
     "not_tracked_sources": 12,
     "skipped_disabled_sources": 6,
     "collection_error_count": 0,
-    "official_job_posting_events": 18,
+    "official_job_posting_events": 17,
     "job_board_posting_events": 0,
-    "labor_market_signal_events": 3,
+    "labor_market_signal_events": 2,
     "skill_demand_events": 0,
     "salary_signal_events": 0,
-    "job_signal_event_count": 21,
-    "official_or_operational_event_count": 18,
+    "job_signal_event_count": 19,
+    "official_or_operational_event_count": 17,
     "community_proxy_event_count": 0,
-    "complete_canonical_key_count": 14,
-    "proxy_canonical_key_count": 7,
+    "complete_canonical_key_count": 13,
+    "proxy_canonical_key_count": 6,
     "missing_canonical_key_count": 0,
-    "company_present_count": 18,
+    "company_present_count": 17,
     "job_title_present_count": 11,
-    "location_present_count": 21,
+    "location_present_count": 19,
     "salary_range_present_count": 0,
     "skill_present_count": 4,
     "demand_count_present_count": 0,
-    "event_required_field_gap_count": 6,
+    "event_required_field_gap_count": 5,
     "tracked_source_gap_count": 0,
     "missing_event_model_count": 3,
     "source_backlog_candidate_count": 4,
-    "daily_review_item_count": 20
+    "daily_review_item_count": 18
   },
   "sources": [
     {
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 9,
+      "article_count": 0,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -214,12 +214,12 @@
       "event_model": "labor_market_signal",
       "freshness_sla_days": 14.0,
       "status": "fresh",
-      "article_count": 3,
-      "event_count": 3,
-      "latest_event_at": "2026-05-05T07:18:13+00:00",
-      "age_days": 1.74,
-      "latest_title": "March 2026 JOLTS Report: Stable, Depending on What You Do",
-      "latest_url": "https://www.hiringlab.org/2026/05/05/march-2026-jolts-report-stable-depending-on-what-you-do/",
+      "article_count": 2,
+      "event_count": 2,
+      "latest_event_at": "2026-05-08T04:46:58+00:00",
+      "age_days": 5.32,
+      "latest_title": "April 2026 Jobs Report: Moving, But Not Moving Along",
+      "latest_url": "https://www.hiringlab.org/2026/05/08/april-2026-jobs-report-moving-but-not-moving-along",
       "latest_canonical_key": "labor_market:hiring:us",
       "latest_required_field_gaps": [],
       "skip_reason": null,
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 14,
+      "article_count": 2,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -272,7 +272,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 14,
+      "article_count": 3,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 22,
+      "article_count": 3,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -322,7 +322,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 18,
+      "article_count": 0,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -347,7 +347,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 20,
+      "article_count": 1,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -372,7 +372,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 21,
+      "article_count": 0,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -397,7 +397,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 13,
+      "article_count": 0,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -422,7 +422,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 4,
+      "article_count": 0,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -447,7 +447,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 11,
+      "article_count": 0,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -559,9 +559,9 @@
       "event_model": "official_job_posting",
       "freshness_sla_days": 3.0,
       "status": "fresh",
-      "article_count": 17,
-      "event_count": 17,
-      "latest_event_at": "2026-05-07T00:58:14.773581+00:00",
+      "article_count": 16,
+      "event_count": 16,
+      "latest_event_at": "2026-05-13T12:26:05.292292+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-05-07T00:58:18.476049+00:00",
+      "latest_event_at": "2026-05-13T12:26:09.351940+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-05-07T00:58:18.476049+00:00",
+      "event_at": "2026-05-13T12:26:09.351940+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260507",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260513",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-05-07T00:58:14.773581+00:00",
+      "event_at": "2026-05-13T12:26:05.292292+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260507",
+      "event_key": "official_job_posting:00539721ef51:20260513",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -726,6 +726,64 @@
       "required_field_gaps": [
         "job_title"
       ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "April 2026 Jobs Report: Moving, But Not Moving Along",
+      "url": "https://www.hiringlab.org/2026/05/08/april-2026-jobs-report-moving-but-not-moving-along",
+      "source_url": "https://www.hiringlab.org/2026/05/08/april-2026-jobs-report-moving-but-not-moving-along",
+      "event_at": "2026-05-08T04:46:58+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260508",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
     },
     {
       "source": "Indeed Hiring Lab",
@@ -1791,185 +1849,6 @@
         "source_url": true
       },
       "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "April 2026 FOMC Reaction: Uncertainty From All Directions",
-      "url": "https://www.hiringlab.org/2026/04/29/april-2026-fomc-reaction-uncertainty-from-all-directions/",
-      "source_url": "https://www.hiringlab.org/2026/04/29/april-2026-fomc-reaction-uncertainty-from-all-directions/",
-      "event_at": "2026-04-29T10:24:55+00:00",
-      "matched_entities": {
-        "EmploymentTrend": [
-          "hiring"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260429",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "Job Seeker Searches for AI Roles Have Grown 11x Since ChatGPT Released",
-      "url": "https://www.hiringlab.org/2026/04/28/job-seeker-searches-for-ai-roles-have-grown/",
-      "source_url": "https://www.hiringlab.org/2026/04/28/job-seeker-searches-for-ai-roles-have-grown/",
-      "event_at": "2026-04-28T00:00:00+00:00",
-      "matched_entities": {
-        "EmploymentTrend": [
-          "hiring"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260428",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Kakao Careers",
-      "source_type": "browser",
-      "trust_tier": "T1_authoritative",
-      "content_type": "job_posting",
-      "collection_tier": "C3_html_js",
-      "producer_role": "employer",
-      "info_purpose": [
-        "official_job_posting",
-        "tech_hiring"
-      ],
-      "event_model": "official_job_posting",
-      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
-      "url": "https://careers.kakao.com/jobs/S-4697?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
-      "source_url": "https://careers.kakao.com/jobs/S-4697?skillSet=&part=TECHNOLOGY&company=ALL&employeeType=&page=1",
-      "event_at": "2026-04-25T11:23:29.887335+00:00",
-      "matched_entities": {
-        "Company": [
-          "카카오"
-        ],
-        "Industry": [
-          "보험"
-        ],
-        "EmploymentType": [
-          "정규직"
-        ],
-        "SourceSignal": [
-          "employer",
-          "official_job_posting",
-          "tech_hiring"
-        ]
-      },
-      "signal_basis": "operational_source",
-      "company_id": "all-employeetype-page-1",
-      "company_name": "ALL&employeeType=&page=1",
-      "job_title": "",
-      "role": "",
-      "location": "KR",
-      "region": "KR",
-      "skills": [],
-      "skill": "",
-      "employment_type": [
-        "정규직"
-      ],
-      "topic": "employer",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "employer",
-        "official_job_posting",
-        "tech_hiring"
-      ],
-      "canonical_key": "job_posting:employer:all-employeetype-page-1",
-      "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:9720b25d1204:20260425",
-      "required_field_proxy": {
-        "company_id": true,
-        "job_title": false,
-        "location": true,
-        "source_url": true
-      },
-      "required_field_gaps": [
-        "job_title"
-      ]
     }
   ],
   "daily_review_items": [
@@ -2068,24 +1947,6 @@
       "event_model": "official_job_posting",
       "source": "Kakao Careers",
       "title": "[공동체] 카카오헬스케어 AI Native EHR 개발영입마감일영입종료시근무지직군 태그회사정보카카오헬스케어직원유형정규직",
-      "canonical_key": "job_posting:employer:all-employeetype-page-1",
-      "canonical_key_status": "employer_proxy"
-    },
-    {
-      "reason": "missing_required_fields",
-      "event_model": "official_job_posting",
-      "source": "Kakao Careers",
-      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
-      "canonical_key": "job_posting:employer:all-employeetype-page-1",
-      "required_field_gaps": [
-        "job_title"
-      ]
-    },
-    {
-      "reason": "proxy_canonical_key",
-      "event_model": "official_job_posting",
-      "source": "Kakao Careers",
-      "title": "[공동체] 카카오페이손해보험 Frontend Engineer영입마감일2026년 04월 27일 00:00까지근무지직군 태그회사정보카카오페이손해보험직원유형정규직",
       "canonical_key": "job_posting:employer:all-employeetype-page-1",
       "canonical_key_status": "employer_proxy"
     },
