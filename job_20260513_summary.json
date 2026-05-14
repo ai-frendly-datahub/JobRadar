@@ -1,68 +1,113 @@
 {
   "date": "2026-05-13",
   "category": "job",
-  "article_count": 114,
-  "source_count": 13,
-  "matched_count": 114,
+  "article_count": 4,
+  "source_count": 4,
+  "matched_count": 4,
   "top_entities": [
     {
-      "name": "EmploymentTrend",
-      "count": 104
-    },
-    {
-      "name": "Industry",
-      "count": 82
-    },
-    {
       "name": "SourceSignal",
-      "count": 77
-    },
-    {
-      "name": "JobTitle",
-      "count": 68
-    },
-    {
-      "name": "TechStack",
-      "count": 32
-    },
-    {
-      "name": "EmploymentType",
-      "count": 16
+      "count": 11
     },
     {
       "name": "Company",
-      "count": 10
+      "count": 2
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 2
+    },
+    {
+      "name": "JobTitle",
+      "count": 2
     },
     {
       "name": "JobGeneral",
-      "count": 6
+      "count": 1
+    },
+    {
+      "name": "TechStack",
+      "count": 1
     }
   ],
   "sources": {
     "Samsung Careers": 1,
     "Kakao Careers": 1,
-    "r/careeradvice": 14,
-    "r/cscareerquestions": 21,
-    "r/recruitinghell": 13,
-    "r/jobs": 13,
-    "r/overemployed": 11,
-    "r/korea": 6,
-    "r/layoffs": 6,
-    "매일경제 취업": 5,
-    "HR Dive": 11,
-    "HR Executive": 10,
-    "Indeed Hiring Lab": 2
+    "HR Executive": 1,
+    "HR Bartender": 1
   },
-  "generated_at": "2026-05-13T16:51:08.199967+09:00",
+  "generated_at": "2026-05-13T21:26:14.985850+09:00",
   "articles": [
     {
       "event_model_payload": {
-        "source_name": "HR Dive",
-        "headline": "Antisemitism allegations reach National Education Association",
-        "source_url": "https://www.hrdive.com/news/antisemitism-allegations-reach-national-education-association/819430/",
-        "published_at": "2026-05-06T10:53:00+00:00",
-        "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/YhfYIJUVq5NS1TvFUN7mAypDRiuxxHCUI51fcFpRLKw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTk4NTU1NzA5LmpwZw==.webp\" /></div></figure><p>NEA discriminated against Jewish members by allowing pro-Palestinian activity that promoted “a hostile environment,” a Brandeis Center complaint filed with EEOC alleges.</p>"
+        "source_url": "https://www.samsungcareers.com/insight/find"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Executive",
+        "headline": "4 in 10 insured Americans ration medical care due to financial struggles",
+        "source_url": "https://hrexecutive.com/4-in-10-insured-americans-ration-medical-care-due-to-financial-struggles/",
+        "published_at": "2026-05-13T03:15:36+00:00",
+        "summary": "<p>The research shows that the barrier to health often is relatively small—typically less than $1,500.</p>\n<p>The post <a href=\"https://hrexecutive.com/4-in-10-insured-americans-ration-medical-care-due-to-financial-struggles/\">4 in 10 insured Americans ration medical care due to financial struggles</a> appeared first on <a href=\"https://hrexecutive.com\">HR Executive</a>.</p>"
+      }
+    },
+    {
+      "event_model_payload": {
+        "source_name": "HR Bartender",
+        "headline": "Leadership and Management are Two Different Things",
+        "source_url": "https://www.hrbartender.com/2026/leadership-and-management/leadership-management-two-different-things/",
+        "published_at": "2026-05-12T23:57:00+00:00",
+        "summary": "<p>Explore the key differences between leadership and management. Learn how everyone has the ability to be a leader, not just those with titles.</p>\n<p>The post <a href=\"https://www.hrbartender.com/2026/leadership-and-management/leadership-management-two-different-things/\">Leadership and Management are Two Different Things</a> appeared first on <a href=\"https://www.hrbartender.com\">hr bartender</a>.</p>"
       }
     }
-  ]
+  ],
+  "ontology": {
+    "repo": "JobRadar",
+    "category": "job",
+    "ontology_version": "0.1.0",
+    "event_model_ids": [
+      "employment.editorial_coverage",
+      "employment.job_board_posting",
+      "employment.labor_market_signal",
+      "employment.official_job_posting",
+      "employment.salary_signal",
+      "employment.skill_demand"
+    ],
+    "event_model_mappings": {
+      "official_job_posting": "employment.official_job_posting",
+      "job_board_posting": "employment.job_board_posting",
+      "salary_signal": "employment.salary_signal",
+      "skill_demand": "employment.skill_demand",
+      "labor_market_signal": "employment.labor_market_signal",
+      "editorial_coverage": "employment.editorial_coverage"
+    },
+    "entity_type_hints": [
+      "employment.job_posting",
+      "organization.company"
+    ],
+    "source_role_ids": [
+      "community_signal",
+      "context_only",
+      "operational_evidence",
+      "primary_evidence"
+    ],
+    "source_role_mappings": {
+      "Kakao Careers": "primary_evidence",
+      "Samsung Careers": "primary_evidence",
+      "Indeed Hiring Lab": "operational_evidence",
+      "HR Dive": "context_only",
+      "r/cscareerquestions": "community_signal"
+    },
+    "evidence_policy_ids": [
+      "traceable_url_required",
+      "cross_reference_required",
+      "non_authoritative_context_only"
+    ]
+  }
 }
