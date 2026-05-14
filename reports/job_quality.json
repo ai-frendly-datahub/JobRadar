@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-05-14T07:44:20.207826+00:00",
+  "generated_at": "2026-05-14T07:47:14.297642+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -217,7 +217,7 @@
       "article_count": 4,
       "event_count": 4,
       "latest_event_at": "2026-05-08T04:46:58+00:00",
-      "age_days": 6.12,
+      "age_days": 6.13,
       "latest_title": "April 2026 Jobs Report: Moving, But Not Moving Along",
       "latest_url": "https://www.hiringlab.org/2026/05/08/april-2026-jobs-report-moving-but-not-moving-along",
       "latest_canonical_key": "labor_market:hiring:us",
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 16,
       "event_count": 16,
-      "latest_event_at": "2026-05-14T07:44:06.848802+00:00",
+      "latest_event_at": "2026-05-14T07:47:02.083472+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-05-14T07:44:15.115605+00:00",
+      "latest_event_at": "2026-05-14T07:47:09.319915+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-05-14T07:44:15.115605+00:00",
+      "event_at": "2026-05-14T07:47:09.319915+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-05-14T07:44:06.848802+00:00",
+      "event_at": "2026-05-14T07:47:02.083472+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
