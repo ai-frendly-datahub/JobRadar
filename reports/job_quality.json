@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-05-21T08:33:38.361107+00:00",
+  "generated_at": "2026-05-22T08:23:30.551113+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 22,
+      "article_count": 25,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -129,7 +129,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 8,
+      "article_count": 10,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -216,10 +216,10 @@
       "status": "fresh",
       "article_count": 3,
       "event_count": 3,
-      "latest_event_at": "2026-05-14T08:59:51+00:00",
-      "age_days": 6.98,
-      "latest_title": "The Great Mismatch: How a Shrinking Workforce, AI, and Labor Reallocation Will Define the Next 15 Years",
-      "latest_url": "https://www.hiringlab.org/2026/05/14/how-a-shrinking-workforce-ai-and-labor-reallocation-will-define-the-next-15-years",
+      "latest_event_at": "2026-05-21T02:00:00+00:00",
+      "age_days": 1.27,
+      "latest_title": "A Shifting Pipeline: What Indeed’s Data Reveals About Immigrants’ Role in the US Labor Force",
+      "latest_url": "https://www.hiringlab.org/2026/05/21/immigrants-role-in-the-us-labor-force",
       "latest_canonical_key": "labor_market:hiring:us",
       "latest_required_field_gaps": [],
       "skip_reason": null,
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 28,
+      "article_count": 35,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -272,7 +272,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 25,
+      "article_count": 30,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 72,
+      "article_count": 88,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -322,7 +322,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 74,
+      "article_count": 86,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -347,7 +347,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 55,
+      "article_count": 74,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -372,7 +372,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 72,
+      "article_count": 83,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -397,7 +397,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 44,
+      "article_count": 58,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -447,7 +447,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 46,
+      "article_count": 55,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-05-21T08:33:24.344086+00:00",
+      "latest_event_at": "2026-05-22T08:23:17.650357+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-05-21T08:33:30.806609+00:00",
+      "latest_event_at": "2026-05-22T08:23:25.044481+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-05-21T08:33:30.806609+00:00",
+      "event_at": "2026-05-22T08:23:25.044481+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260521",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260522",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-05-21T08:33:24.344086+00:00",
+      "event_at": "2026-05-22T08:23:17.650357+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260521",
+      "event_key": "official_job_posting:00539721ef51:20260522",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -726,6 +726,64 @@
       "required_field_gaps": [
         "job_title"
       ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "A Shifting Pipeline: What Indeed’s Data Reveals About Immigrants’ Role in the US Labor Force",
+      "url": "https://www.hiringlab.org/2026/05/21/immigrants-role-in-the-us-labor-force",
+      "source_url": "https://www.hiringlab.org/2026/05/21/immigrants-role-in-the-us-labor-force",
+      "event_at": "2026-05-21T02:00:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260521",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
     },
     {
       "source": "Indeed Hiring Lab",
@@ -841,64 +899,6 @@
       "canonical_key": "labor_market:hiring:us",
       "canonical_key_status": "complete",
       "event_key": "labor_market_signal:a077c35290c8:20260514",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "April 2026 Jobs Report: Moving, But Not Moving Along",
-      "url": "https://www.hiringlab.org/2026/05/08/april-2026-jobs-report-moving-but-not-moving-along",
-      "source_url": "https://www.hiringlab.org/2026/05/08/april-2026-jobs-report-moving-but-not-moving-along",
-      "event_at": "2026-05-08T04:46:58+00:00",
-      "matched_entities": {
-        "EmploymentTrend": [
-          "hiring",
-          "labor market"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260508",
       "required_field_proxy": {
         "topic": true,
         "source_url": true,
