@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-06-23T08:30:21.596984+00:00",
+  "generated_at": "2026-06-24T08:23:24.254674+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 69,
+      "article_count": 68,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -129,7 +129,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 26,
+      "article_count": 27,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -217,9 +217,9 @@
       "article_count": 3,
       "event_count": 3,
       "latest_event_at": "2026-06-18T02:00:00+00:00",
-      "age_days": 5.27,
-      "latest_title": "Strong Job Gains, Weak Hiring",
-      "latest_url": "https://www.hiringlab.org/2026/06/18/strong-job-gains-weak-hiring",
+      "age_days": 6.27,
+      "latest_title": "US Labor Market Snapshot — May 2026",
+      "latest_url": "https://www.hiringlab.org/2026/06/18/us-labor-market-snapshot-may-2026",
       "latest_canonical_key": "labor_market:hiring:us",
       "latest_required_field_gaps": [],
       "skip_reason": null,
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 53,
+      "article_count": 54,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -272,7 +272,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 47,
+      "article_count": 46,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 194,
+      "article_count": 196,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -322,7 +322,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 50,
+      "article_count": 36,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -347,7 +347,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 29,
+      "article_count": 14,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -372,7 +372,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 31,
+      "article_count": 14,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -397,7 +397,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 19,
+      "article_count": 9,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -422,7 +422,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 1,
+      "article_count": 0,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -447,7 +447,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 37,
+      "article_count": 29,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-06-23T08:30:09.662804+00:00",
+      "latest_event_at": "2026-06-24T08:23:12.491812+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-06-23T08:30:16.908811+00:00",
+      "latest_event_at": "2026-06-24T08:23:19.801410+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-06-23T08:30:16.908811+00:00",
+      "event_at": "2026-06-24T08:23:19.801410+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260623",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260624",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-06-23T08:30:09.662804+00:00",
+      "event_at": "2026-06-24T08:23:12.491812+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260623",
+      "event_key": "official_job_posting:00539721ef51:20260624",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -740,14 +740,15 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "Strong Job Gains, Weak Hiring",
-      "url": "https://www.hiringlab.org/2026/06/18/strong-job-gains-weak-hiring",
-      "source_url": "https://www.hiringlab.org/2026/06/18/strong-job-gains-weak-hiring",
+      "title": "US Labor Market Snapshot — May 2026",
+      "url": "https://www.hiringlab.org/2026/06/18/us-labor-market-snapshot-may-2026",
+      "source_url": "https://www.hiringlab.org/2026/06/18/us-labor-market-snapshot-may-2026",
       "event_at": "2026-06-18T02:00:00+00:00",
       "matched_entities": {
         "EmploymentTrend": [
           "hiring",
-          "payroll"
+          "unemployment",
+          "labor market"
         ],
         "SourceSignal": [
           "labor_market",
@@ -798,15 +799,14 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "US Labor Market Snapshot — May 2026",
-      "url": "https://www.hiringlab.org/2026/06/18/us-labor-market-snapshot-may-2026",
-      "source_url": "https://www.hiringlab.org/2026/06/18/us-labor-market-snapshot-may-2026",
+      "title": "Strong Job Gains, Weak Hiring",
+      "url": "https://www.hiringlab.org/2026/06/18/strong-job-gains-weak-hiring",
+      "source_url": "https://www.hiringlab.org/2026/06/18/strong-job-gains-weak-hiring",
       "event_at": "2026-06-18T02:00:00+00:00",
       "matched_entities": {
         "EmploymentTrend": [
           "hiring",
-          "unemployment",
-          "labor market"
+          "payroll"
         ],
         "SourceSignal": [
           "labor_market",
