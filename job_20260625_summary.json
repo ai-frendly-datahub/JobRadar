@@ -1,0 +1,51 @@
+{
+  "date": "2026-06-25",
+  "category": "job",
+  "article_count": 189,
+  "source_count": 7,
+  "matched_count": 189,
+  "top_entities": [
+    {
+      "name": "EmploymentTrend",
+      "count": 149
+    },
+    {
+      "name": "SourceSignal",
+      "count": 129
+    },
+    {
+      "name": "JobTitle",
+      "count": 117
+    },
+    {
+      "name": "Industry",
+      "count": 116
+    },
+    {
+      "name": "TechStack",
+      "count": 59
+    },
+    {
+      "name": "EmploymentType",
+      "count": 22
+    },
+    {
+      "name": "JobGeneral",
+      "count": 20
+    },
+    {
+      "name": "Company",
+      "count": 19
+    }
+  ],
+  "sources": {
+    "Samsung Careers": 1,
+    "Kakao Careers": 1,
+    "r/cscareerquestions": 105,
+    "매일경제 취업": 28,
+    "한국경제": 13,
+    "HR Dive": 22,
+    "HR Executive": 19
+  },
+  "generated_at": "2026-06-25T17:24:27.441529+09:00"
+}
