@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-06-30T08:31:29.115053+00:00",
+  "generated_at": "2026-07-01T08:51:03.981301+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -16,18 +16,18 @@
     "collection_error_count": 0,
     "official_job_posting_events": 2,
     "job_board_posting_events": 0,
-    "labor_market_signal_events": 3,
+    "labor_market_signal_events": 4,
     "skill_demand_events": 0,
     "salary_signal_events": 0,
-    "job_signal_event_count": 5,
+    "job_signal_event_count": 6,
     "official_or_operational_event_count": 2,
     "community_proxy_event_count": 0,
-    "complete_canonical_key_count": 3,
+    "complete_canonical_key_count": 4,
     "proxy_canonical_key_count": 2,
     "missing_canonical_key_count": 0,
     "company_present_count": 2,
     "job_title_present_count": 0,
-    "location_present_count": 5,
+    "location_present_count": 6,
     "salary_range_present_count": 0,
     "skill_present_count": 1,
     "demand_count_present_count": 0,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 65,
+      "article_count": 64,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -129,7 +129,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 26,
+      "article_count": 27,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -214,12 +214,12 @@
       "event_model": "labor_market_signal",
       "freshness_sla_days": 14.0,
       "status": "fresh",
-      "article_count": 3,
-      "event_count": 3,
-      "latest_event_at": "2026-06-18T02:00:00+00:00",
-      "age_days": 12.27,
-      "latest_title": "US Labor Market Snapshot — May 2026",
-      "latest_url": "https://www.hiringlab.org/2026/06/18/us-labor-market-snapshot-may-2026",
+      "article_count": 4,
+      "event_count": 4,
+      "latest_event_at": "2026-06-30T05:38:26+00:00",
+      "age_days": 1.13,
+      "latest_title": "May 2026 JOLTS Report: More of the Same",
+      "latest_url": "https://www.hiringlab.org/2026/06/30/may-2026-jolts-report-more-of-the-same",
       "latest_canonical_key": "labor_market:hiring:us",
       "latest_required_field_gaps": [],
       "skip_reason": null,
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 52,
+      "article_count": 50,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-06-30T08:31:18.440735+00:00",
+      "latest_event_at": "2026-07-01T08:50:52.020670+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-06-30T08:31:24.527302+00:00",
+      "latest_event_at": "2026-07-01T08:51:00.141018+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-06-30T08:31:24.527302+00:00",
+      "event_at": "2026-07-01T08:51:00.141018+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260630",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260701",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-06-30T08:31:18.440735+00:00",
+      "event_at": "2026-07-01T08:50:52.020670+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260630",
+      "event_key": "official_job_posting:00539721ef51:20260701",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -726,6 +726,64 @@
       "required_field_gaps": [
         "job_title"
       ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "May 2026 JOLTS Report: More of the Same",
+      "url": "https://www.hiringlab.org/2026/06/30/may-2026-jolts-report-more-of-the-same",
+      "source_url": "https://www.hiringlab.org/2026/06/30/may-2026-jolts-report-more-of-the-same",
+      "event_at": "2026-06-30T05:38:26+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260630",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
     },
     {
       "source": "Indeed Hiring Lab",
