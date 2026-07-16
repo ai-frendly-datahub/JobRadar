@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-07-15T07:15:32.622082+00:00",
+  "generated_at": "2026-07-16T07:23:16.937629+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -29,7 +29,7 @@
     "job_title_present_count": 0,
     "location_present_count": 6,
     "salary_range_present_count": 0,
-    "skill_present_count": 2,
+    "skill_present_count": 1,
     "demand_count_present_count": 0,
     "event_required_field_gap_count": 1,
     "tracked_source_gap_count": 0,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 80,
+      "article_count": 77,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -129,7 +129,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 27,
+      "article_count": 26,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -216,10 +216,10 @@
       "status": "fresh",
       "article_count": 4,
       "event_count": 4,
-      "latest_event_at": "2026-07-14T02:00:00+00:00",
-      "age_days": 1.22,
-      "latest_title": "Hiring for the Data Center Build-Out",
-      "latest_url": "https://www.hiringlab.org/2026/07/14/hiring-for-the-data-center-build-out",
+      "latest_event_at": "2026-07-15T12:30:44+00:00",
+      "age_days": 0.79,
+      "latest_title": "The Retirement Divide: Examining Who Gets Access to Employer-Sponsored Retirement Benefits, and Who Does Not",
+      "latest_url": "https://www.hiringlab.org/2026/07/15/employer-sponsored-retirement",
       "latest_canonical_key": "labor_market:hiring:us",
       "latest_required_field_gaps": [],
       "skip_reason": null,
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 49,
+      "article_count": 48,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -272,7 +272,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 40,
+      "article_count": 42,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-07-15T07:15:21.778633+00:00",
+      "latest_event_at": "2026-07-16T07:23:06.330598+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-07-15T07:15:28.368340+00:00",
+      "latest_event_at": "2026-07-16T07:23:12.911206+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-07-15T07:15:28.368340+00:00",
+      "event_at": "2026-07-16T07:23:12.911206+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260715",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260716",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-07-15T07:15:21.778633+00:00",
+      "event_at": "2026-07-16T07:23:06.330598+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260715",
+      "event_key": "official_job_posting:00539721ef51:20260716",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -726,6 +726,65 @@
       "required_field_gaps": [
         "job_title"
       ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "The Retirement Divide: Examining Who Gets Access to Employer-Sponsored Retirement Benefits, and Who Does Not",
+      "url": "https://www.hiringlab.org/2026/07/15/employer-sponsored-retirement",
+      "source_url": "https://www.hiringlab.org/2026/07/15/employer-sponsored-retirement",
+      "event_at": "2026-07-15T12:30:44+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "employer",
+          "benefits"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260715",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
     },
     {
       "source": "Indeed Hiring Lab",
@@ -895,68 +954,6 @@
       "canonical_key": "labor_market:hiring:us",
       "canonical_key_status": "complete",
       "event_key": "labor_market_signal:a077c35290c8:20260708",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "June 2026 Jobs Report: An Unmoving Tide",
-      "url": "https://www.hiringlab.org/2026/07/02/june-2026-jobs-report-an-unmoving-tide",
-      "source_url": "https://www.hiringlab.org/2026/07/02/june-2026-jobs-report-an-unmoving-tide",
-      "event_at": "2026-07-02T04:10:44+00:00",
-      "matched_entities": {
-        "TechStack": [
-          "go"
-        ],
-        "EmploymentTrend": [
-          "hiring"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [
-        "go"
-      ],
-      "skill": "go",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260702",
       "required_field_proxy": {
         "topic": true,
         "source_url": true,
