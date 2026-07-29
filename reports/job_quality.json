@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-07-28T07:40:03.764244+00:00",
+  "generated_at": "2026-07-29T07:44:35.502925+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 69,
+      "article_count": 65,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -217,9 +217,9 @@
       "article_count": 4,
       "event_count": 4,
       "latest_event_at": "2026-07-23T01:00:00+00:00",
-      "age_days": 5.28,
-      "latest_title": "Entry-Level Jobs Aren’t Just for Inexperienced Workers",
-      "latest_url": "https://www.hiringlab.org/2026/07/23/entry-level-jobs-arent-just-for-inexperienced-workers",
+      "age_days": 6.28,
+      "latest_title": "The Labor Market Is Tilting Toward Seniority",
+      "latest_url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
       "latest_canonical_key": "labor_market:hiring:us",
       "latest_required_field_gaps": [],
       "skip_reason": null,
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 58,
+      "article_count": 57,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -272,7 +272,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 49,
+      "article_count": 50,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 207,
+      "article_count": 204,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-07-28T07:39:52.149908+00:00",
+      "latest_event_at": "2026-07-29T07:44:22.934744+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-07-28T07:39:59.222533+00:00",
+      "latest_event_at": "2026-07-29T07:44:30.405186+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-07-28T07:39:59.222533+00:00",
+      "event_at": "2026-07-29T07:44:30.405186+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260728",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260729",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-07-28T07:39:52.149908+00:00",
+      "event_at": "2026-07-29T07:44:22.934744+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260728",
+      "event_key": "official_job_posting:00539721ef51:20260729",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -740,17 +740,17 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "Entry-Level Jobs Aren’t Just for Inexperienced Workers",
-      "url": "https://www.hiringlab.org/2026/07/23/entry-level-jobs-arent-just-for-inexperienced-workers",
-      "source_url": "https://www.hiringlab.org/2026/07/23/entry-level-jobs-arent-just-for-inexperienced-workers",
+      "title": "The Labor Market Is Tilting Toward Seniority",
+      "url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
+      "source_url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
       "event_at": "2026-07-23T01:00:00+00:00",
       "matched_entities": {
         "EmploymentType": [
-          "entry-level",
-          "experienced"
+          "entry-level"
         ],
         "EmploymentTrend": [
-          "hiring"
+          "hiring",
+          "labor market"
         ],
         "SourceSignal": [
           "labor_market",
@@ -769,8 +769,7 @@
       "skills": [],
       "skill": "",
       "employment_type": [
-        "entry-level",
-        "experienced"
+        "entry-level"
       ],
       "topic": "hiring",
       "salary_range": "",
@@ -863,17 +862,17 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "The Labor Market Is Tilting Toward Seniority",
-      "url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
-      "source_url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
+      "title": "Entry-Level Jobs Aren’t Just for Inexperienced Workers",
+      "url": "https://www.hiringlab.org/2026/07/23/entry-level-jobs-arent-just-for-inexperienced-workers",
+      "source_url": "https://www.hiringlab.org/2026/07/23/entry-level-jobs-arent-just-for-inexperienced-workers",
       "event_at": "2026-07-23T01:00:00+00:00",
       "matched_entities": {
         "EmploymentType": [
-          "entry-level"
+          "entry-level",
+          "experienced"
         ],
         "EmploymentTrend": [
-          "hiring",
-          "labor market"
+          "hiring"
         ],
         "SourceSignal": [
           "labor_market",
@@ -892,7 +891,8 @@
       "skills": [],
       "skill": "",
       "employment_type": [
-        "entry-level"
+        "entry-level",
+        "experienced"
       ],
       "topic": "hiring",
       "salary_range": "",
