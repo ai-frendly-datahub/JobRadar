@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-08-01T07:28:57.394710+00:00",
+  "generated_at": "2026-08-02T07:32:32.234437+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 60,
+      "article_count": 56,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -129,7 +129,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 38,
+      "article_count": 39,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -217,7 +217,7 @@
       "article_count": 6,
       "event_count": 6,
       "latest_event_at": "2026-07-31T05:56:22+00:00",
-      "age_days": 1.06,
+      "age_days": 2.07,
       "latest_title": "Q2 2026 Employment Cost Index: Losing Ground",
       "latest_url": "https://www.hiringlab.org/2026/07/31/q2-2026-employment-cost-index-losing-ground",
       "latest_canonical_key": "labor_market:hiring:us",
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 200,
+      "article_count": 194,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-01T07:28:44.403138+00:00",
+      "latest_event_at": "2026-08-02T07:32:20.281683+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-01T07:28:51.339455+00:00",
+      "latest_event_at": "2026-08-02T07:32:26.646513+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-08-01T07:28:51.339455+00:00",
+      "event_at": "2026-08-02T07:32:26.646513+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260801",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260802",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-08-01T07:28:44.403138+00:00",
+      "event_at": "2026-08-02T07:32:20.281683+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260801",
+      "event_key": "official_job_posting:00539721ef51:20260802",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -920,69 +920,6 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "The Labor Market Is Tilting Toward Seniority",
-      "url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
-      "source_url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
-      "event_at": "2026-07-23T01:00:00+00:00",
-      "matched_entities": {
-        "EmploymentType": [
-          "entry-level"
-        ],
-        "EmploymentTrend": [
-          "hiring",
-          "labor market"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [
-        "entry-level"
-      ],
-      "topic": "hiring",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260723",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
       "title": "US Labor Market Snapshot — June 2026",
       "url": "https://www.hiringlab.org/2026/07/23/us-labor-market-snapshot-june-2026",
       "source_url": "https://www.hiringlab.org/2026/07/23/us-labor-market-snapshot-june-2026",
@@ -1073,6 +1010,69 @@
       "employment_type": [
         "entry-level",
         "experienced"
+      ],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260723",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "The Labor Market Is Tilting Toward Seniority",
+      "url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
+      "source_url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
+      "event_at": "2026-07-23T01:00:00+00:00",
+      "matched_entities": {
+        "EmploymentType": [
+          "entry-level"
+        ],
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "entry-level"
       ],
       "topic": "hiring",
       "salary_range": "",
