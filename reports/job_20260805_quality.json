@@ -1,0 +1,1248 @@
+{
+  "category": "job",
+  "generated_at": "2026-08-05T07:40:00.907803+00:00",
+  "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
+  "summary": {
+    "total_sources": 21,
+    "enabled_sources": 15,
+    "tracked_sources": 3,
+    "fresh_sources": 3,
+    "stale_sources": 0,
+    "missing_sources": 0,
+    "missing_event_sources": 0,
+    "unknown_event_date_sources": 0,
+    "not_tracked_sources": 12,
+    "skipped_disabled_sources": 6,
+    "collection_error_count": 0,
+    "official_job_posting_events": 2,
+    "job_board_posting_events": 0,
+    "labor_market_signal_events": 7,
+    "skill_demand_events": 0,
+    "salary_signal_events": 0,
+    "job_signal_event_count": 9,
+    "official_or_operational_event_count": 2,
+    "community_proxy_event_count": 0,
+    "complete_canonical_key_count": 7,
+    "proxy_canonical_key_count": 2,
+    "missing_canonical_key_count": 0,
+    "company_present_count": 2,
+    "job_title_present_count": 0,
+    "location_present_count": 9,
+    "salary_range_present_count": 1,
+    "skill_present_count": 1,
+    "demand_count_present_count": 0,
+    "event_required_field_gap_count": 1,
+    "tracked_source_gap_count": 0,
+    "missing_event_model_count": 3,
+    "source_backlog_candidate_count": 4,
+    "daily_review_item_count": 10
+  },
+  "sources": [
+    {
+      "source": "매일경제 취업",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 47,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "RecruitingDaily",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "recruiting_ops"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Endpoint is reachable but latest parsed feed entries are from 2024, so it no longer satisfies current labor-market freshness.",
+      "reenable_gate": "Re-enable after the feed resumes current dated recruiting/labor-market posts.",
+      "errors": []
+    },
+    {
+      "source": "서울경제",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "",
+      "freshness_sla_days": null,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Non-tracked broad economy feed is currently disabled by crawl-health checks.",
+      "reenable_gate": "Re-enable only if it is promoted to a tracked job-specific signal or crawl health recovers.",
+      "errors": []
+    },
+    {
+      "source": "한국경제",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 40,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "WorkLife",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "workplace",
+        "labor_market"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed is healthy but latest entries are stale for current job-market tracking.",
+      "reenable_gate": "Re-enable after the feed publishes current workplace/labor-market posts.",
+      "errors": []
+    },
+    {
+      "source": "HR Bartender",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "workplace",
+        "talent_strategy"
+      ],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "tracked": true,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 14.0,
+      "status": "fresh",
+      "article_count": 7,
+      "event_count": 7,
+      "latest_event_at": "2026-08-04T07:04:53+00:00",
+      "age_days": 1.02,
+      "latest_title": "June 2026 JOLTS Report: The Labor Market is a Duck on a Pond",
+      "latest_url": "https://www.hiringlab.org/2026/08/04/june-2026-jolts-report",
+      "latest_canonical_key": "labor_market:hiring:us",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "HR Dive",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "employment_compliance",
+        "workplace"
+      ],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 56,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "HR Executive",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "trade_media",
+      "info_purpose": [
+        "labor_market",
+        "talent_strategy",
+        "workplace"
+      ],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 49,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/cscareerquestions",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 189,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/jobs",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/recruitinghell",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/careeradvice",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/layoffs",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/korea",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "r/overemployed",
+      "source_type": "rss",
+      "enabled": true,
+      "trust_tier": "T4_community",
+      "content_type": "community",
+      "collection_tier": "C3_reddit",
+      "producer_role": "",
+      "info_purpose": [],
+      "tracked": false,
+      "event_model": "editorial_coverage",
+      "freshness_sla_days": null,
+      "status": "not_tracked",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Think Fast Talk Smart",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "workplace"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 404 during source audit.",
+      "reenable_gate": "Replace with a current feed URL before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "Hiring On All Cylinders",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T3_professional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "expert_media",
+      "info_purpose": [
+        "recruiting_ops",
+        "talent_strategy"
+      ],
+      "tracked": false,
+      "event_model": "labor_market_signal",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 404 during source audit.",
+      "reenable_gate": "Replace with a current feed URL before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "LinkedIn Talent Blog",
+      "source_type": "rss",
+      "enabled": false,
+      "trust_tier": "T1_authoritative",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "skill_trend",
+        "official_hiring_signal"
+      ],
+      "tracked": false,
+      "event_model": "skill_demand",
+      "freshness_sla_days": 7.0,
+      "status": "skipped_disabled",
+      "article_count": 0,
+      "event_count": 0,
+      "latest_event_at": null,
+      "age_days": null,
+      "latest_title": "",
+      "latest_url": "",
+      "latest_canonical_key": "",
+      "latest_required_field_gaps": [],
+      "skip_reason": "Feed endpoint returned 400 during unauthenticated source audit.",
+      "reenable_gate": "Replace with a stable public feed or authenticated/API-backed source before re-enabling.",
+      "errors": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "enabled": true,
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "tracked": true,
+      "event_model": "official_job_posting",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 1,
+      "event_count": 1,
+      "latest_event_at": "2026-08-05T07:39:49.717542+00:00",
+      "age_days": 0.0,
+      "latest_title": "카카오 영입",
+      "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
+      "latest_canonical_key": "job_posting:employer:all-part-technology",
+      "latest_required_field_gaps": [
+        "job_title"
+      ],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    },
+    {
+      "source": "Samsung Careers",
+      "source_type": "browser",
+      "enabled": true,
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "enterprise_hiring"
+      ],
+      "tracked": true,
+      "event_model": "official_job_posting",
+      "freshness_sla_days": 3.0,
+      "status": "fresh",
+      "article_count": 1,
+      "event_count": 1,
+      "latest_event_at": "2026-08-05T07:39:56.022911+00:00",
+      "age_days": 0.0,
+      "latest_title": "SAMSUNG CAREERS",
+      "latest_url": "https://www.samsungcareers.com/insight/find",
+      "latest_canonical_key": "job_posting:employer:삼성",
+      "latest_required_field_gaps": [],
+      "skip_reason": null,
+      "reenable_gate": null,
+      "errors": []
+    }
+  ],
+  "events": [
+    {
+      "source": "Samsung Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "enterprise_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "SAMSUNG CAREERS",
+      "url": "https://www.samsungcareers.com/insight/find",
+      "source_url": "https://www.samsungcareers.com/insight/find",
+      "event_at": "2026-08-05T07:39:56.022911+00:00",
+      "matched_entities": {
+        "Company": [
+          "삼성"
+        ],
+        "EmploymentTrend": [
+          "채용",
+          "채용공고"
+        ],
+        "JobGeneral": [
+          "커리어"
+        ],
+        "SourceSignal": [
+          "employer",
+          "enterprise_hiring",
+          "official_job_posting"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "삼성",
+      "company_name": "삼성",
+      "job_title": "",
+      "role": "채용",
+      "location": "KR",
+      "region": "KR",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "채용",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "enterprise_hiring",
+        "official_job_posting"
+      ],
+      "canonical_key": "job_posting:employer:삼성",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260805",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": true,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Kakao Careers",
+      "source_type": "browser",
+      "trust_tier": "T1_authoritative",
+      "content_type": "job_posting",
+      "collection_tier": "C3_html_js",
+      "producer_role": "employer",
+      "info_purpose": [
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "event_model": "official_job_posting",
+      "title": "카카오 영입",
+      "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
+      "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
+      "event_at": "2026-08-05T07:39:49.717542+00:00",
+      "matched_entities": {
+        "Company": [
+          "카카오"
+        ],
+        "TechStack": [
+          "javascript"
+        ],
+        "SourceSignal": [
+          "employer",
+          "official_job_posting",
+          "tech_hiring"
+        ]
+      },
+      "signal_basis": "operational_source",
+      "company_id": "all-part-technology",
+      "company_name": "ALL&part=TECHNOLOGY",
+      "job_title": "",
+      "role": "",
+      "location": "KR",
+      "region": "KR",
+      "skills": [
+        "javascript"
+      ],
+      "skill": "javascript",
+      "employment_type": [],
+      "topic": "employer",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "employer",
+        "official_job_posting",
+        "tech_hiring"
+      ],
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "canonical_key_status": "employer_proxy",
+      "event_key": "official_job_posting:00539721ef51:20260805",
+      "required_field_proxy": {
+        "company_id": true,
+        "job_title": false,
+        "location": true,
+        "source_url": true
+      },
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "June 2026 JOLTS Report: The Labor Market is a Duck on a Pond",
+      "url": "https://www.hiringlab.org/2026/08/04/june-2026-jolts-report",
+      "source_url": "https://www.hiringlab.org/2026/08/04/june-2026-jolts-report",
+      "event_at": "2026-08-04T07:04:53+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260804",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Q2 2026 Employment Cost Index: Losing Ground",
+      "url": "https://www.hiringlab.org/2026/07/31/q2-2026-employment-cost-index-losing-ground",
+      "source_url": "https://www.hiringlab.org/2026/07/31/q2-2026-employment-cost-index-losing-ground",
+      "event_at": "2026-07-31T05:56:22+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "2-2026",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260731",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Stethoscopes Without Borders: The Global Race for Healthcare Talent",
+      "url": "https://www.hiringlab.org/2026/07/30/the-global-race-for-healthcare-talent",
+      "source_url": "https://www.hiringlab.org/2026/07/30/the-global-race-for-healthcare-talent",
+      "event_at": "2026-07-30T01:00:00+00:00",
+      "matched_entities": {
+        "Industry": [
+          "healthcare"
+        ],
+        "EmploymentTrend": [
+          "hiring",
+          "workforce",
+          "talent"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260730",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "July 2026 FOMC Reaction: The Labor Market Plays Second Fiddle",
+      "url": "https://www.hiringlab.org/2026/07/29/july-2026-fomc-reaction-the-labor-market-plays-second-fiddle",
+      "source_url": "https://www.hiringlab.org/2026/07/29/july-2026-fomc-reaction-the-labor-market-plays-second-fiddle",
+      "event_at": "2026-07-29T09:38:49+00:00",
+      "matched_entities": {
+        "Industry": [
+          "it"
+        ],
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260729",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Entry-Level Jobs Aren’t Just for Inexperienced Workers",
+      "url": "https://www.hiringlab.org/2026/07/23/entry-level-jobs-arent-just-for-inexperienced-workers",
+      "source_url": "https://www.hiringlab.org/2026/07/23/entry-level-jobs-arent-just-for-inexperienced-workers",
+      "event_at": "2026-07-23T01:00:00+00:00",
+      "matched_entities": {
+        "EmploymentType": [
+          "entry-level",
+          "experienced"
+        ],
+        "EmploymentTrend": [
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "entry-level",
+        "experienced"
+      ],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260723",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "The Labor Market Is Tilting Toward Seniority",
+      "url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
+      "source_url": "https://www.hiringlab.org/2026/07/23/the-labor-market-is-tilting-toward-seniority",
+      "event_at": "2026-07-23T01:00:00+00:00",
+      "matched_entities": {
+        "EmploymentType": [
+          "entry-level"
+        ],
+        "EmploymentTrend": [
+          "hiring",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [
+        "entry-level"
+      ],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260723",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "US Labor Market Snapshot — June 2026",
+      "url": "https://www.hiringlab.org/2026/07/23/us-labor-market-snapshot-june-2026",
+      "source_url": "https://www.hiringlab.org/2026/07/23/us-labor-market-snapshot-june-2026",
+      "event_at": "2026-07-23T01:00:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "unemployment",
+          "labor market"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260723",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    }
+  ],
+  "daily_review_items": [
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Samsung Careers",
+      "title": "SAMSUNG CAREERS",
+      "canonical_key": "job_posting:employer:삼성",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_required_fields",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "카카오 영입",
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "required_field_gaps": [
+        "job_title"
+      ]
+    },
+    {
+      "reason": "proxy_canonical_key",
+      "event_model": "official_job_posting",
+      "source": "Kakao Careers",
+      "title": "카카오 영입",
+      "canonical_key": "job_posting:employer:all-part-technology",
+      "canonical_key_status": "employer_proxy"
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "job_board_posting"
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "skill_demand"
+    },
+    {
+      "reason": "missing_event_model",
+      "event_model": "salary_signal"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Greenhouse public job boards",
+      "signal_type": "official_job_posting",
+      "activation_gate": "board token mapping, company canonicalization, and duplicate posting handling"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Lever public job boards",
+      "signal_type": "official_job_posting",
+      "activation_gate": "company canonicalization, location normalization, and closing date policy"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Job board skill demand index",
+      "signal_type": "skill_demand",
+      "activation_gate": "ToS/API review, repost handling, and skill alias map"
+    },
+    {
+      "reason": "source_backlog_pending",
+      "source": "Salary survey and labor market feeds",
+      "signal_type": "salary_signal",
+      "activation_gate": "role taxonomy, region mapping, and sample-size caveat retention"
+    }
+  ],
+  "source_backlog": {
+    "operational_candidates": [
+      {
+        "id": "greenhouse_public_jobs",
+        "name": "Greenhouse public job boards",
+        "signal_type": "official_job_posting",
+        "activation_gate": "board token mapping, company canonicalization, and duplicate posting handling"
+      },
+      {
+        "id": "lever_public_jobs",
+        "name": "Lever public job boards",
+        "signal_type": "official_job_posting",
+        "activation_gate": "company canonicalization, location normalization, and closing date policy"
+      },
+      {
+        "id": "job_board_skill_index",
+        "name": "Job board skill demand index",
+        "signal_type": "skill_demand",
+        "activation_gate": "ToS/API review, repost handling, and skill alias map"
+      },
+      {
+        "id": "salary_survey_feeds",
+        "name": "Salary survey and labor market feeds",
+        "signal_type": "salary_signal",
+        "activation_gate": "role taxonomy, region mapping, and sample-size caveat retention"
+      }
+    ]
+  },
+  "errors": []
+}
