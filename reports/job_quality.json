@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-08-10T06:10:58.860510+00:00",
+  "generated_at": "2026-08-11T05:54:07.965678+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 41,
+      "article_count": 39,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -217,7 +217,7 @@
       "article_count": 7,
       "event_count": 7,
       "latest_event_at": "2026-08-07T04:18:07+00:00",
-      "age_days": 3.08,
+      "age_days": 4.07,
       "latest_title": "July 2026 Jobs Report: Unexpected Turbulence",
       "latest_url": "https://www.hiringlab.org/2026/08/07/july-2026-jobs-report-unexpected-turbulence",
       "latest_canonical_key": "labor_market:hiring:us",
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 54,
+      "article_count": 59,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 195,
+      "article_count": 194,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-10T06:10:45.981429+00:00",
+      "latest_event_at": "2026-08-11T05:53:55.377521+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-10T06:10:53.420174+00:00",
+      "latest_event_at": "2026-08-11T05:54:02.255370+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-08-10T06:10:53.420174+00:00",
+      "event_at": "2026-08-11T05:54:02.255370+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260810",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260811",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-08-10T06:10:45.981429+00:00",
+      "event_at": "2026-08-11T05:53:55.377521+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260810",
+      "event_key": "official_job_posting:00539721ef51:20260811",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
