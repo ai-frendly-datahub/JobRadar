@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-08-13T06:17:35.429033+00:00",
+  "generated_at": "2026-08-14T06:15:11.461298+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -16,19 +16,19 @@
     "collection_error_count": 0,
     "official_job_posting_events": 2,
     "job_board_posting_events": 0,
-    "labor_market_signal_events": 10,
+    "labor_market_signal_events": 9,
     "skill_demand_events": 0,
     "salary_signal_events": 0,
-    "job_signal_event_count": 12,
+    "job_signal_event_count": 11,
     "official_or_operational_event_count": 2,
     "community_proxy_event_count": 0,
-    "complete_canonical_key_count": 10,
+    "complete_canonical_key_count": 9,
     "proxy_canonical_key_count": 2,
     "missing_canonical_key_count": 0,
     "company_present_count": 2,
     "job_title_present_count": 0,
-    "location_present_count": 12,
-    "salary_range_present_count": 2,
+    "location_present_count": 11,
+    "salary_range_present_count": 0,
     "skill_present_count": 1,
     "demand_count_present_count": 0,
     "event_required_field_gap_count": 1,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 41,
+      "article_count": 40,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -214,12 +214,12 @@
       "event_model": "labor_market_signal",
       "freshness_sla_days": 14.0,
       "status": "fresh",
-      "article_count": 10,
-      "event_count": 10,
-      "latest_event_at": "2026-08-07T04:18:07+00:00",
-      "age_days": 6.08,
-      "latest_title": "July 2026 Jobs Report: Unexpected Turbulence",
-      "latest_url": "https://hiringlab.indeed.com/2026/08/07/july-2026-jobs-report-unexpected-turbulence",
+      "article_count": 9,
+      "event_count": 9,
+      "latest_event_at": "2026-08-13T01:00:00+00:00",
+      "age_days": 1.22,
+      "latest_title": "Working in the Data Center Build-Out",
+      "latest_url": "https://hiringlab.indeed.com/2026/08/13/working-in-the-data-center-build-out",
       "latest_canonical_key": "labor_market:hiring:us",
       "latest_required_field_gaps": [],
       "skip_reason": null,
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 57,
+      "article_count": 58,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -272,7 +272,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 48,
+      "article_count": 46,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 200,
+      "article_count": 206,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-13T06:17:20.837431+00:00",
+      "latest_event_at": "2026-08-14T06:14:57.391197+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-13T06:17:29.394498+00:00",
+      "latest_event_at": "2026-08-14T06:15:04.918124+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-08-13T06:17:29.394498+00:00",
+      "event_at": "2026-08-14T06:15:04.918124+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260813",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260814",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-08-13T06:17:20.837431+00:00",
+      "event_at": "2026-08-14T06:14:57.391197+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260813",
+      "event_key": "official_job_posting:00539721ef51:20260814",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -726,6 +726,64 @@
       "required_field_gaps": [
         "job_title"
       ]
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Working in the Data Center Build-Out",
+      "url": "https://hiringlab.indeed.com/2026/08/13/working-in-the-data-center-build-out",
+      "source_url": "https://hiringlab.indeed.com/2026/08/13/working-in-the-data-center-build-out",
+      "event_at": "2026-08-13T01:00:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring",
+          "benefits"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260813",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
     },
     {
       "source": "Indeed Hiring Lab",
@@ -857,63 +915,6 @@
       ],
       "event_model": "labor_market_signal",
       "title": "Q2 2026 Productivity and Costs Release: Productivity Keeps Growing, but Workers Aren’t Getting the Gains",
-      "url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
-      "source_url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
-      "event_at": "2026-08-06T05:39:49+00:00",
-      "matched_entities": {
-        "EmploymentTrend": [
-          "hiring"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260806",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "Q2 2026 Productivity and Costs Release: Productivity Keeps Growing, but Workers Aren’t Getting the Gains",
       "url": "https://www.hiringlab.org/2026/08/06/q2-productivity-and-costs-release",
       "source_url": "https://www.hiringlab.org/2026/08/06/q2-productivity-and-costs-release",
       "event_at": "2026-08-06T05:39:49+00:00",
@@ -970,9 +971,66 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
+      "title": "Q2 2026 Productivity and Costs Release: Productivity Keeps Growing, but Workers Aren’t Getting the Gains",
+      "url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
+      "source_url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
+      "event_at": "2026-08-06T05:39:49+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260806",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
       "title": "Economists Expect a Cooled Labor Market and an AI Reshuffling of White-Collar Work",
-      "url": "https://www.hiringlab.org/2026/08/05/q2-labor-market-outlook-survey",
-      "source_url": "https://www.hiringlab.org/2026/08/05/q2-labor-market-outlook-survey",
+      "url": "https://hiringlab.indeed.com/2026/08/05/q2-labor-market-outlook-survey",
+      "source_url": "https://hiringlab.indeed.com/2026/08/05/q2-labor-market-outlook-survey",
       "event_at": "2026-08-05T03:00:00+00:00",
       "matched_entities": {
         "Industry": [
@@ -1032,8 +1090,8 @@
       ],
       "event_model": "labor_market_signal",
       "title": "Economists Expect a Cooled Labor Market and an AI Reshuffling of White-Collar Work",
-      "url": "https://hiringlab.indeed.com/2026/08/05/q2-labor-market-outlook-survey",
-      "source_url": "https://hiringlab.indeed.com/2026/08/05/q2-labor-market-outlook-survey",
+      "url": "https://www.hiringlab.org/2026/08/05/q2-labor-market-outlook-survey",
+      "source_url": "https://www.hiringlab.org/2026/08/05/q2-labor-market-outlook-survey",
       "event_at": "2026-08-05T03:00:00+00:00",
       "matched_entities": {
         "Industry": [
@@ -1188,120 +1246,6 @@
       "canonical_key": "labor_market:hiring:us",
       "canonical_key_status": "complete",
       "event_key": "labor_market_signal:a077c35290c8:20260804",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "Q2 2026 Employment Cost Index: Losing Ground",
-      "url": "https://hiringlab.indeed.com/2026/07/31/q2-2026-employment-cost-index-losing-ground",
-      "source_url": "https://hiringlab.indeed.com/2026/07/31/q2-2026-employment-cost-index-losing-ground",
-      "event_at": "2026-07-31T05:56:22+00:00",
-      "matched_entities": {
-        "EmploymentTrend": [
-          "hiring"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "2-2026",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260731",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "Q2 2026 Employment Cost Index: Losing Ground",
-      "url": "https://www.hiringlab.org/2026/07/31/q2-2026-employment-cost-index-losing-ground",
-      "source_url": "https://www.hiringlab.org/2026/07/31/q2-2026-employment-cost-index-losing-ground",
-      "event_at": "2026-07-31T05:56:22+00:00",
-      "matched_entities": {
-        "EmploymentTrend": [
-          "hiring"
-        ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "2-2026",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260731",
       "required_field_proxy": {
         "topic": true,
         "source_url": true,
