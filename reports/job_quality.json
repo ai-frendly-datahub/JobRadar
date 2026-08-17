@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-08-16T05:29:11.965073+00:00",
+  "generated_at": "2026-08-17T05:36:12.662132+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 45,
+      "article_count": 49,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -217,7 +217,7 @@
       "article_count": 9,
       "event_count": 9,
       "latest_event_at": "2026-08-13T01:00:00+00:00",
-      "age_days": 3.19,
+      "age_days": 4.19,
       "latest_title": "Working in the Data Center Build-Out",
       "latest_url": "https://hiringlab.indeed.com/2026/08/13/working-in-the-data-center-build-out",
       "latest_canonical_key": "labor_market:hiring:us",
@@ -243,7 +243,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 59,
+      "article_count": 57,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -272,7 +272,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 53,
+      "article_count": 48,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 209,
+      "article_count": 210,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-16T05:29:01.085276+00:00",
+      "latest_event_at": "2026-08-17T05:36:02.042371+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-08-16T05:29:08.040262+00:00",
+      "latest_event_at": "2026-08-17T05:36:07.913065+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-08-16T05:29:08.040262+00:00",
+      "event_at": "2026-08-17T05:36:07.913065+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260816",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260817",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-08-16T05:29:01.085276+00:00",
+      "event_at": "2026-08-17T05:36:02.042371+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260816",
+      "event_key": "official_job_posting:00539721ef51:20260817",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -915,8 +915,8 @@
       ],
       "event_model": "labor_market_signal",
       "title": "Q2 2026 Productivity and Costs Release: Productivity Keeps Growing, but Workers Aren’t Getting the Gains",
-      "url": "https://www.hiringlab.org/2026/08/06/q2-productivity-and-costs-release",
-      "source_url": "https://www.hiringlab.org/2026/08/06/q2-productivity-and-costs-release",
+      "url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
+      "source_url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
       "event_at": "2026-08-06T05:39:49+00:00",
       "matched_entities": {
         "EmploymentTrend": [
@@ -972,8 +972,8 @@
       ],
       "event_model": "labor_market_signal",
       "title": "Q2 2026 Productivity and Costs Release: Productivity Keeps Growing, but Workers Aren’t Getting the Gains",
-      "url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
-      "source_url": "https://hiringlab.indeed.com/2026/08/06/q2-productivity-and-costs-release",
+      "url": "https://www.hiringlab.org/2026/08/06/q2-productivity-and-costs-release",
+      "source_url": "https://www.hiringlab.org/2026/08/06/q2-productivity-and-costs-release",
       "event_at": "2026-08-06T05:39:49+00:00",
       "matched_entities": {
         "EmploymentTrend": [
@@ -1151,8 +1151,8 @@
       ],
       "event_model": "labor_market_signal",
       "title": "June 2026 JOLTS Report: The Labor Market is a Duck on a Pond",
-      "url": "https://www.hiringlab.org/2026/08/04/june-2026-jolts-report",
-      "source_url": "https://www.hiringlab.org/2026/08/04/june-2026-jolts-report",
+      "url": "https://hiringlab.indeed.com/2026/08/04/june-2026-jolts-report",
+      "source_url": "https://hiringlab.indeed.com/2026/08/04/june-2026-jolts-report",
       "event_at": "2026-08-04T07:04:53+00:00",
       "matched_entities": {
         "EmploymentTrend": [
@@ -1209,8 +1209,8 @@
       ],
       "event_model": "labor_market_signal",
       "title": "June 2026 JOLTS Report: The Labor Market is a Duck on a Pond",
-      "url": "https://hiringlab.indeed.com/2026/08/04/june-2026-jolts-report",
-      "source_url": "https://hiringlab.indeed.com/2026/08/04/june-2026-jolts-report",
+      "url": "https://www.hiringlab.org/2026/08/04/june-2026-jolts-report",
+      "source_url": "https://www.hiringlab.org/2026/08/04/june-2026-jolts-report",
       "event_at": "2026-08-04T07:04:53+00:00",
       "matched_entities": {
         "EmploymentTrend": [
