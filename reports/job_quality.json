@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-09-05T08:52:17.452542+00:00",
+  "generated_at": "2026-09-06T09:11:53.285181+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 65,
+      "article_count": 66,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -129,7 +129,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 20,
+      "article_count": 19,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -217,7 +217,7 @@
       "article_count": 8,
       "event_count": 8,
       "latest_event_at": "2026-09-04T04:14:20+00:00",
-      "age_days": 1.19,
+      "age_days": 2.21,
       "latest_title": "August 2026 Jobs Report: Rebound Without Real Relief",
       "latest_url": "https://hiringlab.indeed.com/2026/09/04/august-2026-jobs-report-rebound-without-real-relief",
       "latest_canonical_key": "labor_market:hiring:us",
@@ -297,7 +297,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 216,
+      "article_count": 209,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-09-05T08:52:06.000049+00:00",
+      "latest_event_at": "2026-09-06T09:11:41.326228+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-09-05T08:52:10.977857+00:00",
+      "latest_event_at": "2026-09-06T09:11:48.856891+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-09-05T08:52:10.977857+00:00",
+      "event_at": "2026-09-06T09:11:48.856891+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20260905",
+      "event_key": "official_job_posting:099e3c3f6ba4:20260906",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-09-05T08:52:06.000049+00:00",
+      "event_at": "2026-09-06T09:11:41.326228+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20260905",
+      "event_key": "official_job_posting:00539721ef51:20260906",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -913,70 +913,17 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "Metro-Level AI Exposure: Where GenAI Could Reshape Work the Most",
-      "url": "https://hiringlab.indeed.com/2026/08/25/metro-level-ai-exposure",
-      "source_url": "https://hiringlab.indeed.com/2026/08/25/metro-level-ai-exposure",
+      "title": "Labor Market Tightness: Where Is It Easiest — and Hardest — to Find a Job Right Now?",
+      "url": "https://hiringlab.indeed.com/2026/08/25/labor-market-tightness",
+      "source_url": "https://hiringlab.indeed.com/2026/08/25/labor-market-tightness",
       "event_at": "2026-08-25T00:00:00+00:00",
       "matched_entities": {
-        "EmploymentTrend": [
-          "hiring"
+        "Industry": [
+          "it"
         ],
-        "SourceSignal": [
-          "labor_market",
-          "salary_signal",
-          "skill_trend",
-          "vendor_research"
-        ]
-      },
-      "signal_basis": "source_context_signal",
-      "company_id": "",
-      "company_name": "",
-      "job_title": "",
-      "role": "hiring",
-      "location": "US",
-      "region": "US",
-      "skills": [],
-      "skill": "",
-      "employment_type": [],
-      "topic": "hiring",
-      "salary_range": "",
-      "demand_count": null,
-      "source_signal": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend",
-        "vendor_research"
-      ],
-      "canonical_key": "labor_market:hiring:us",
-      "canonical_key_status": "complete",
-      "event_key": "labor_market_signal:a077c35290c8:20260825",
-      "required_field_proxy": {
-        "topic": true,
-        "source_url": true,
-        "source_name": true
-      },
-      "required_field_gaps": []
-    },
-    {
-      "source": "Indeed Hiring Lab",
-      "source_type": "rss",
-      "trust_tier": "T2_institutional",
-      "content_type": "news",
-      "collection_tier": "C1_rss",
-      "producer_role": "vendor_research",
-      "info_purpose": [
-        "labor_market",
-        "salary_signal",
-        "skill_trend"
-      ],
-      "event_model": "labor_market_signal",
-      "title": "Best Cities for Work 2026: Methodology & Data Sources",
-      "url": "https://hiringlab.indeed.com/2026/08/25/best-cities-for-work-2026-methodology-data-sources",
-      "source_url": "https://hiringlab.indeed.com/2026/08/25/best-cities-for-work-2026-methodology-data-sources",
-      "event_at": "2026-08-25T00:00:00+00:00",
-      "matched_entities": {
         "EmploymentTrend": [
-          "hiring"
+          "hiring",
+          "labor market"
         ],
         "SourceSignal": [
           "labor_market",
@@ -1084,17 +1031,70 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "Labor Market Tightness: Where Is It Easiest — and Hardest — to Find a Job Right Now?",
-      "url": "https://hiringlab.indeed.com/2026/08/25/labor-market-tightness",
-      "source_url": "https://hiringlab.indeed.com/2026/08/25/labor-market-tightness",
+      "title": "Metro-Level AI Exposure: Where GenAI Could Reshape Work the Most",
+      "url": "https://hiringlab.indeed.com/2026/08/25/metro-level-ai-exposure",
+      "source_url": "https://hiringlab.indeed.com/2026/08/25/metro-level-ai-exposure",
       "event_at": "2026-08-25T00:00:00+00:00",
       "matched_entities": {
-        "Industry": [
-          "it"
-        ],
         "EmploymentTrend": [
-          "hiring",
-          "labor market"
+          "hiring"
+        ],
+        "SourceSignal": [
+          "labor_market",
+          "salary_signal",
+          "skill_trend",
+          "vendor_research"
+        ]
+      },
+      "signal_basis": "source_context_signal",
+      "company_id": "",
+      "company_name": "",
+      "job_title": "",
+      "role": "hiring",
+      "location": "US",
+      "region": "US",
+      "skills": [],
+      "skill": "",
+      "employment_type": [],
+      "topic": "hiring",
+      "salary_range": "",
+      "demand_count": null,
+      "source_signal": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend",
+        "vendor_research"
+      ],
+      "canonical_key": "labor_market:hiring:us",
+      "canonical_key_status": "complete",
+      "event_key": "labor_market_signal:a077c35290c8:20260825",
+      "required_field_proxy": {
+        "topic": true,
+        "source_url": true,
+        "source_name": true
+      },
+      "required_field_gaps": []
+    },
+    {
+      "source": "Indeed Hiring Lab",
+      "source_type": "rss",
+      "trust_tier": "T2_institutional",
+      "content_type": "news",
+      "collection_tier": "C1_rss",
+      "producer_role": "vendor_research",
+      "info_purpose": [
+        "labor_market",
+        "salary_signal",
+        "skill_trend"
+      ],
+      "event_model": "labor_market_signal",
+      "title": "Best Cities for Work 2026: Methodology & Data Sources",
+      "url": "https://hiringlab.indeed.com/2026/08/25/best-cities-for-work-2026-methodology-data-sources",
+      "source_url": "https://hiringlab.indeed.com/2026/08/25/best-cities-for-work-2026-methodology-data-sources",
+      "event_at": "2026-08-25T00:00:00+00:00",
+      "matched_entities": {
+        "EmploymentTrend": [
+          "hiring"
         ],
         "SourceSignal": [
           "labor_market",
