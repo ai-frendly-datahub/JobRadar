@@ -1,6 +1,6 @@
 {
   "category": "job",
-  "generated_at": "2026-10-03T10:15:41.531123+00:00",
+  "generated_at": "2026-10-04T10:57:40.533517+00:00",
   "scope_note": "Job quality rows separate official employer boards, job-board postings, labor-market signals, skill demand, and salary signals from broad HR or community context. Proxy rows stay review items until company, role, location, salary, or skill identifiers are collected.",
   "summary": {
     "total_sources": 21,
@@ -51,7 +51,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 49,
+      "article_count": 47,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -129,7 +129,7 @@
       "event_model": "editorial_coverage",
       "freshness_sla_days": null,
       "status": "not_tracked",
-      "article_count": 20,
+      "article_count": 23,
       "event_count": 0,
       "latest_event_at": null,
       "age_days": null,
@@ -217,7 +217,7 @@
       "article_count": 4,
       "event_count": 4,
       "latest_event_at": "2026-10-02T04:18:34+00:00",
-      "age_days": 1.25,
+      "age_days": 2.28,
       "latest_title": "September 2026 Jobs Report: Steadiness Without a Spark",
       "latest_url": "https://hiringlab.indeed.com/2026/10/02/september-2026-jobs-report-steadiness-without-a-spark",
       "latest_canonical_key": "labor_market:hiring:us",
@@ -561,7 +561,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-10-03T10:15:30.536568+00:00",
+      "latest_event_at": "2026-10-04T10:57:27.337669+00:00",
       "age_days": 0.0,
       "latest_title": "카카오 영입",
       "latest_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
@@ -591,7 +591,7 @@
       "status": "fresh",
       "article_count": 1,
       "event_count": 1,
-      "latest_event_at": "2026-10-03T10:15:36.776745+00:00",
+      "latest_event_at": "2026-10-04T10:57:35.167867+00:00",
       "age_days": 0.0,
       "latest_title": "SAMSUNG CAREERS",
       "latest_url": "https://www.samsungcareers.com/insight/find",
@@ -618,7 +618,7 @@
       "title": "SAMSUNG CAREERS",
       "url": "https://www.samsungcareers.com/insight/find",
       "source_url": "https://www.samsungcareers.com/insight/find",
-      "event_at": "2026-10-03T10:15:36.776745+00:00",
+      "event_at": "2026-10-04T10:57:35.167867+00:00",
       "matched_entities": {
         "Company": [
           "삼성"
@@ -656,7 +656,7 @@
       ],
       "canonical_key": "job_posting:employer:삼성",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:099e3c3f6ba4:20261003",
+      "event_key": "official_job_posting:099e3c3f6ba4:20261004",
       "required_field_proxy": {
         "company_id": true,
         "job_title": true,
@@ -680,7 +680,7 @@
       "title": "카카오 영입",
       "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
       "source_url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
-      "event_at": "2026-10-03T10:15:30.536568+00:00",
+      "event_at": "2026-10-04T10:57:27.337669+00:00",
       "matched_entities": {
         "Company": [
           "카카오"
@@ -716,7 +716,7 @@
       ],
       "canonical_key": "job_posting:employer:all-part-technology",
       "canonical_key_status": "employer_proxy",
-      "event_key": "official_job_posting:00539721ef51:20261003",
+      "event_key": "official_job_posting:00539721ef51:20261004",
       "required_field_proxy": {
         "company_id": true,
         "job_title": false,
@@ -858,15 +858,13 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "US Labor Market Snapshot — September 2026",
-      "url": "https://hiringlab.indeed.com/2026/09/24/us-labor-market-snapshot-september-2026",
-      "source_url": "https://hiringlab.indeed.com/2026/09/24/us-labor-market-snapshot-september-2026",
+      "title": "Economists See Slightly Steadier Hiring Ahead, but Offer an AI Wage Warning for College Grads",
+      "url": "https://hiringlab.indeed.com/2026/09/24/q3-labor-market-outlook-survey",
+      "source_url": "https://hiringlab.indeed.com/2026/09/24/q3-labor-market-outlook-survey",
       "event_at": "2026-09-24T01:00:00+00:00",
       "matched_entities": {
         "EmploymentTrend": [
-          "hiring",
-          "unemployment",
-          "labor market"
+          "hiring"
         ],
         "SourceSignal": [
           "labor_market",
@@ -917,13 +915,15 @@
         "skill_trend"
       ],
       "event_model": "labor_market_signal",
-      "title": "Economists See Slightly Steadier Hiring Ahead, but Offer an AI Wage Warning for College Grads",
-      "url": "https://hiringlab.indeed.com/2026/09/24/q3-labor-market-outlook-survey",
-      "source_url": "https://hiringlab.indeed.com/2026/09/24/q3-labor-market-outlook-survey",
+      "title": "US Labor Market Snapshot — September 2026",
+      "url": "https://hiringlab.indeed.com/2026/09/24/us-labor-market-snapshot-september-2026",
+      "source_url": "https://hiringlab.indeed.com/2026/09/24/us-labor-market-snapshot-september-2026",
       "event_at": "2026-09-24T01:00:00+00:00",
       "matched_entities": {
         "EmploymentTrend": [
-          "hiring"
+          "hiring",
+          "unemployment",
+          "labor market"
         ],
         "SourceSignal": [
           "labor_market",
