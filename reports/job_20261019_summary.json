@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-19",
+  "category": "job",
+  "article_count": 178,
+  "source_count": 7,
+  "matched_count": 178,
+  "top_entities": [
+    {
+      "name": "Industry",
+      "count": 107
+    },
+    {
+      "name": "EmploymentTrend",
+      "count": 106
+    },
+    {
+      "name": "JobTitle",
+      "count": 92
+    },
+    {
+      "name": "SourceSignal",
+      "count": 88
+    },
+    {
+      "name": "TechStack",
+      "count": 85
+    },
+    {
+      "name": "JobGeneral",
+      "count": 35
+    },
+    {
+      "name": "EmploymentType",
+      "count": 13
+    },
+    {
+      "name": "Company",
+      "count": 12
+    }
+  ],
+  "sources": {
+    "Samsung Careers": 1,
+    "Kakao Careers": 1,
+    "r/cscareerquestions": 94,
+    "한국경제": 20,
+    "매일경제 취업": 35,
+    "HR Dive": 26,
+    "Indeed Hiring Lab": 1
+  },
+  "generated_at": "2026-10-19T19:33:42.881459+09:00"
+}
