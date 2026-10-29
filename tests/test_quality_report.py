@@ -203,3 +203,17 @@ def test_write_quality_report_writes_latest_and_dated_json(tmp_path) -> None:
     assert paths["latest"] == tmp_path / "job_quality.json"
     assert paths["dated"] == tmp_path / "job_20260413_quality.json"
     assert json.loads(paths["latest"].read_text(encoding="utf-8"))["category"] == "job"
+
+
+def test_write_quality_report_uses_seoul_calendar_date(tmp_path) -> None:
+    """Dated quality files use the Asia/Seoul date of the collection instant."""
+    report = {
+        "category": "job",
+        "generated_at": "2026-10-28T15:30:00+00:00",
+        "summary": {},
+        "sources": [],
+    }
+
+    paths = write_quality_report(report, output_dir=tmp_path, category_name="job")
+
+    assert paths["dated"] == tmp_path / "job_20261029_quality.json"

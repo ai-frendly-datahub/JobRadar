@@ -27,6 +27,7 @@ sources:
       - official_job_posting
       - tech_hiring
     notes: official company hiring board
+    default_timezone: Asia/Seoul
     config:
       wait_for: body
 entities: []
@@ -47,6 +48,7 @@ entities: []
     assert source.producer_role == "employer"
     assert source.info_purpose == ["official_job_posting", "tech_hiring"]
     assert source.notes == "official company hiring board"
+    assert source.default_timezone == "Asia/Seoul"
     assert source.config == {"wait_for": "body"}
 
 

@@ -42,5 +42,6 @@ def test_collect_browser_sources_forwards_source_config(monkeypatch) -> None:
             "type": "browser",
             "url": "https://careers.kakao.com/jobs?company=ALL&part=TECHNOLOGY",
             "config": {"wait_for": "body"},
+            "default_timezone": "",
         }
     ]

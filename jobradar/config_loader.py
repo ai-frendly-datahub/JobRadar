@@ -123,6 +123,7 @@ def load_category_config(category_name: str, categories_dir: Path | None = None)
                     info_purpose=_strings(sd, "info_purpose"),
                     notes=_str(sd, "notes"),
                     config=_dict(sd, "config"),
+                    default_timezone=_str(sd, "default_timezone"),
                 )
             )
     entities = []
