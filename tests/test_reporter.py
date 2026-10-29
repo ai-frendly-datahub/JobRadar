@@ -107,6 +107,19 @@ def test_generate_report_injects_job_quality_panel(tmp_path, monkeypatch):
                 return fixed_now.replace(tzinfo=None)
             return fixed_now.astimezone(tz)
 
+    contract_dir = tmp_path / "runtime_contracts"
+    contract_dir.mkdir()
+    (contract_dir / "JobRadar.json").write_text(
+        """{
+  "ontology_version": "0.1.0",
+  "event_model_mappings": {
+    "official_job_posting": "employment.official_job_posting"
+  }
+}
+""",
+        encoding="utf-8",
+    )
+    monkeypatch.setenv("RADAR_ONTOLOGY_RUNTIME_DIR", str(contract_dir))
     monkeypatch.setattr("radar_core.report_utils.datetime", FixedDateTime)
 
     output_path = tmp_path / "reports" / "test_report.html"

@@ -52,6 +52,7 @@ def collect_browser_sources(
                 "type": source.type,
                 "url": source.url,
                 "config": source.config,
+                "default_timezone": source.default_timezone,
             }
             for source in sources
         ]
@@ -89,6 +90,7 @@ def collect_browser_sources(
                 published=article.published,
                 source=article.source,
                 category=article.category or category,
+                published_raw=getattr(article, "published_raw", None),
             )
         )
 
